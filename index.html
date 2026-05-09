@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zen Acquisition — 30 Qualified Sales Calls in 30 Days</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f5f3;
+      --grey-1: #1a1a1a;
+      --grey-2: #2e2e2e;
+      --grey-3: #6b6b6b;
+      --grey-4: #a0a0a0;
+      --blue: #1a56db;
+      --blue-light: #3b82f6;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    .divider { border: none; border-top: 1px solid var(--grey-2); margin: 0; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 48px;
+      border-bottom: 1px solid var(--grey-2);
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.93);
+      backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-cta {
+      display: inline-block;
+      padding: 10px 24px;
+      border: 1px solid var(--white);
+      color: var(--white);
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, color 0.22s;
+    }
+    .nav-cta:hover { background: var(--white); color: var(--black); }
+
+    /* ── HERO ── */
+    #hero {
+      padding: 100px 48px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-light);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 600;
+      line-height: 1.07;
+      letter-spacing: -0.01em;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+    h1 em { font-style: italic; color: var(--grey-4); }
+
+    .hero-guarantee {
+      font-family: var(--serif);
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+      font-weight: 400;
+      color: var(--grey-4);
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+    font-size: 0.98rem;
+    color: var(--grey-4);
+    max-width: 540px;
+    margin: 0 auto 52px;
+    line-height: 1.85;
+    }
+
+    /* video inside hero */
+    .hero-video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--grey-1);
+      border: 1px solid var(--grey-2);
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .play-ring {
+      width: 68px; height: 68px;
+      border: 1px solid var(--grey-3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.28s, transform 0.28s;
+    }
+    .hero-video-wrap:hover .play-ring { border-color: var(--white); transform: scale(1.1); }
+
+    .play-tri {
+      width: 0; height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      border-left: 18px solid var(--grey-3);
+      margin-left: 4px;
+      transition: border-left-color 0.28s;
+    }
+    .hero-video-wrap:hover .play-tri { border-left-color: var(--white); }
+    .video-placeholder p { font-size: 0.74rem; color: var(--grey-3); letter-spacing: 0.14em; text-transform: uppercase; }
+
+    /* CTA */
+    .hero-cta-block { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 52px; }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 16px 40px;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.18s;
+    }
+    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); }
+
+    .trust-note { font-size: 0.73rem; color: var(--grey-3); letter-spacing: 0.06em; }
+
+    /* cal embed in hero */
+    .hero-cal-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 16px;
+    }
+
+    .cal-embed-box {
+      width: 100%;
+      border: 1px solid var(--grey-2);
+      background: var(--grey-1);
+      overflow: hidden;
+    }
+
+    #my-cal-inline-strategy { width: 100%; min-height: 660px; overflow: scroll; }
+
+    /* ── SHARED ── */
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-family: var(--serif);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 600;
+      line-height: 1.12;
+      margin-bottom: 32px;
+      letter-spacing: -0.01em;
+    }
+    h2 em { font-style: italic; color: var(--grey-4); }
+
+    /* ── PROBLEM ── */
+    #problem { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
+
+    .problem-intro { font-size: 1rem; color: var(--grey-4); max-width: 580px; margin-bottom: 52px; line-height: 1.85; }
+
+    .pain-list { list-style: none; border-top: 1px solid var(--grey-2); }
+    .pain-list li {
+      padding: 20px 0 20px 28px;
+      border-bottom: 1px solid var(--grey-2);
+      font-size: 0.94rem; color: var(--grey-4);
+      position: relative;
+      transition: color 0.22s, padding-left 0.22s;
+    }
+    .pain-list li::before { content: '—'; position: absolute; left: 0; color: var(--grey-2); }
+    .pain-list li:hover { color: var(--white); padding-left: 36px; }
+
+    .problem-closer { margin-top: 48px; font-size: 1rem; color: var(--grey-4); max-width: 580px; line-height: 1.85; }
+    .problem-closer strong { color: var(--white); font-weight: 500; }
+
+    /* ── SYSTEM ── */
+    #system { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
+    .system-inner { max-width: 860px; margin: 0 auto; }
+
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); border-left: 1px solid var(--grey-2); margin-top: 56px; }
+    .step { padding: 44px 36px; border-right: 1px solid var(--grey-2); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
+    .step-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 400; color: var(--grey-2); line-height: 1; margin-bottom: 20px; font-style: italic; }
+    .step h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 10px; color: var(--white); }
+    .step p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.8; }
+
+    /* ── FOR WHO ── */
+    #for-who { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
+    .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 52px; }
+    .for-who-block h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; margin-bottom: 22px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid var(--grey-2); }
+    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .check-list li { font-size: 0.88rem; color: var(--grey-4); padding-left: 20px; position: relative; line-height: 1.6; }
+    .check-list.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--blue-light); font-weight: 500; }
+    .check-list.no  li::before { content: '×'; position: absolute; left: 0; color: var(--grey-3); font-weight: 500; }
+
+    /* ── DELIVERABLES ── */
+    #deliverables { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
+    .deliverables-inner { max-width: 860px; margin: 0 auto; }
+    .deliverables-grid { display: grid; grid-template-columns: repeat(2,1fr); border-top: 1px solid var(--grey-2); border-left: 1px solid var(--grey-2); margin-top: 52px; }
+    .deliverable-item { padding: 26px 28px; border-right: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); display: flex; align-items: flex-start; gap: 14px; }
+    .d-dot { width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
+    .deliverable-item p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.6; }
+
+    /* ── TESTIMONIALS ── */
+    #results { padding: 100px 48px; max-width: 960px; margin: 0 auto; }
+
+    .t-heading-wrap { text-align: center; margin-bottom: 64px; }
+
+    /* video row */
+    .t-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.t-video-item {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+  border: 1px solid var(--grey-2);
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.t-video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15));
+
+  transition: opacity .25s ease;
+}
+
+.t-video-item.playing .video-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.play-btn::before {
+  content: '';
+
+  margin-left: 4px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid white;
+}
+
+.t-video-item:hover .play-btn {
+  transform: scale(1.08);
+  background: rgba(255,255,255,.16);
+}
+
+    /* screenshot grid */
+    .t-screenshots {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .t-shot {
+      border: 1px solid var(--grey-2);
+      overflow: hidden;
+      background: var(--grey-1);
+      transition: transform 0.25s, border-color 0.25s;
+      cursor: zoom-in;
+    }
+
+    .t-shot:hover { transform: scale(1.02); border-color: var(--grey-3); }
+
+    .t-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; border: 1px solid var(--grey-2); }
+    .lightbox-close { position: fixed; top: 24px; right: 32px; font-size: 2rem; color: var(--grey-4); cursor: pointer; line-height: 1; background: none; border: none; transition: color 0.2s; }
+    .lightbox-close:hover { color: var(--white); }
+
+    /* ── FAQ ── */
+    #faq { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); }
+    .faq-inner { max-width: 700px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--grey-2); padding: 22px 0; }
+    .faq-q { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--white); list-style: none; user-select: none; }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-icon { font-size: 1.2rem; color: var(--grey-3); flex-shrink: 0; transition: transform 0.28s; font-style: normal; font-family: var(--sans); }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-a { font-size: 0.9rem; color: var(--grey-4); line-height: 1.8; padding-top: 14px; max-width: 560px; }
+
+    /* ── BOTTOM BOOKING ── */
+    #booking-bottom { padding: 100px 48px; max-width: 900px; margin: 0 auto; text-align: center; }
+    .booking-intro { font-size: 0.98rem; color: var(--grey-4); max-width: 480px; margin: 0 auto 36px; line-height: 1.8; }
+    .cal-embed-box-bottom { width: 100%; border: 1px solid var(--grey-2); background: var(--grey-1); overflow: hidden; margin-top: 36px; }
+    #my-cal-inline-strategy-bottom { width: 100%; min-height: 660px; overflow: scroll; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--grey-2); padding: 44px 48px; display: flex; flex-direction: column; gap: 20px; }
+    .footer-inner { max-width: 860px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
+    .footer-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a { font-size: 0.73rem; color: var(--grey-3); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--white); }
+    .footer-disclaimer { max-width: 860px; margin: 0 auto; width: 100%; font-size: 0.68rem; color: var(--grey-3); line-height: 1.75; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      .steps { grid-template-columns: 1fr; border-left: none; }
+      .step { border-left: 1px solid var(--grey-2); }
+      .for-who-grid { grid-template-columns: 1fr; }
+      .deliverables-grid { grid-template-columns: 1fr; }
+      .t-videos { grid-template-columns: 1fr; }
+      .t-screenshots { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 18px 20px; }
+      .nav-logo { font-size: 1.05rem; }
+      .nav-cta { padding: 8px 14px; font-size: 0.7rem; }
+      #hero { padding: 60px 20px 60px; }
+      #problem, #for-who, #results, #booking-bottom { padding: 72px 20px; }
+      #system, #deliverables, #faq { padding: 72px 20px; }
+      footer { padding: 36px 20px; }
+      .step { padding: 32px 20px; }
+      .deliverable-item { padding: 18px 16px; }
+      .stat-block { padding: 36px 20px; }
+      .footer-inner { flex-direction: column; gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Zen Acquisition™</a>
+    <a href="#hero-cal" class="nav-cta">Book a Call</a>
+  </nav>
+
+  <!-- ═══════ HERO ═══════ -->
+  <section id="hero">
+
+    <p class="hero-eyebrow reveal">Appointment Generation · Coaches &amp; Agency Owners · India</p>
+
+    <h1 class="reveal" style="transition-delay:.08s">
+      We Book <em>30 Qualified</em><br>Sales Calls Into Your<br>Calendar In 30 Days.
+    </h1>
+
+    <p class="hero-guarantee reveal" style="transition-delay:.16s">Or you pay nothing.</p>
+
+    <p class="hero-sub reveal" style="transition-delay:.22s">
+      For agency owners who are tired of inconsistent leads, unpredictable revenue, and doing everything themselves.
+    </p>
+
+    <!-- VIDEO -->
+    <div class="hero-video-wrap reveal" style="transition-delay:.3s">
+      <!--
+        ══ HOW TO ADD YOUR VIDEO ══
+        Delete the .video-placeholder div and paste your embed instead:
+
+        YouTube:
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+          allowfullscreen></iframe>
+
+        Loom:
+        <iframe src="https://www.loom.com/embed/YOUR_VIDEO_ID"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+          allowfullscreen></iframe>
+      -->
+      <div class="video-placeholder">
+        <div class="play-ring"><div class="play-tri"></div></div>
+        <p>Paste your video embed here</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="hero-cta-block reveal" style="transition-delay:.38s">
+      <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+      <span class="trust-note">Trusted by 20+ coaches and agency owners across India</span>
+    </div>
+
+    <!-- CAL EMBED -->
+    <p class="hero-cal-label reveal" style="transition-delay:.44s" id="hero-cal">Pick a time — it takes 30 seconds</p>
+    <div class="cal-embed-box reveal" style="transition-delay:.5s">
+      <div id="my-cal-inline-strategy"></div>
+    </div>
+
+  </section>
+
+  <hr class="divider" />
+
+  <!-- PROBLEM -->
+  <section id="problem">
+    <p class="section-label reveal">The Real Problem</p>
+    <h2 class="reveal" style="transition-delay:.08s">
+      Most coaches don't have<br>a delivery problem.<br>They have <em>a pipeline problem.</em>
+    </h2>
+    <p class="problem-intro reveal" style="transition-delay:.14s">
+      Every month looks different. Some months you're fully booked. Other months you're refreshing your inbox. And the worst part? You can't pinpoint why it keeps happening.
+    </p>
+    <ul class="pain-list">
+      <li class="reveal" style="transition-delay:.00s">Spending hours every week on outreach that goes nowhere</li>
+      <li class="reveal" style="transition-delay:.04s">Posting content and waiting for it to somehow convert into booked calls</li>
+      <li class="reveal" style="transition-delay:.08s">Relying on referrals you can't predict, control, or scale</li>
+      <li class="reveal" style="transition-delay:.12s">Jumping between strategies — cold DMs one week, LinkedIn the next, email the week after</li>
+      <li class="reveal" style="transition-delay:.16s">Doing everything yourself because hiring feels like a risk you can't justify yet</li>
+      <li class="reveal" style="transition-delay:.20s">Closing well when people show up — the problem is getting them to show up</li>
+      <li class="reveal" style="transition-delay:.24s">Watching other agencies scale while your lead flow stays inconsistent</li>
+    </ul>
+    <p class="problem-closer reveal">
+      The gap between where you are and where you want to be isn't your offer. It isn't your skills. It isn't your pricing. It's the absence of one thing — <strong>a predictable, repeatable system that puts qualified buyers in front of you every single week without you having to chase them.</strong><br><br>
+      That's not a you problem. That's a system problem. And systems can be fixed.
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- SYSTEM -->
+  <section id="system">
+    <div class="system-inner">
+      <p class="section-label reveal">How It Works</p>
+      <h2 class="reveal" style="transition-delay:.08s">
+        We Install a Done-For-You<br><em>Appointment Engine</em><br>Into Your Business.
+      </h2>
+      <div class="steps">
+        <div class="step reveal" style="transition-delay:.00s">
+          <div class="step-num">01</div>
+          <h3>Identify</h3>
+          <p>We map your ideal client profile with surgical precision — industry, revenue range, pain point, buying trigger. No spray and pray.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:.1s">
+          <div class="step-num">02</div>
+          <h3>Outreach</h3>
+          <p>We build and run a multi-channel outbound system — cold email, LinkedIn, cold calling — that puts your offer in front of decision makers daily.</p>
+        </div>
+        <div class="step reveal" style="transition-delay:.2s">
+          <div class="step-num">03</div>
+          <h3>Book</h3>
+          <p>We qualify every lead before they hit your calendar. You only speak to people who have a problem you solve and budget to pay for it.</p>
+        </div>
+      </div>
+      <div style="margin-top:48px" class="reveal">
+        <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="results">
+    <div class="t-heading-wrap reveal">
+      <p class="section-label">Results From The System</p>
+      <h2 style="margin-bottom:12px">Real clients.<br><em>Real outcomes.</em></h2>
+      <p style="font-size:0.9rem;color:var(--grey-4);max-width:480px;margin:0 auto">20+ coaches and agency owners across India have used the system. Here's what they said.</p>
+    </div>
+
+    <!-- 3 VIDEO TESTIMONIALS -->
+    <div class="t-videos reveal" style="transition-delay:.1s">
+
+  <div class="t-video-item" onclick="playVideo(this)">
+    <video preload="metadata" playsinline>
+      <source src="t7.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
+      <div class="play-btn"></div>
+    </div>
+  </div>
+
+  <div class="t-video-item" onclick="playVideo(this)">
+    <video preload="metadata" playsinline>
+      <source src="t8.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
+      <div class="play-btn"></div>
+    </div>
+  </div>
+
+  <div class="t-video-item" onclick="playVideo(this)">
+    <video preload="metadata" playsinline>
+      <source src="t9.mp4" type="video/mp4">
+    </video>
+
+    <div class="video-overlay">
+      <div class="play-btn"></div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+    <!-- 6 SCREENSHOT TESTIMONIALS -->
+    <div class="t-screenshots reveal" style="transition-delay:.2s">
+
+      <!-- Replace testimonial1.jpg etc. with your actual filenames -->
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t1.jpeg" alt="Client result" loading="lazy" />
+      </div>
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t2.jpeg" alt="Client result" loading="lazy" />
+      </div>
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t3.jpeg" alt="Client result" loading="lazy" />
+      </div>
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t4.jpeg" alt="Client result" loading="lazy" />
+      </div>
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t5.jpeg" alt="Client result" loading="lazy" />
+      </div>
+      <div class="t-shot" onclick="openLightbox(this)">
+        <img src="t6.jpeg" alt="Client result" loading="lazy" />
+      </div>
+
+    </div>
+
+    <div style="text-align:center;margin-top:52px" class="reveal" style="transition-delay:.28s">
+      <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+      <p class="trust-note" style="margin-top:14px">Trusted by 20+ coaches and agency owners across India</p>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">×</button>
+    <img id="lightbox-img" src="" alt="Testimonial" />
+  </div>
+
+  <hr class="divider" />
+
+  <!-- FOR WHO -->
+  <section id="for-who">
+    <p class="section-label reveal">Who This Is For</p>
+    <h2 class="reveal" style="transition-delay:.08s">The right fit<br><em>matters.</em></h2>
+    <div class="for-who-grid">
+      <div class="for-who-block reveal" style="transition-delay:.1s">
+        <h3>This Is For You If</h3>
+        <ul class="check-list yes">
+          <li>You run a coaching business or agency doing at least ₹2L+/month</li>
+          <li>You have a proven offer but inconsistent lead flow</li>
+          <li>You're ready to scale but don't want to hire a full sales team</li>
+          <li>You've tried ads or content and want something more predictable</li>
+        </ul>
+      </div>
+      <div class="for-who-block reveal" style="transition-delay:.2s">
+        <h3>This Is NOT For You If</h3>
+        <ul class="check-list no">
+          <li>You don't have an offer that has closed at least one paying client</li>
+          <li>You're looking for a magic button with zero involvement</li>
+          <li>You can't handle 30 calls in a month operationally</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- DELIVERABLES -->
+  <section id="deliverables">
+    <div class="deliverables-inner">
+      <p class="section-label reveal">What You Get</p>
+      <h2 class="reveal" style="transition-delay:.08s">Everything you need.<br><em>Nothing you don't.</em></h2>
+      <div class="deliverables-grid reveal" style="transition-delay:.16s">
+        <div class="deliverable-item"><div class="d-dot"></div><p>Done-for-you outbound system built and managed for you</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Ideal client profile research and targeting</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Cold email + LinkedIn + calling sequences</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Lead qualification before any call hits your calendar</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly reporting on pipeline activity</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Direct access to your account manager</p></div>
+        <div class="deliverable-item" style="grid-column:1/-1">
+          <div class="d-dot"></div>
+          <p><strong style="color:var(--white);font-weight:500">30 qualified show-up appointments in 30 days — guaranteed.</strong></p>
+        </div>
+      </div>
+      <div style="margin-top:48px" class="reveal">
+        <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="faq-inner">
+      <p class="section-label reveal">FAQ</p>
+      <h2 class="reveal" style="transition-delay:.08s;margin-bottom:44px">Common<br><em>Questions.</em></h2>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">How quickly do we start seeing results? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">Most clients start seeing qualified calls within the first 7–10 business days. The full system ramps up over 30 days, with weeks two and three typically being the strongest.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What do I need to have ready before starting? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">A proven offer that has closed at least one paying client, a calendar link, and 30–60 minutes for our onboarding call. We handle everything else — copy, targeting, sequences, execution.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">Do you run ads? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">No. We run a fully organic outbound system — cold email, LinkedIn, and calling. No ad spend required. That's what makes the results predictable and the ROI clean.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What industries do you work with? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">Primarily coaches and agency owners in India — business coaching, marketing agencies, consulting, and professional services. If you have a high-ticket offer, we can make it work.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What happens on the strategy call? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and goals. We'll map out a custom outbound strategy and tell you exactly what we'd do — whether you work with us or not.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- BOTTOM BOOKING -->
+  <section id="booking-bottom">
+    <p class="section-label reveal">Book Your Call</p>
+    <h2 class="reveal" style="transition-delay:.08s;margin-bottom:16px">
+      Ready to Fill<br><em>Your Calendar?</em>
+    </h2>
+    <p class="booking-intro reveal" style="transition-delay:.16s">
+      Pick a time below. No pressure, no pitch. Just a focused strategy conversation about your business.
+    </p>
+    <div class="reveal" style="transition-delay:.22s">
+      <a href="https://cal.com/zenacquisition/strategy" class="btn-primary" target="_blank" rel="noopener">Open Booking Page ↗</a>
+    </div>
+    <div class="cal-embed-box-bottom reveal" style="transition-delay:.28s">
+      <div id="my-cal-inline-strategy-bottom"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Zen Acquisition™</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Earnings Disclaimer</a>
+        <a href="https://cal.com/zenacquisition/strategy" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      © 2026 Zen Acquisition. All rights reserved. This website is not affiliated with Google, Facebook, or LinkedIn.
+      Results mentioned on this page are not typical and are not a guarantee of your results.
+      Individual outcomes depend on your offer, market, and execution.
+    </p>
+  </footer>
+
+  <!-- CAL.COM SCRIPTS -->
+  <script type="text/javascript">
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal = C.Cal || function () {
+        let cal = C.Cal; let ar = arguments;
+        if (!cal.loaded) {
+          cal.ns = {}; cal.q = cal.q || [];
+          d.head.appendChild(d.createElement("script")).src = A;
+          cal.loaded = true;
+        }
+        if (ar[0] === L) {
+          const api = function () { p(api, arguments); };
+          const namespace = ar[1];
+          api.q = api.q || [];
+          if (typeof namespace === "string") {
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar);
+          return;
+        }
+        p(cal, ar);
+      };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    /* Hero embed */
+    Cal("init", "strategy", { origin: "https://app.cal.com" });
+    Cal.ns.strategy("inline", {
+      elementOrSelector: "#my-cal-inline-strategy",
+      config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
+      calLink: "zenacquisition/strategy",
+    });
+    Cal.ns.strategy("ui", {
+      "cssVarsPerTheme": {
+        "light": { "cal-brand": "#000000" },
+        "dark":  { "cal-brand": "#ffffff" }
+      },
+      "hideEventTypeDetails": false,
+      "layout": "month_view"
+    });
+
+    /* Bottom embed */
+    Cal("init", "strategy-bottom", { origin: "https://app.cal.com" });
+    Cal.ns["strategy-bottom"]("inline", {
+      elementOrSelector: "#my-cal-inline-strategy-bottom",
+      config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
+      calLink: "zenacquisition/strategy",
+    });
+    Cal.ns["strategy-bottom"]("ui", {
+      "cssVarsPerTheme": {
+        "light": { "cal-brand": "#000000" },
+        "dark":  { "cal-brand": "#ffffff" }
+      },
+      "hideEventTypeDetails": false,
+      "layout": "month_view"
+    });
+  </script>
+
+  <!-- Lightbox -->
+  <script>
+    function openLightbox(el) {
+      const src = el.querySelector('img').src;
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+  <!-- Scroll reveal -->
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+  <script>
+  function playVideo(card) {
+
+    const allVideos = document.querySelectorAll('.t-video-item');
+
+    allVideos.forEach(item => {
+      if (item !== card) {
+        const v = item.querySelector('video');
+        v.pause();
+        item.classList.remove('playing');
+      }
+    });
+
+    const video = card.querySelector('video');
+
+    if (video.paused) {
+      video.play();
+      video.setAttribute('controls', true);
+      card.classList.add('playing');
+    } else {
+      video.pause();
+      card.classList.remove('playing');
+    }
+  }
+</script><script>
+  function playVideo(card) {
+
+    const allVideos = document.querySelectorAll('.t-video-item');
+
+    allVideos.forEach(item => {
+      if (item !== card) {
+        const v = item.querySelector('video');
+        v.pause();
+        item.classList.remove('playing');
+      }
+    });
+
+    const video = card.querySelector('video');
+
+    if (video.paused) {
+      video.play();
+      video.setAttribute('controls', true);
+      card.classList.add('playing');
+    } else {
+      video.pause();
+      card.classList.remove('playing');
+    }
+  }
+</script>
+
+</body>
+</html>
