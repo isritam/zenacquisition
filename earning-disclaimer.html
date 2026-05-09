@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zen Acquisition™ | Earnings Disclaimer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 48px;
+  border-bottom:1px solid var(--grey-2);
+}
+
+.nav-back{
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--grey-4);
+  text-decoration:none;
+  font-family:var(--sans);
+  transition:color .2s ease;
+}
+
+.nav-back:hover{
+  color:var(--white);
+}
+
+    :root {
+      --black:#0a0a0a;
+      --white:#f5f5f3;
+      --grey-1:#1a1a1a;
+      --grey-2:#2e2e2e;
+      --grey-3:#6b6b6b;
+      --grey-4:#a0a0a0;
+      --blue:#1a56db;
+      --blue-light:#3b82f6;
+      --serif:'Cormorant Garamond', Georgia, serif;
+      --sans:'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content:'';
+      position:fixed;
+      inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events:none;
+      z-index:9999;
+      opacity:.35;
+    }
+
+    nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:26px 48px;
+      border-bottom:1px solid var(--grey-2);
+      position:sticky;
+      top:0;
+      background:rgba(10,10,10,.93);
+      backdrop-filter:blur(14px);
+      z-index:100;
+    }
+
+    .nav-logo {
+      font-family:var(--serif);
+      font-size:1.3rem;
+      font-weight:600;
+      letter-spacing:.04em;
+      color:var(--white);
+      text-decoration:none;
+    }
+
+    .nav-back {
+      font-size:.72rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--grey-4);
+      text-decoration:none;
+      transition:color .2s ease;
+    }
+
+    .nav-back:hover { color:var(--white); }
+
+    .legal-wrap {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 90px 48px 120px;
+    }
+
+    .section-label {
+      font-size:0.72rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--blue-light);
+      margin-bottom:20px;
+      font-weight:500;
+    }
+
+    h1 {
+      font-family:var(--serif);
+      font-size:clamp(3.2rem, 7vw, 5.4rem);
+      line-height:1.02;
+      font-weight:600;
+      margin-bottom:14px;
+      letter-spacing:-.02em;
+    }
+
+    .updated {
+      color:var(--grey-4);
+      font-style:italic;
+      margin-bottom:72px;
+      font-size:.95rem;
+    }
+
+    .intro {
+      max-width:720px;
+      color:var(--grey-4);
+      font-size:1rem;
+      margin-bottom:64px;
+    }
+
+    h2 {
+      font-family:var(--serif);
+      font-size:2.1rem;
+      font-weight:600;
+      margin:64px 0 18px;
+      padding-top:30px;
+      border-top:1px solid var(--grey-2);
+      line-height:1.15;
+    }
+
+    p, li {
+      color:var(--grey-4);
+      font-size:.96rem;
+    }
+
+    strong {
+      color:var(--white);
+      font-weight:500;
+    }
+
+    ul {
+      padding-left:22px;
+      margin-top:14px;
+    }
+
+    li {
+      margin-bottom:10px;
+    }
+
+    .contact-box {
+      margin-top:40px;
+      padding:28px;
+      border:1px solid var(--grey-2);
+      background:var(--grey-1);
+    }
+
+    .contact-box p {
+      margin-bottom:8px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: none;
+    }
+
+    a:hover {
+      border-bottom: none;
+    }
+
+    footer {
+      border-top:1px solid var(--grey-2);
+      padding:44px 48px;
+    }
+
+    .footer-inner {
+      max-width:950px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .footer-brand {
+      font-family:var(--serif);
+      font-size:1.1rem;
+      font-weight:600;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      font-size:.72rem;
+      color:var(--grey-3);
+      border:none;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .footer-links a:hover {
+      color:var(--white);
+    }
+
+    .footer-disclaimer {
+      max-width:950px;
+      margin:20px auto 0;
+      color:var(--grey-3);
+      font-size:.7rem;
+      line-height:1.8;
+    }
+
+    @media (max-width: 640px) {
+      nav, .legal-wrap, footer {
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .legal-wrap {
+        padding-top:60px;
+      }
+
+      h2 {
+        font-size:1.65rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Zen Acquisition™</a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </nav>
+
+  <main class="legal-wrap">
+
+    <p class="section-label">Legal</p>
+
+    <h1>Earnings Disclaimer</h1>
+
+    <p class="updated">Last updated: May 2026</p>
+
+    <p class="intro">
+      Zen Acquisition makes every effort to accurately represent our services, systems, and client outcomes. However, all revenue examples, appointment figures, business growth references, or case studies presented on this website are illustrative of past or existing client experiences and are not guarantees of future performance.
+    </p>
+
+    <h2>1. No Earnings Guarantees</h2>
+    <p>
+      Zen Acquisition does not guarantee any specific financial outcome, client acquisition result, appointment volume, revenue increase, or business growth. Results depend on numerous variables including, but not limited to, your offer quality, pricing, market conditions, sales ability, operational execution, business reputation, and external economic factors.
+    </p>
+
+    <h2>2. Individual Results Will Vary</h2>
+    <p>
+      Any testimonials, case studies, or performance examples displayed on this website reflect individual experiences and may not be typical. These examples are not promises or assurances that you will achieve identical or similar results.
+    </p>
+
+    <h2>3. Marketing & Sales Performance Factors</h2>
+    <p>
+      Appointment generation, outbound campaign performance, and client acquisition outcomes are influenced by multiple variables outside our control, including:
+    </p>
+
+    <ul>
+      <li>Your industry and target market</li>
+      <li>Offer-market fit</li>
+      <li>Sales process effectiveness</li>
+      <li>Lead responsiveness</li>
+      <li>Operational fulfillment capacity</li>
+      <li>Economic and platform changes</li>
+    </ul>
+
+    <h2>4. Business Responsibility</h2>
+    <p>
+      You acknowledge that running a business involves inherent risk. Zen Acquisition provides systems, strategy, and execution support, but ultimate business performance depends on your own decisions, implementation, team capacity, and market circumstances.
+    </p>
+
+    <h2>5. No Professional Financial Advice</h2>
+    <p>
+      Nothing on this website, in our materials, or during consultations should be interpreted as financial, legal, accounting, or investment advice. You should conduct your own due diligence and consult qualified professionals before making business or financial decisions.
+    </p>
+
+    <h2>6. Testimonials & Case Studies</h2>
+    <p>
+      Client testimonials, screenshots, revenue claims, or appointment figures are shared for informational and illustrative purposes only. They are not intended to represent average performance or guaranteed success.
+    </p>
+
+    <h2>7. Forward-Looking Statements</h2>
+    <p>
+      Any statements regarding potential growth, projected appointments, expected pipeline expansion, or business scaling are opinions or strategic projections—not assurances of actual future outcomes.
+    </p>
+
+    <h2>8. External Platforms</h2>
+    <p>
+      Zen Acquisition is not affiliated with or endorsed by LinkedIn, Meta, Google, or any third-party platform referenced in our systems unless explicitly stated.
+    </p>
+
+    <h2>9. Your Acceptance</h2>
+    <p>
+      By using this website or engaging our services, you accept full responsibility for your business decisions and acknowledge that Zen Acquisition is not liable for your business performance, profits, or losses.
+    </p>
+
+    <h2>10. Contact</h2>
+    <div class="contact-box">
+      <p><strong>Zen Acquisition™</strong></p>
+      <p>West Bengal, India</p>
+      <p>Email: <a href="mailto:contact@zenacquisition.com">contact@zenacquisition.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Zen Acquisition™</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="earning-disclaimer.html">Earnings Disclaimer</a>
+      </div>
+    </div>
+
+    <p class="footer-disclaimer">
+      © 2026 Zen Acquisition. All rights reserved. Results vary by business, offer, execution, and market conditions.
+    </p>
+  </footer>
+
+</body>

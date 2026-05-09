@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zen Acquisition™ | Privacy Policy</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:28px 48px;
+  border-bottom:1px solid var(--grey-2);
+    }
+
+.nav-back{
+  font-size:0.78rem;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  color:var(--grey-4);
+  text-decoration:none;
+  font-family:var(--sans);
+  transition:color .2s ease;
+}
+
+.nav-back:hover{
+  color:var(--white);
+}
+    :root {
+      --black:#0a0a0a;
+      --white:#f5f5f3;
+      --grey-1:#1a1a1a;
+      --grey-2:#2e2e2e;
+      --grey-3:#6b6b6b;
+      --grey-4:#a0a0a0;
+      --blue:#1a56db;
+      --blue-light:#3b82f6;
+      --serif:'Cormorant Garamond', Georgia, serif;
+      --sans:'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content:'';
+      position:fixed;
+      inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events:none;
+      z-index:9999;
+      opacity:.35;
+    }
+
+    nav {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:26px 48px;
+      border-bottom:1px solid var(--grey-2);
+      position:sticky;
+      top:0;
+      background:rgba(10,10,10,.93);
+      backdrop-filter:blur(14px);
+      z-index:100;
+    }
+
+    .nav-logo {
+      font-family:var(--serif);
+      font-size:1.3rem;
+      font-weight:600;
+      letter-spacing:.04em;
+      color:var(--white);
+      text-decoration:none;
+    }
+
+    .nav-back {
+      font-size:.72rem;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--grey-4);
+      text-decoration:none;
+      transition:color .2s ease;
+    }
+
+    .nav-back:hover { color:var(--white); }
+
+    .legal-wrap {
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 90px 48px 120px;
+    }
+
+    .section-label {
+      font-size:0.72rem;
+      letter-spacing:.2em;
+      text-transform:uppercase;
+      color:var(--blue-light);
+      margin-bottom:20px;
+      font-weight:500;
+    }
+
+    h1 {
+      font-family:var(--serif);
+      font-size:clamp(3.2rem, 7vw, 5.4rem);
+      line-height:1.02;
+      font-weight:600;
+      margin-bottom:14px;
+      letter-spacing:-.02em;
+    }
+
+    .updated {
+      color:var(--grey-4);
+      font-style:italic;
+      margin-bottom:72px;
+      font-size:.95rem;
+    }
+
+    .intro {
+      max-width:720px;
+      color:var(--grey-4);
+      font-size:1rem;
+      margin-bottom:64px;
+    }
+
+    h2 {
+      font-family:var(--serif);
+      font-size:2.1rem;
+      font-weight:600;
+      margin:64px 0 18px;
+      padding-top:30px;
+      border-top:1px solid var(--grey-2);
+      line-height:1.15;
+    }
+
+    p, li {
+      color:var(--grey-4);
+      font-size:.96rem;
+    }
+
+    strong {
+      color:var(--white);
+      font-weight:500;
+    }
+
+    ul {
+      padding-left:22px;
+      margin-top:14px;
+    }
+
+    li {
+      margin-bottom:10px;
+    }
+
+    .contact-box {
+      margin-top:40px;
+      padding:28px;
+      border:1px solid var(--grey-2);
+      background:var(--grey-1);
+    }
+
+    .contact-box p {
+      margin-bottom:8px;
+    }
+
+    a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+a:hover {
+  border-bottom: none;
+}
+
+    footer {
+      border-top:1px solid var(--grey-2);
+      padding:44px 48px;
+    }
+
+    .footer-inner {
+      max-width:950px;
+      margin:0 auto;
+      display:flex;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      gap:20px;
+    }
+
+    .footer-brand {
+      font-family:var(--serif);
+      font-size:1.1rem;
+      font-weight:600;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      font-size:.72rem;
+      color:var(--grey-3);
+      border:none;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .footer-links a:hover {
+      color:var(--white);
+    }
+
+    .footer-disclaimer {
+      max-width:950px;
+      margin:20px auto 0;
+      color:var(--grey-3);
+      font-size:.7rem;
+      line-height:1.8;
+    }
+
+    @media (max-width: 640px) {
+      nav, .legal-wrap, footer {
+        padding-left:20px;
+        padding-right:20px;
+      }
+
+      .legal-wrap {
+        padding-top:60px;
+      }
+
+      h2 {
+        font-size:1.65rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+  <a href="index.html" class="nav-logo">Zen Acquisition™</a>
+  <a href="index.html" class="nav-back">← Back to Home</a>
+</nav>
+
+  <main class="legal-wrap">
+
+    <p class="section-label">Legal</p>
+
+    <h1>Privacy Policy</h1>
+
+    <p class="updated">Last updated: May 2026</p>
+
+    <p class="intro">
+      Zen Acquisition respects your privacy and is committed to protecting your personal data with transparency, discretion, and lawful processing. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you interact with our website, services, systems, and communications.
+    </p>
+
+    <h2>1. Who We Are</h2>
+    <p>
+      Zen Acquisition is a client acquisition agency registered in West Bengal, India (UDYAM-WB-18-0184983), providing outbound lead generation, appointment setting, and business growth systems for agencies, consultants, and service businesses.
+    </p>
+
+    <h2>2. Scope of This Policy</h2>
+    <p>
+      This policy applies to all website visitors, prospective clients, current clients, strategic partners, and any individuals whose data is processed through our systems in connection with our services.
+    </p>
+
+    <h2>3. Information We Collect</h2>
+    <p><strong>Information you provide directly:</strong></p>
+    <ul>
+      <li>Name, phone number, email address</li>
+      <li>Company or business name</li>
+      <li>Website, social profiles, or business assets</li>
+      <li>Booking details, onboarding forms, call notes, and communication records</li>
+    </ul>
+
+    <p><strong>Information collected automatically:</strong></p>
+    <ul>
+      <li>IP address and browser/device type</li>
+      <li>General geographic location</li>
+      <li>Website analytics, cookies, and usage behavior</li>
+    </ul>
+
+    <h2>4. How We Use Information</h2>
+    <ul>
+      <li>Responding to inquiries and consultation requests</li>
+      <li>Delivering contracted services</li>
+      <li>Campaign execution and reporting</li>
+      <li>Internal business operations and optimization</li>
+      <li>Fraud prevention and legal compliance</li>
+    </ul>
+
+    <h2>5. Legal Basis for Processing</h2>
+    <p>
+      We process data under lawful business purposes, contractual necessity, consent, and compliance obligations under applicable Indian law, including the Digital Personal Data Protection Act, 2023.
+    </p>
+
+    <h2>6. Client Campaign Data Processing</h2>
+    <p>
+      For outbound campaigns, Zen Acquisition may act as a Data Processor on behalf of clients. Data accessed for campaign fulfillment is used solely within the agreed scope, never repurposed for unrelated campaigns, and is deleted, returned, or archived securely after engagement completion.
+    </p>
+
+    <h2>7. Data Sharing</h2>
+    <p>
+      We do not sell or rent personal information. Data may only be shared with trusted service providers, software platforms, or legal authorities when operationally necessary or legally required.
+    </p>
+
+    <h2>8. Data Retention</h2>
+    <p>
+      We retain information only for as long as operationally necessary, contractually relevant, or legally required. Campaign communication records may be retained temporarily for quality assurance, dispute resolution, and compliance purposes.
+    </p>
+
+    <h2>9. Security Measures</h2>
+    <p>
+      We implement commercially reasonable administrative, technical, and organizational safeguards to protect data against unauthorized access, misuse, loss, or disclosure. While no system is completely immune to risk, security remains a continuous priority.
+    </p>
+
+    <h2>10. International Transfers</h2>
+    <p>
+      If our tools, vendors, or systems process information outside India, we take commercially appropriate steps to ensure reasonable safeguards are maintained.
+    </p>
+
+    <h2>11. Your Rights</h2>
+    <p>
+      Subject to applicable law, you may request access, correction, deletion, objection, or withdrawal of consent regarding your personal data.
+    </p>
+
+    <h2>12. Cookies & Analytics</h2>
+    <p>
+      We may use cookies, analytics tools, and performance technologies to improve functionality, measure traffic, and enhance user experience. You may manage cookie settings through your browser.
+    </p>
+
+    <h2>13. Children's Privacy</h2>
+    <p>
+      Our services are not directed toward individuals under 18, and we do not knowingly collect personal information from minors.
+    </p>
+
+    <h2>14. Policy Updates</h2>
+    <p>
+      We may revise this Privacy Policy periodically to reflect operational, legal, or regulatory changes. Updated versions will be posted on this page with a revised effective date.
+    </p>
+
+    <h2>15. Governing Law</h2>
+    <p>
+      This Privacy Policy is governed by the laws of India, with jurisdiction in Kolkata, West Bengal.
+    </p>
+
+    <h2>16. Contact</h2>
+    <div class="contact-box">
+      <p><strong>Zen Acquisition™</strong></p>
+      <p>West Bengal, India</p>
+      <p>Email: <a href="mailto:contact@zenacquisition.com">contact@zenacquisition.com</a></p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Zen Acquisition™</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms & Conditions</a>
+        <a href="earning-disclaimer.html">Earnings Disclaimer</a>
+      </div>
+    </div>
+
+    <p class="footer-disclaimer">
+      © 2026 Zen Acquisition. All rights reserved. This policy is provided for informational purposes and should be reviewed periodically for updates.
+    </p>
+  </footer>
+
+</body>
+</html>
