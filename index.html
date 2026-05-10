@@ -776,12 +776,12 @@ h2 em {
   <script src="https://fast.wistia.com/embed/mkb4gydpww.js" async type="module"></script>
 
   <!-- Wistia Player -->
-  <wistia-player
+ <wistia-player
   media-id="mkb4gydpww"
   aspect="1.7777777777777777"
-  muted="true"
   playsinline="true"
-  controls="true">
+  controls="true"
+  audio="true">
 </wistia-player>
 
 
@@ -1197,7 +1197,8 @@ h2 em {
       setTimeout(async () => {
 
         try {
-
+/* unmute first */
+player.muted = false;
           /* play video */
           await player.play();
 
