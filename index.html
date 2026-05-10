@@ -7,11 +7,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
- <link rel="icon" href="favicon.ico" type="image/x-icon">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
-<link rel="manifest" href="site.webmanifest">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -97,68 +96,231 @@
     }
     .nav-cta:hover { background: var(--white); color: var(--black); }
 
-    /* ── URGENCY BAR ── */
-.urgency-bar {
+    /* ── PROGRESS BAR ── */
+
+.progress-wrap {
   width: 100%;
   border-bottom: 1px solid var(--grey-2);
 
   background:
     linear-gradient(
       90deg,
-      rgba(26,86,219,.12),
-      rgba(59,130,246,.06)
+      rgba(26,86,219,.10),
+      rgba(59,130,246,.04)
     );
 
   backdrop-filter: blur(12px);
+
+  padding: 18px 24px;
 }
 
-.urgency-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-
-  padding: 14px 24px;
+.progress-top {
+  max-width: 900px;
+  margin: 0 auto 10px;
 
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.urgency-text {
+.progress-label {
   font-size: 0.72rem;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: var(--white);
+}
+
+.progress-percent {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 
   color: var(--grey-4);
 }
 
-.urgency-text strong {
-  color: var(--white);
-  font-weight: 500;
+.progress-bar {
+  max-width: 900px;
+  height: 10px;
+
+  margin: 0 auto;
+
+  background: rgba(255,255,255,.06);
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  overflow: hidden;
 }
 
-.countdown {
-  min-width: 120px;
+.progress-fill {
+  position: relative;
 
-  padding: 8px 14px;
+  width: 60%;
+  height: 100%;
 
-  border: 1px solid rgba(255,255,255,.12);
+  overflow: hidden;
 
-  background: rgba(255,255,255,.04);
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--blue-light)
+    );
 
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 500;
-
-  letter-spacing: 0.14em;
-  text-align: center;
-
-  color: var(--white);
 }
+
+/* moving shine effect */
+.progress-fill::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 20%,
+      rgba(255,255,255,.10) 35%,
+      rgba(255,255,255,.22) 50%,
+      rgba(255,255,255,.10) 65%,
+      transparent 80%
+    );
+
+  transform: translateX(-120%);
+
+  animation: progressShine 2.8s ease-in-out infinite;
+}
+
+/* glossy moving sweep */
+@keyframes progressShine {
+
+  0% {
+    transform: translateX(-120%);
+  }
+
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+
 
     /* ── HERO ── */
+   /* ── HERO FLOW ── */
+
+.hero-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  margin-bottom: 26px;
+
+  flex-wrap: wrap;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px 16px;
+
+  border: 1px solid rgba(255,255,255,.08);
+
+  background: rgba(255,255,255,.02);
+
+  backdrop-filter: blur(10px);
+}
+
+.flow-step {
+  cursor: pointer;
+  transition:
+    transform .22s ease,
+    border-color .22s ease,
+    background .22s ease;
+}
+
+.flow-step:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(255,255,255,.16);
+
+  background: rgba(255,255,255,.04);
+}
+
+.flow-number {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    var(--blue),
+    var(--blue-light)
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: white;
+
+  flex-shrink: 0;
+}
+
+.flow-text {
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  color: rgba(255,255,255,.72);
+}
+
+.flow-divider {
+  width: 34px;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    rgba(255,255,255,.08),
+    rgba(255,255,255,.22),
+    rgba(255,255,255,.08)
+  );
+}
+
+@media (max-width: 640px) {
+
+  .hero-flow {
+    gap: 10px;
+  }
+
+  .flow-divider {
+    display: none;
+  }
+
+  .flow-step {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* active step */
+.flow-step:first-child {
+  border-color: rgba(59,130,246,.22);
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(26,86,219,.12),
+      rgba(26,86,219,.04)
+    );
+}
+
+
     #hero {
       padding: 100px 48px 80px;
       max-width: 900px;
@@ -313,8 +475,10 @@
       margin-bottom: 32px;
       letter-spacing: -0.01em;
     }
-    h2 em { font-style: italic; color: var(--grey-4); }
-
+h2 em {
+  font-style: italic;
+  color: var(--blue-light);
+}
     /* ── PROBLEM ── */
     #problem { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
 
@@ -546,17 +710,23 @@
 <a href="#hero-cal" class="nav-cta">Book a Call</a>
   </nav>
 
-  <!-- URGENCY BAR -->
-<div class="urgency-bar">
-  <div class="urgency-inner">
-    <span class="urgency-text">
-  Free consultation access closes in
-</span>
+ <!-- PROGRESS BAR -->
+<div class="progress-wrap">
 
-    <div class="countdown" id="countdown">
-      24:00:00
-    </div>
+  <div class="progress-top">
+    <span class="progress-label">
+      Step 1 of 2 in progress...
+    </span>
+
+    <span class="progress-percent">
+      60%
+    </span>
   </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill"></div>
+  </div>
+
 </div>
 
   <!-- ═══════ HERO ═══════ -->
@@ -573,8 +743,25 @@
       For agency owners who are tired of inconsistent leads, unpredictable revenue, and doing everything themselves.
     </p>
 
+    
+
     <!-- VIDEO -->
-<div class="hero-video-wrap reveal" style="transition-delay:.3s">
+     <div class="hero-flow reveal" style="transition-delay:.26s">
+
+  <div class="flow-step" id="watch-video-btn">
+    <div class="flow-number">1</div>
+    <div class="flow-text">Watch The Video</div>
+  </div>
+
+  <div class="flow-divider"></div>
+
+  <div class="flow-step" id="book-call-btn">
+    <div class="flow-number">2</div>
+    <div class="flow-text">Book Your Strategy Call</div>
+  </div>
+
+</div>
+<div id="hero-video" class="hero-video-wrap reveal" style="transition-delay:.3s">
 
   <!-- Wistia Scripts -->
   <script src="https://fast.wistia.com/player.js" async></script>
@@ -977,59 +1164,65 @@
   }
 </script>
 
+
 <script>
-  const countdownEl = document.getElementById('countdown');
 
-  function getNextResetTime() {
+  /* STEP 1 — WATCH VIDEO */
 
-    const now = new Date();
+  document
+    .getElementById('watch-video-btn')
+    .addEventListener('click', async () => {
 
-    let reset = localStorage.getItem('zen-reset-time');
+      const player = document.querySelector('wistia-player');
 
-    if (!reset || now.getTime() > Number(reset)) {
+      if (!player) return;
 
-      const next = now.getTime() + (24 * 60 * 60 * 1000);
+      /* scroll to video first */
+      document
+        .getElementById('hero-video')
+        .scrollIntoView({
+          behavior: 'smooth',
+          block: 'center'
+        });
 
-      localStorage.setItem('zen-reset-time', next);
+      /* slight delay for smoother UX */
+      setTimeout(async () => {
 
-      reset = next;
-    }
+        try {
 
-    return Number(reset);
-  }
+          /* play video */
+          await player.play();
 
-  let resetTime = getNextResetTime();
+          /* fullscreen */
+          if (player.requestFullscreen) {
+            player.requestFullscreen();
+          }
 
-  function updateCountdown() {
+        } catch(err) {
+          console.log(err);
+        }
 
-    const now = new Date().getTime();
+      }, 700);
 
-    let distance = resetTime - now;
+    });
 
-    if (distance <= 0) {
 
-      resetTime = now + (24 * 60 * 60 * 1000);
+  /* STEP 2 — BOOK CALL */
 
-      localStorage.setItem('zen-reset-time', resetTime);
+  document
+    .getElementById('book-call-btn')
+    .addEventListener('click', () => {
 
-      distance = resetTime - now;
-    }
+      document
+        .getElementById('hero-cal')
+        .scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
 
-    const hours = Math.floor(distance / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    });
 
-    countdownEl.innerHTML =
-      String(hours).padStart(2, '0') + ':' +
-      String(minutes).padStart(2, '0') + ':' +
-      String(seconds).padStart(2, '0');
-  }
-
-  updateCountdown();
-
-  setInterval(updateCountdown, 1000);
 </script>
-
 
 </body>
 </html>
