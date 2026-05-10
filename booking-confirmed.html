@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're Confirmed — Zen Acquisition™</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #f5f5f3;
+      --grey-1: #1a1a1a;
+      --grey-2: #2e2e2e;
+      --grey-3: #6b6b6b;
+      --grey-4: #a0a0a0;
+      --blue: #1a56db;
+      --blue-light: #3b82f6;
+      --green: #22c55e;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.35;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    .divider { border: none; border-top: 1px solid var(--grey-2); margin: 0; }
+
+    /* ── NAV ── */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 48px;
+      border-bottom: 1px solid var(--grey-2);
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.93);
+      backdrop-filter: blur(14px);
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--white);
+      border: 1px solid var(--grey-2);
+      padding: 8px 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.22s, color 0.22s, border-color 0.22s;
+    }
+    .nav-tag:hover { background: var(--white); color: var(--black); border-color: var(--white); }
+
+    /* ── HERO CONFIRM ── */
+    .confirm-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(34,197,94,0.3);
+      background: rgba(34,197,94,0.06);
+      padding: 8px 20px;
+      margin-bottom: 36px;
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green);
+      font-weight: 500;
+    }
+
+    .confirm-badge .dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
+    }
+
+    h1 { font-family: var(--serif); font-size: clamp(2.6rem, 5.5vw, 4.4rem); font-weight: 600; line-height: 1.07; letter-spacing: -0.01em; color: var(--white); margin-bottom: 20px; }
+    h1 em { font-style: italic; color: var(--blue-light); }
+
+    /* Hero animation — absolute, clipped strictly inside #confirmed only */
+    #confirmed {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    #confirmed > * { position: relative; z-index: 1; }
+    .confirmed-inner {
+      padding: 80px 48px 60px;
+      max-width: 780px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 600px) {
+      .confirmed-inner { padding: 52px 20px 48px; }
+    }
+
+    #confirmed .hero-grid {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      /* Use an SVG grid that scales with the element */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25'%3E%3Cdefs%3E%3Cpattern id='g' width='60' height='60' patternUnits='userSpaceOnUse'%3E%3Cpath d='M 60 0 L 0 0 0 60' fill='none' stroke='rgba(59%2C130%2C246%2C0.07)' stroke-width='1'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23g)'/%3E%3C/svg%3E");
+      background-size: 100% 100%;
+      animation: gridDrift 20s linear infinite;
+      pointer-events: none;
+      z-index: 0;
+    }
+    @keyframes gridDrift {
+      0%   { background-position: 0 0; }
+      100% { background-position: 60px 60px; }
+    }
+
+    #confirmed .hero-glow {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 60% 55% at 12% 70%, rgba(26,86,219,0.08) 0%, transparent 70%),
+        radial-gradient(ellipse 50% 42% at 88% 22%, rgba(59,130,246,0.06) 0%, transparent 70%);
+      animation: heroGlow 10s ease-in-out infinite alternate;
+    }
+    @keyframes heroGlow {
+      0%   { transform: scale(1); }
+      100% { transform: scale(1.05) translateY(-6px); }
+    }
+
+    /* Scroll CTA button */
+    .btn-scroll {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 32px;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.22s, transform 0.18s;
+      margin-bottom: 0;
+    }
+    .btn-scroll:hover { background: var(--blue-light); transform: translateY(-2px); }
+    .btn-scroll svg { width: 14px; height: 14px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; animation: bounceArrow 1.6s ease-in-out infinite; }
+    @keyframes bounceArrow { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(3px); } }
+
+    .confirm-sub {
+      font-size: 0.98rem;
+      color: var(--grey-4);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.85;
+    }
+
+    /* ── STEPS ── */
+    #steps {
+      padding: 80px 48px;
+      background: var(--grey-1);
+      border-top: 1px solid var(--grey-2);
+      border-bottom: 1px solid var(--grey-2);
+    }
+
+    .steps-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 20px;
+    }
+
+    h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 600; line-height: 1.12; margin-bottom: 52px; letter-spacing: -0.01em; }
+    h2 em { font-style: italic; color: var(--blue-light); }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-left: 1px solid var(--grey-2);
+      border-top: 1px solid var(--grey-2);
+    }
+
+    .step-card {
+      padding: 44px 40px;
+      border-right: 1px solid var(--grey-2);
+      border-bottom: 1px solid var(--grey-2);
+    }
+
+    .step-num {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: 20px;
+      font-style: italic;
+    }
+
+    .step-card h3 {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+      color: var(--white);
+    }
+
+    .step-card p {
+      font-size: 0.88rem;
+      color: var(--grey-4);
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    /* Step 1 — video */
+    .step-video-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--black);
+      border: 1px solid var(--grey-2);
+      overflow: hidden;
+      margin-top: 24px;
+    }
+
+    wistia-player {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    /* Step 2 — rules list */
+    .rules-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .rules-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: var(--grey-4);
+      line-height: 1.65;
+    }
+
+    .rule-icon {
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--grey-2);
+      background: var(--black);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .rule-icon svg {
+      width: 10px;
+      height: 10px;
+      stroke: var(--blue-light);
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ── APPOINTMENT DETAILS ── */
+    #details {
+      padding: 80px 48px;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .detail-cards {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      border-top: 1px solid var(--grey-2);
+      border-left: 1px solid var(--grey-2);
+      margin-top: 48px;
+    }
+
+    .detail-card {
+      padding: 32px 28px;
+      border-right: 1px solid var(--grey-2);
+      border-bottom: 1px solid var(--grey-2);
+    }
+
+    .detail-card .d-label {
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 10px;
+    }
+
+    .detail-card .d-value {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.3;
+    }
+
+    .detail-card .d-sub {
+      font-size: 0.78rem;
+      color: var(--grey-4);
+      margin-top: 6px;
+    }
+
+    /* alert box */
+    .alert-box {
+      margin-top: 40px;
+      border: 1px solid rgba(59,130,246,0.25);
+      background: rgba(59,130,246,0.04);
+      padding: 28px 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .alert-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .alert-icon svg {
+      width: 20px;
+      height: 20px;
+      stroke: var(--blue-light);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .alert-box p {
+      font-size: 0.88rem;
+      color: var(--grey-4);
+      line-height: 1.75;
+    }
+
+    .alert-box strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ── FAQ ── */
+    #faq {
+      padding: 80px 48px;
+      background: var(--grey-1);
+      border-top: 1px solid var(--grey-2);
+    }
+
+    .faq-inner { max-width: 700px; margin: 0 auto; }
+
+    .faq-item { border-bottom: 1px solid var(--grey-2); padding: 22px 0; }
+    .faq-q {
+      font-family: var(--serif);
+      font-size: 1.12rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      color: var(--white);
+      list-style: none;
+      user-select: none;
+    }
+    .faq-q::-webkit-details-marker { display: none; }
+    .faq-icon { font-size: 1.2rem; color: var(--grey-3); flex-shrink: 0; transition: transform 0.28s; font-style: normal; font-family: var(--sans); }
+    details[open] .faq-icon { transform: rotate(45deg); }
+    .faq-a { font-size: 0.9rem; color: var(--grey-4); line-height: 1.8; padding-top: 14px; max-width: 560px; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--grey-2);
+      padding: 44px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+    .footer-links a {
+      font-size: 0.73rem;
+      color: var(--grey-3);
+      text-decoration: none;
+      letter-spacing: 0.06em;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--white); }
+
+    .footer-disclaimer {
+      max-width: 860px;
+      margin: 0 auto;
+      width: 100%;
+      font-size: 0.68rem;
+      color: var(--grey-3);
+      line-height: 1.75;
+    }
+
+    /* Signature line */
+    .signature-block {
+      margin-top: 52px;
+      padding-top: 36px;
+      border-top: 1px solid var(--grey-2);
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .sig-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--grey-2);
+    }
+
+    .sig-text {
+      font-size: 0.82rem;
+      color: var(--grey-4);
+      line-height: 1.6;
+    }
+
+    .sig-text strong {
+      display: block;
+      color: var(--white);
+      font-weight: 500;
+      font-family: var(--serif);
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    /* ── TESTIMONIALS ── */
+#results {
+  padding: 100px 48px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.t-heading-wrap {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+/* video row */
+.t-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.t-video-item {
+  position: relative;
+  aspect-ratio: 16/9;
+  background: #000;
+  border: 1px solid var(--grey-2);
+  overflow: hidden;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.t-video-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:
+    linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15));
+
+  transition: opacity .25s ease;
+}
+
+.t-video-item.playing .video-overlay {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.play-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.1);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.play-btn::before {
+  content: '';
+
+  margin-left: 4px;
+
+  width: 0;
+  height: 0;
+
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 18px solid white;
+}
+
+.t-video-item:hover .play-btn {
+  transform: scale(1.08);
+  background: rgba(255,255,255,.16);
+}
+
+/* screenshot grid */
+.t-screenshots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.t-shot {
+  border: 1px solid var(--grey-2);
+  overflow: hidden;
+  background: var(--grey-1);
+  transition: transform 0.25s, border-color 0.25s;
+  cursor: zoom-in;
+}
+
+.t-shot:hover {
+  transform: scale(1.02);
+  border-color: var(--grey-3);
+}
+
+.t-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid var(--grey-2);
+}
+
+.lightbox-close {
+  position: fixed;
+  top: 24px;
+  right: 32px;
+  font-size: 2rem;
+  color: var(--grey-4);
+  cursor: pointer;
+  line-height: 1;
+  background: none;
+  border: none;
+  transition: color 0.2s;
+}
+
+.lightbox-close:hover {
+  color: var(--white);
+}
+
+.trust-note {
+  font-size: 0.73rem;
+  color: var(--grey-3);
+  letter-spacing: 0.06em;
+}
+
+    /* Responsive */
+    @media (max-width: 860px) {
+      .steps-grid { grid-template-columns: 1fr; }
+      .detail-cards { grid-template-columns: 1fr; }
+      #results {
+  padding: 72px 20px;
+}
+    }
+
+    @media (max-width: 600px) {
+      nav { padding: 18px 20px; }
+      .nav-logo { font-size: 1.05rem; }
+      #steps, #details, #faq { padding: 64px 20px; }
+      footer { padding: 36px 20px; }
+      .step-card { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; gap: 14px; }
+      .alert-box { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">Zen Acquisition™</a>
+    <a href="https://www.youtube.com/@theritamsamanta" target="_blank" rel="noopener" class="nav-tag">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="opacity:0.8"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+      Follow on YouTube
+    </a>
+  </nav>
+
+  <!-- CONFIRMED HERO -->
+  <section id="confirmed">
+    <div class="hero-glow"></div>
+    <div class="hero-grid"></div>
+    <div class="confirmed-inner">
+
+    <div class="confirm-badge reveal">
+      <span class="dot"></span>
+      Your appointment is confirmed
+    </div>
+
+    <h1 class="reveal" style="transition-delay:.08s">
+      You're In.<br><em>Here's What Happens Next.</em>
+    </h1>
+
+    <p class="confirm-sub reveal" style="transition-delay:.16s">
+      We've reserved your slot. Before the call, take two minutes to go through the steps below — it ensures we use your time on the call as productively as possible.
+    </p>
+
+    <div class="reveal" style="transition-delay:.24s; margin-bottom: 0;">
+      <a href="#steps" class="btn-scroll">
+        Continue to Step One
+        <svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19,12 12,19 5,12"/></svg>
+      </a>
+    </div>
+
+    </div><!-- /.confirmed-inner -->
+  </section>
+
+  <hr class="divider" />
+
+  <!-- NEXT STEPS -->
+  <section id="steps">
+    <div class="steps-inner">
+      <p class="section-label reveal">Your Next Steps</p>
+      <h2 class="reveal" style="transition-delay:.08s">
+        Do These Two Things<br><em>Before The Call.</em>
+      </h2>
+
+      <div class="steps-grid">
+
+        <!-- STEP 1 — VIDEO -->
+        <div class="step-card reveal" style="transition-delay:.1s">
+          <div class="step-num">01</div>
+          <h3>Watch This Video First</h3>
+          <p>
+            Ritam walks you through exactly what to expect on the call, how we work, and what you need to have ready. Takes less than 5 minutes. Do not skip it.
+          </p>
+
+          <!-- Wistia embed — replace media-id with your actual video ID -->
+          <div class="step-video-wrap">
+<script src="https://fast.wistia.com/player.js" async></script><script src="https://fast.wistia.com/embed/2auop5c2il.js" async type="module"></script><style>wistia-player[media-id='2auop5c2il']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/2auop5c2il/swatch'); display: block; filter: blur(5px); padding-top:56.25%; }</style> <wistia-player media-id="2auop5c2il" aspect="1.7777777777777777"></wistia-player>          </div>
+        </div>
+
+        <!-- STEP 2 — RULES -->
+        <div class="step-card reveal" style="transition-delay:.2s">
+          <div class="step-num">02</div>
+          <h3>Prepare for the Call</h3>
+          <p>
+            We take these calls seriously. So should you. A few non-negotiables before we connect:
+          </p>
+
+          <ul class="rules-list">
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              Be in a quiet room — not a car, airport, or public space. We will end the call if the environment is too noisy.
+            </li>
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              Have your laptop or computer open. The call runs on Google Meet — phone-only won't work.
+            </li>
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              If you're in a partnership, every decision-maker must be on the call. No exceptions.
+            </li>
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              Block out extra time. Calls sometimes run over — don't schedule anything immediately after.
+            </li>
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              Be punctual. More than 5 minutes late means the call is cancelled and rescheduling will not be possible.
+            </li>
+            <li>
+              <span class="rule-icon">
+                <svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg>
+              </span>
+              Have your questions ready. This is your time — use it well.
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Signature -->
+      <div class="signature-block reveal" style="transition-delay:.28s">
+        <div class="sig-divider"></div>
+        <div class="sig-text">
+          <strong>Ritam Samanta</strong>
+          CEO &amp; Owner, Zen Acquisition™
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- APPOINTMENT DETAILS -->
+  <section id="details">
+    <p class="section-label reveal">Appointment Details</p>
+    <h2 class="reveal" style="transition-delay:.08s">
+      Everything You<br><em>Need to Know.</em>
+    </h2>
+
+    <div class="detail-cards reveal" style="transition-delay:.14s">
+      <div class="detail-card">
+        <div class="d-label">What to Expect</div>
+        <div class="d-value">30–45 min Strategy Call</div>
+        <div class="d-sub">Focused on your pipeline, offer, and growth goals</div>
+      </div>
+      <div class="detail-card">
+        <div class="d-label">Platform</div>
+        <div class="d-value">Google Meet</div>
+        <div class="d-sub">Link sent to your email — check your inbox</div>
+      </div>
+      <div class="detail-card">
+        <div class="d-label">First Step</div>
+        <div class="d-value">We Call You First</div>
+        <div class="d-sub">A team member will reach out to confirm your contact info</div>
+      </div>
+    </div>
+
+    <div class="alert-box reveal" style="transition-delay:.22s">
+      <span class="alert-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      </span>
+      <p>
+        <strong>Check your email now.</strong> You should have received a confirmation with the exact date and time of your call. Add it to your calendar immediately — don't rely on memory. If you don't see it in 5 minutes, check your spam folder. We don't accept everyone — about 30% of applicants are accepted, but even if you're not, you'll leave the call with a clear strategy for your business.
+      </p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- TESTIMONIALS -->
+<section id="results">
+  <div class="t-heading-wrap reveal">
+    <p class="section-label">Results From The System</p>
+
+    <h2 style="margin-bottom:12px">
+      Real clients.<br>
+      <em>Real outcomes.</em>
+    </h2>
+
+    <p style="font-size:0.9rem;color:var(--grey-4);max-width:480px;margin:0 auto">
+      20+ coaches and agency owners across India have used the system.
+      Here's what they said.
+    </p>
+  </div>
+
+  <!-- VIDEO TESTIMONIALS -->
+  <div class="t-videos reveal" style="transition-delay:.1s">
+
+    <div class="t-video-item" onclick="playVideo(this)">
+      <video preload="metadata" playsinline>
+        <source src="t7.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-overlay">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <div class="t-video-item" onclick="playVideo(this)">
+      <video preload="metadata" playsinline>
+        <source src="t8.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-overlay">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+    <div class="t-video-item" onclick="playVideo(this)">
+      <video preload="metadata" playsinline>
+        <source src="t9.mp4" type="video/mp4">
+      </video>
+
+      <div class="video-overlay">
+        <div class="play-btn"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- SCREENSHOT TESTIMONIALS -->
+  <div class="t-screenshots reveal" style="transition-delay:.2s">
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t1.webp" alt="Client result" loading="lazy" />
+    </div>
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t2.webp" alt="Client result" loading="lazy" />
+    </div>
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t3.webp" alt="Client result" loading="lazy" />
+    </div>
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t4.webp" alt="Client result" loading="lazy" />
+    </div>
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t5.webp" alt="Client result" loading="lazy" />
+    </div>
+
+    <div class="t-shot" onclick="openLightbox(this)">
+      <img src="t6.webp" alt="Client result" loading="lazy" />
+    </div>
+
+  </div>
+
+  <!-- YOUTUBE CTA -->
+  <div
+    style="text-align:center;margin-top:52px"
+    class="reveal"
+    style="transition-delay:.28s"
+  >
+    <a
+      href="https://www.youtube.com/@theritamsamanta"
+      target="_blank"
+      rel="noopener"
+      class="btn-scroll"
+    >
+      Watch More on YouTube ↗
+    </a>
+
+    <p class="trust-note" style="margin-top:14px">
+      More sales, outbound, and acquisition content on the channel
+    </p>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <img id="lightbox-img" src="" alt="Testimonial" />
+</div>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="faq-inner">
+      <p class="section-label reveal">FAQ</p>
+      <h2 class="reveal" style="transition-delay:.08s; margin-bottom:44px">Common<br><em>Questions.</em></h2>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What do I need to prepare before the call? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">Watch the video above, be in a quiet space with your laptop ready, and have your questions prepared. Think about your current monthly revenue, your offer, and where your lead flow is breaking down. That context makes the call 10x more useful.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">How quickly do we start seeing results? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">Most clients start seeing qualified calls within the first 7–10 business days. The full system ramps up over 30 days, with weeks two and three typically being the strongest.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What do I need to have ready before starting? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">A proven offer that has closed at least one paying client, a calendar link, and 30–60 minutes for our onboarding call. We handle everything else — copy, targeting, sequences, execution.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">Do you run ads? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">No. We run a fully organic outbound system — cold email, LinkedIn, and calling. No ad spend required. That's what makes the results predictable and the ROI clean.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What industries do you work with? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">Primarily coaches and agency owners in India — business coaching, marketing agencies, consulting, and professional services. If you have a high-ticket offer, we can make it work.</p>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">What happens on the strategy call? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and goals. We'll map out a custom outbound strategy and tell you exactly what we'd do — whether you work with us or not.</p>
+      </details>
+
+    </div>
+  </section>
+<hr class="divider" />
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Zen Acquisition™</div>
+      <div class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+        <a href="earning-disclaimer.html">Earnings Disclaimer</a>
+        <a href="https://cal.com/zenacquisition/strategy" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+    </div>
+    <p class="footer-disclaimer">
+      © 2026 Zen Acquisition. All rights reserved. This website is not affiliated with Google, Facebook, or LinkedIn.
+      Results mentioned on this page are not typical and are not a guarantee of your results.
+      Individual outcomes depend on your offer, market, and execution.
+    </p>
+  </footer>
+
+  <!-- Scroll reveal -->
+  <script>
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  </script>
+
+
+<!-- Lightbox -->
+<script>
+  function openLightbox(el) {
+    const src = el.querySelector('img').src;
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<!-- Video play -->
+<script>
+  function playVideo(card) {
+
+    const allVideos = document.querySelectorAll('.t-video-item');
+
+    allVideos.forEach(item => {
+      if (item !== card) {
+        const v = item.querySelector('video');
+        v.pause();
+        item.classList.remove('playing');
+      }
+    });
+
+    const video = card.querySelector('video');
+
+    if (video.paused) {
+      video.play();
+      video.setAttribute('controls', true);
+      card.classList.add('playing');
+    } else {
+      video.pause();
+      card.classList.remove('playing');
+    }
+  }
+</script>
+</body>
+</html>
