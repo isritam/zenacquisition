@@ -7,31 +7,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:28px 48px;
-  border-bottom:1px solid var(--grey-2);
-    }
-
-.nav-back{
-  font-size:0.78rem;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:var(--grey-4);
-  text-decoration:none;
-  font-family:var(--sans);
-  transition:color .2s ease;
-}
-
-.nav-back:hover{
-  color:var(--white);
-}
     :root {
       --black:#0a0a0a;
       --white:#f5f5f3;
@@ -41,7 +20,7 @@
       --grey-4:#a0a0a0;
       --blue:#1a56db;
       --blue-light:#3b82f6;
-      --serif:'Cormorant Garamond', Georgia, serif;
+      --serif:'Space Grotesk', 'DM Sans', sans-serif;
       --sans:'DM Sans', sans-serif;
     }
 
@@ -82,8 +61,8 @@
     .nav-logo {
       font-family:var(--serif);
       font-size:1.3rem;
-      font-weight:600;
-      letter-spacing:.04em;
+      font-weight:700;
+      letter-spacing:.02em;
       color:var(--white);
       text-decoration:none;
     }
@@ -118,9 +97,9 @@
       font-family:var(--serif);
       font-size:clamp(3.2rem, 7vw, 5.4rem);
       line-height:1.02;
-      font-weight:600;
+      font-weight:700;
       margin-bottom:14px;
-      letter-spacing:-.02em;
+      letter-spacing:-.01em;
     }
 
     .updated {
@@ -140,7 +119,7 @@
     h2 {
       font-family:var(--serif);
       font-size:2.1rem;
-      font-weight:600;
+      font-weight:700;
       margin:64px 0 18px;
       padding-top:30px;
       border-top:1px solid var(--grey-2);
@@ -178,14 +157,14 @@
     }
 
     a {
-  color: inherit;
-  text-decoration: none;
-  border-bottom: none;
-}
+      color: inherit;
+      text-decoration: none;
+      border-bottom: none;
+    }
 
-a:hover {
-  border-bottom: none;
-}
+    a:hover {
+      border-bottom: none;
+    }
 
     footer {
       border-top:1px solid var(--grey-2);
@@ -204,7 +183,7 @@ a:hover {
     .footer-brand {
       font-family:var(--serif);
       font-size:1.1rem;
-      font-weight:600;
+      font-weight:700;
     }
 
     .footer-links {
@@ -252,9 +231,9 @@ a:hover {
 <body>
 
   <nav>
-  <a href="/" class="nav-logo">Zen Acquisition™</a>
-<a href="/" class="nav-back">← Back to Home</a>
-</nav>
+    <a href="/" class="nav-logo">Zen Acquisition™</a>
+    <a href="/" class="nav-back">← Back to Home</a>
+  </nav>
 
   <main class="legal-wrap">
 
@@ -262,24 +241,24 @@ a:hover {
 
     <h1>Privacy Policy</h1>
 
-    <p class="updated">Last updated: May 2026</p>
+    <p class="updated">Last updated: August 2026</p>
 
     <p class="intro">
-      Zen Acquisition respects your privacy and is committed to protecting your personal data with transparency, discretion, and lawful processing. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you interact with our website, services, systems, and communications.
+      Zen Acquisition respects your privacy and is committed to protecting your personal data with transparency, discretion, and lawful processing. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you interact with our website, training program, systems, and communications.
     </p>
 
     <h2>1. Who We Are</h2>
     <p>
-  Zen Acquisition™ is operated by Sujit Samanta, a sole proprietorship registered in West Bengal, India under UDYAM Registration No. UDYAM-WB-18-0184983.
-</p>
+      Zen Acquisition™ is operated by Sujit Samanta, a sole proprietorship registered in West Bengal, India under UDYAM Registration No. UDYAM-WB-18-0184983.
+    </p>
 
-<p>
-  The business provides outbound lead generation, appointment setting, and client acquisition systems for agencies, consultants, and service-based businesses.
-</p>
+    <p>
+      The business provides outbound lead generation training, appointment-setting coaching, and a structured client acquisition program that teaches agencies, consultants, and service-based businesses to run and own their own outbound systems.
+    </p>
 
     <h2>2. Scope of This Policy</h2>
     <p>
-      This policy applies to all website visitors, prospective clients, current clients, strategic partners, and any individuals whose data is processed through our systems in connection with our services.
+      This policy applies to all website visitors, prospective clients, enrolled program participants, current clients, strategic partners, and any individuals whose data is processed through our systems in connection with our services.
     </p>
 
     <h2>3. Information We Collect</h2>
@@ -288,7 +267,8 @@ a:hover {
       <li>Name, phone number, email address</li>
       <li>Company or business name</li>
       <li>Website, social profiles, or business assets</li>
-      <li>Booking details, onboarding forms, call notes, and communication records</li>
+      <li>Booking details, onboarding and enrollment forms, call notes, and communication records</li>
+      <li>Program progress, session attendance, and coaching notes for enrolled participants</li>
     </ul>
 
     <p><strong>Information collected automatically:</strong></p>
@@ -300,9 +280,9 @@ a:hover {
 
     <h2>4. How We Use Information</h2>
     <ul>
-      <li>Responding to inquiries and consultation requests</li>
-      <li>Delivering contracted services</li>
-      <li>Campaign execution and reporting</li>
+      <li>Responding to inquiries and enrollment requests</li>
+      <li>Delivering the training program and coaching sessions</li>
+      <li>Tracking program progress against the performance guarantee</li>
       <li>Internal business operations and optimization</li>
       <li>Fraud prevention and legal compliance</li>
     </ul>
@@ -312,9 +292,9 @@ a:hover {
       We process data under lawful business purposes, contractual necessity, consent, and compliance obligations under applicable Indian law, including the Digital Personal Data Protection Act, 2023.
     </p>
 
-    <h2>6. Client Campaign Data Processing</h2>
+    <h2>6. Training Program Data Processing</h2>
     <p>
-      For outbound campaigns, Zen Acquisition may act as a Data Processor on behalf of clients. Data accessed for campaign fulfillment is used solely within the agreed scope, never repurposed for unrelated campaigns, and is deleted, returned, or archived securely after engagement completion.
+      Unlike a managed campaign service, our training program is delivered to your team, and your team runs its own outbound system during and after the program. Where we access your business information for onboarding, demonstration, or coaching purposes during the 75-day program, that access is limited to the agreed training scope, is never repurposed for unrelated engagements, and is deleted, returned, or archived securely once the program concludes. We do not operate or retain ongoing access to your outbound systems, calendars, or client data after your team has taken over execution, unless separately agreed in writing.
     </p>
 
     <h2>7. Data Sharing</h2>
@@ -324,7 +304,7 @@ a:hover {
 
     <h2>8. Data Retention</h2>
     <p>
-      We retain information only for as long as operationally necessary, contractually relevant, or legally required. Campaign communication records may be retained temporarily for quality assurance, dispute resolution, and compliance purposes.
+      We retain information only for as long as operationally necessary, contractually relevant, or legally required. Program communication and coaching records may be retained temporarily for quality assurance, guarantee verification, dispute resolution, and compliance purposes.
     </p>
 
     <h2>9. Security Measures</h2>
@@ -364,8 +344,9 @@ a:hover {
 
     <h2>16. Contact</h2>
     <div class="contact-box">
-<p><strong>Zen Acquisition™</strong></p>
-<p>Operated by Sujit Samanta</p>      <p>West Bengal, India</p>
+      <p><strong>Zen Acquisition™</strong></p>
+      <p>Operated by Sujit Samanta</p>
+      <p>West Bengal, India</p>
       <p>Email: <a href="mailto:contact@zenacquisition.com">contact@zenacquisition.com</a></p>
     </div>
 
