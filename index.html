@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zen Acquisition — 30 Qualified Sales Calls in 30 Days</title>
+  <title>Zen Acquisition — Train Your Team To Land 20-30 Clients In 75 Days</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +24,7 @@
       --grey-4: #a0a0a0;
       --blue: #1a56db;
       --blue-light: #3b82f6;
-      --serif: 'Cormorant Garamond', Georgia, serif;
+      --serif: 'Space Grotesk', 'DM Sans', sans-serif;
       --sans: 'DM Sans', sans-serif;
     }
 
@@ -75,8 +75,8 @@
     .nav-logo {
       font-family: var(--serif);
       font-size: 1.3rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
+      font-weight: 700;
+      letter-spacing: 0.02em;
       color: var(--white);
       text-decoration: none;
     }
@@ -191,31 +191,19 @@
   animation: progressShine 2.8s ease-in-out infinite;
 }
 
-/* glossy moving sweep */
 @keyframes progressShine {
-
-  0% {
-    transform: translateX(-120%);
-  }
-
-  100% {
-    transform: translateX(120%);
-  }
+  0% { transform: translateX(-120%); }
+  100% { transform: translateX(120%); }
 }
 
-
-
-    /* ── HERO ── */
-   /* ── HERO FLOW ── */
+    /* ── HERO FLOW ── */
 
 .hero-flow {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 18px;
-
   margin-bottom: 26px;
-
   flex-wrap: wrap;
 }
 
@@ -223,52 +211,32 @@
   display: flex;
   align-items: center;
   gap: 10px;
-
   padding: 10px 16px;
-
   border: 1px solid rgba(255,255,255,.08);
-
   background: rgba(255,255,255,.02);
-
   backdrop-filter: blur(10px);
-}
-
-.flow-step {
   cursor: pointer;
-  transition:
-    transform .22s ease,
-    border-color .22s ease,
-    background .22s ease;
+  transition: transform .22s ease, border-color .22s ease, background .22s ease;
 }
 
 .flow-step:hover {
   transform: translateY(-2px);
-
   border-color: rgba(255,255,255,.16);
-
   background: rgba(255,255,255,.04);
 }
 
 .flow-number {
   width: 24px;
   height: 24px;
-
   border-radius: 999px;
-
-  background: linear-gradient(
-    135deg,
-    var(--blue),
-    var(--blue-light)
-  );
-
+  background: linear-gradient(135deg, var(--blue), var(--blue-light));
   display: flex;
   align-items: center;
   justify-content: center;
-
+  font-family: var(--serif);
   font-size: 0.7rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
-
   flex-shrink: 0;
 }
 
@@ -276,56 +244,32 @@
   font-size: 0.72rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-
   color: rgba(255,255,255,.72);
 }
 
 .flow-divider {
   width: 34px;
   height: 1px;
-
-  background: linear-gradient(
-    to right,
-    rgba(255,255,255,.08),
-    rgba(255,255,255,.22),
-    rgba(255,255,255,.08)
-  );
+  background: linear-gradient(to right, rgba(255,255,255,.08), rgba(255,255,255,.22), rgba(255,255,255,.08));
 }
 
 @media (max-width: 640px) {
-
-  .hero-flow {
-    gap: 10px;
-  }
-
-  .flow-divider {
-    display: none;
-  }
-
-  .flow-step {
-    width: 100%;
-    justify-content: center;
-  }
+  .hero-flow { gap: 10px; }
+  .flow-divider { display: none; }
+  .flow-step { width: 100%; justify-content: center; }
 }
 
-/* active step */
 .flow-step:first-child {
   border-color: rgba(59,130,246,.22);
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(26,86,219,.12),
-      rgba(26,86,219,.04)
-    );
+  background: linear-gradient(180deg, rgba(26,86,219,.12), rgba(26,86,219,.04));
 }
-
 
     #hero {
-padding: 42px 48px 80px;  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
+      padding: 42px 48px 80px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
     .hero-eyebrow {
       font-size: 0.7rem;
@@ -337,38 +281,33 @@ padding: 42px 48px 80px;  max-width: 900px;
     }
 
     h1 {
-  font-family: var(--serif);
-  font-size: clamp(2.8rem, 6vw, 5rem);
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.03em;
-
-  color: var(--white);
-
-  margin-bottom: 18px;
-}
-    h1 em { font-style: italic; color: var(--grey-4); }
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-weight: 700;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    h1 .accent { color: var(--blue-light); }
+    h1 .dim { color: var(--grey-4); }
 
     .hero-guarantee {
       font-family: var(--serif);
       font-size: clamp(1.05rem, 2.2vw, 1.4rem);
-      font-weight: 400;
-      color: var(--grey-4);
-      font-style: italic;
+      font-weight: 600;
+      color: var(--blue-light);
       margin-bottom: 20px;
     }
 
     .hero-sub {
-  font-size: 0.78rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-
-  color: var(--grey-3);
-
-  margin-bottom: 26px;
-
-  line-height: 1.4;
-}
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--grey-3);
+      margin-bottom: 26px;
+      line-height: 1.4;
+    }
 
     /* video inside hero */
     .hero-video-wrap {
@@ -381,47 +320,34 @@ padding: 42px 48px 80px;  max-width: 900px;
       margin-bottom: 40px;
     }
     wistia-player {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
 
-.highlight-blue {
-  color: var(--blue-light);
-}
+    .highlight-blue { color: var(--blue-light); }
 
+    .hero-video-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 28px;
+      background: linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0));
+      pointer-events: none;
+    }
 
-.hero-video-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-
-  padding-bottom: 28px;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.45),
-      rgba(0,0,0,0)
-    );
-
-  pointer-events: none;
-}
-
-.hero-video-overlay p {
-  font-size: 0.74rem;
-  color: white;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  opacity: 0.9;
-}
-    
+    .hero-video-overlay p {
+      font-size: 0.74rem;
+      color: white;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
 
     .video-placeholder p { font-size: 0.74rem; color: var(--grey-3); letter-spacing: 0.14em; text-transform: uppercase; }
 
@@ -475,15 +401,13 @@ padding: 42px 48px 80px;  max-width: 900px;
     h2 {
       font-family: var(--serif);
       font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.12;
       margin-bottom: 32px;
       letter-spacing: -0.01em;
     }
-h2 em {
-  font-style: italic;
-  color: var(--blue-light);
-}
+    h2 .accent { color: var(--blue-light); }
+
     /* ── PROBLEM ── */
     #problem { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
 
@@ -509,14 +433,14 @@ h2 em {
 
     .steps { display: grid; grid-template-columns: repeat(3,1fr); border-left: 1px solid var(--grey-2); margin-top: 56px; }
     .step { padding: 44px 36px; border-right: 1px solid var(--grey-2); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
-    .step-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 400; color: white; line-height: 1; margin-bottom: 20px; font-style: italic; }
-    .step h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 10px; color: var(--white); }
+    .step-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; color: var(--blue-light); line-height: 1; margin-bottom: 20px; }
+    .step h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
     .step p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.8; }
 
     /* ── FOR WHO ── */
     #for-who { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
     .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 52px; }
-    .for-who-block h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 600; margin-bottom: 22px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid var(--grey-2); }
+    .for-who-block h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 22px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid var(--grey-2); }
     .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
     .check-list li { font-size: 0.88rem; color: var(--grey-4); padding-left: 20px; position: relative; line-height: 1.6; }
     .check-list.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--blue-light); font-weight: 500; }
@@ -535,89 +459,68 @@ h2 em {
 
     .t-heading-wrap { text-align: center; margin-bottom: 64px; }
 
-    /* video row */
     .t-videos {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-bottom: 16px;
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 16px;
+    }
 
-.t-video-item {
-  position: relative;
-  aspect-ratio: 16/9;
-  background: #000;
-  border: 1px solid var(--grey-2);
-  overflow: hidden;
-  border-radius: 16px;
-  cursor: pointer;
-}
+    .t-video-item {
+      position: relative;
+      aspect-ratio: 16/9;
+      background: #000;
+      border: 1px solid var(--grey-2);
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: pointer;
+    }
 
-.t-video-item video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background: #000;
-  display: block;
-}
+    .t-video-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background: #000;
+      display: block;
+    }
 
-.video-overlay {
-  position: absolute;
-  inset: 0;
+    .video-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15));
+      transition: opacity .25s ease;
+    }
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    .t-video-item.playing .video-overlay { opacity: 0; pointer-events: none; }
 
-  background:
-    linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15));
+    .play-btn {
+      width: 72px;
+      height: 72px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform .2s ease, background .2s ease;
+    }
 
-  transition: opacity .25s ease;
-}
+    .play-btn::before {
+      content: '';
+      margin-left: 4px;
+      width: 0;
+      height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 18px solid white;
+    }
 
-.t-video-item.playing .video-overlay {
-  opacity: 0;
-  pointer-events: none;
-}
+    .t-video-item:hover .play-btn { transform: scale(1.08); background: rgba(255,255,255,.16); }
 
-.play-btn {
-  width: 72px;
-  height: 72px;
-  border-radius: 999px;
-
-  background: rgba(255,255,255,.1);
-  backdrop-filter: blur(10px);
-
-  border: 1px solid rgba(255,255,255,.2);
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    transform .2s ease,
-    background .2s ease;
-}
-
-.play-btn::before {
-  content: '';
-
-  margin-left: 4px;
-
-  width: 0;
-  height: 0;
-
-  border-top: 12px solid transparent;
-  border-bottom: 12px solid transparent;
-  border-left: 18px solid white;
-}
-
-.t-video-item:hover .play-btn {
-  transform: scale(1.08);
-  background: rgba(255,255,255,.16);
-}
-
-    /* screenshot grid */
     .t-screenshots {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -634,14 +537,8 @@ h2 em {
 
     .t-shot:hover { transform: scale(1.02); border-color: var(--grey-3); }
 
-    .t-shot img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+    .t-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-    /* lightbox */
     .lightbox {
       display: none;
       position: fixed;
@@ -661,7 +558,7 @@ h2 em {
     #faq { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); }
     .faq-inner { max-width: 700px; margin: 0 auto; }
     .faq-item { border-bottom: 1px solid var(--grey-2); padding: 22px 0; }
-    .faq-q { font-family: var(--serif); font-size: 1.12rem; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--white); list-style: none; user-select: none; }
+    .faq-q { font-family: var(--serif); font-size: 1.12rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--white); list-style: none; user-select: none; }
     .faq-q::-webkit-details-marker { display: none; }
     .faq-icon { font-size: 1.2rem; color: var(--grey-3); flex-shrink: 0; transition: transform 0.28s; font-style: normal; font-family: var(--sans); }
     details[open] .faq-icon { transform: rotate(45deg); }
@@ -676,7 +573,7 @@ h2 em {
     /* ── FOOTER ── */
     footer { border-top: 1px solid var(--grey-2); padding: 44px 48px; display: flex; flex-direction: column; gap: 20px; }
     .footer-inner { max-width: 860px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
-    .footer-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; color: var(--white); }
+    .footer-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--white); }
     .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
     .footer-links a { font-size: 0.73rem; color: var(--grey-3); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
     .footer-links a:hover { color: var(--white); }
@@ -696,13 +593,12 @@ h2 em {
       nav { padding: 18px 20px; }
       .nav-logo { font-size: 1.05rem; }
       .nav-cta { padding: 8px 14px; font-size: 0.7rem; }
-#hero { padding: 36px 20px 60px; }     
- #problem, #for-who, #results, #booking-bottom { padding: 72px 20px; }
+      #hero { padding: 36px 20px 60px; }
+      #problem, #for-who, #results, #booking-bottom { padding: 72px 20px; }
       #system, #deliverables, #faq { padding: 72px 20px; }
       footer { padding: 36px 20px; }
       .step { padding: 32px 20px; }
       .deliverable-item { padding: 18px 16px; }
-      .stat-block { padding: 36px 20px; }
       .footer-inner { flex-direction: column; gap: 14px; }
     }
   </style>
@@ -711,86 +607,65 @@ h2 em {
 
   <!-- NAV -->
   <nav>
-<a href="/" class="nav-logo">Zen Acquisition™</a>
-<a href="#hero-cal" class="nav-cta">Book a Call</a>
+    <a href="/" class="nav-logo">Zen Acquisition™</a>
+    <a href="#hero-cal" class="nav-cta">Book a Call</a>
   </nav>
 
- <!-- PROGRESS BAR -->
-<div class="progress-wrap">
-
-  <div class="progress-top">
-    <span class="progress-label">
-      Step 1 of 2 in progress...
-    </span>
-
-    <span class="progress-percent">
-      60%
-    </span>
+  <!-- PROGRESS BAR -->
+  <div class="progress-wrap">
+    <div class="progress-top">
+      <span class="progress-label">Step 1 of 2 in progress...</span>
+      <span class="progress-percent">60%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
   </div>
-
-  <div class="progress-bar">
-    <div class="progress-fill"></div>
-  </div>
-
-</div>
 
   <!-- ═══════ HERO ═══════ -->
   <section id="hero">
-<p class="hero-sub reveal" style="transition-delay:.02s">
-  For agency owners, coaches & consultants
-</p>
+    <p class="hero-sub reveal" style="transition-delay:.02s">
+      A 75-day training program for agency owners, coaches & consultants
+    </p>
 
-<h1 class="reveal" style="transition-delay:.08s">
-  We Book <span class="highlight-blue">30 Qualified</span>
-  Appointments Into Your Calendar
-  In <span class="highlight-blue">30 Days.</span>
-</h1>
+    <h1 class="reveal" style="transition-delay:.08s">
+      We Train Your Team To Land <span class="accent">20 to 30</span>
+      High-Ticket Clients In <span class="accent">75 Days.</span>
+    </h1>
 
-<p class="hero-guarantee reveal" style="transition-delay:.14s">
-  Or you pay nothing.
-</p>
-
-
-    
+    <p class="hero-guarantee reveal" style="transition-delay:.14s">
+      Implement it as taught or get a full refund.
+    </p>
 
     <!-- VIDEO -->
-     <div class="hero-flow reveal" style="transition-delay:.26s">
+    <div class="hero-flow reveal" style="transition-delay:.26s">
+      <div class="flow-step" id="watch-video-btn">
+        <div class="flow-number">1</div>
+        <div class="flow-text">Watch The Video</div>
+      </div>
+      <div class="flow-divider"></div>
+      <div class="flow-step" id="book-call-btn">
+        <div class="flow-number">2</div>
+        <div class="flow-text">Book Your Enrollment Call</div>
+      </div>
+    </div>
 
-  <div class="flow-step" id="watch-video-btn">
-    <div class="flow-number">1</div>
-    <div class="flow-text">Watch The Video</div>
-  </div>
-
-  <div class="flow-divider"></div>
-
-  <div class="flow-step" id="book-call-btn">
-    <div class="flow-number">2</div>
-    <div class="flow-text">Book Your Strategy Call</div>
-  </div>
-
-</div>
-<div id="hero-video" class="hero-video-wrap reveal" style="transition-delay:.3s">
-
-  <!-- Wistia Scripts -->
-  <script src="https://fast.wistia.com/player.js" async></script>
-  <script src="https://fast.wistia.com/embed/mkb4gydpww.js" async type="module"></script>
-
-  <!-- Wistia Player -->
- <wistia-player
-  media-id="mkb4gydpww"
-  aspect="1.7777777777777777"
-  playsinline="true"
-  controls="true"
-  audio="true">
-</wistia-player>
-
-
-</div>
+    <div id="hero-video" class="hero-video-wrap reveal" style="transition-delay:.3s">
+      <script src="https://fast.wistia.com/player.js" async></script>
+      <script src="https://fast.wistia.com/embed/mkb4gydpww.js" async type="module"></script>
+      <wistia-player
+        media-id="mkb4gydpww"
+        aspect="1.7777777777777777"
+        playsinline="true"
+        controls="true"
+        audio="true">
+      </wistia-player>
+    </div>
 
     <!-- CTA -->
     <div class="hero-cta-block reveal" style="transition-delay:.38s">
-      <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
-      <span class="trust-note">Trusted by 20+ coaches and agency owners across India</span>
+      <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
+      <span class="trust-note">You pay once,the system and the skills stay with your team permanently</span>
     </div>
 
     <!-- CAL EMBED -->
@@ -807,7 +682,7 @@ h2 em {
   <section id="problem">
     <p class="section-label reveal">The Real Problem</p>
     <h2 class="reveal" style="transition-delay:.08s">
-      Most coaches don't have<br>a delivery problem.<br>They have <em>a pipeline problem.</em>
+      Most coaches don't have<br>a delivery problem.<br>They have <span class="accent">a pipeline problem.</span>
     </h2>
     <p class="problem-intro reveal" style="transition-delay:.14s">
       Every month looks different. Some months you're fully booked. Other months you're refreshing your inbox. And the worst part? You can't pinpoint why it keeps happening.
@@ -817,13 +692,13 @@ h2 em {
       <li class="reveal" style="transition-delay:.04s">Posting content and waiting for it to somehow convert into booked calls</li>
       <li class="reveal" style="transition-delay:.08s">Relying on referrals you can't predict, control, or scale</li>
       <li class="reveal" style="transition-delay:.12s">Jumping between strategies — cold DMs one week, LinkedIn the next, email the week after</li>
-      <li class="reveal" style="transition-delay:.16s">Doing everything yourself because hiring feels like a risk you can't justify yet</li>
+      <li class="reveal" style="transition-delay:.16s">Paying an agency every month for pipeline you never actually own</li>
       <li class="reveal" style="transition-delay:.20s">Closing well when people show up — the problem is getting them to show up</li>
       <li class="reveal" style="transition-delay:.24s">Watching other agencies scale while your lead flow stays inconsistent</li>
     </ul>
     <p class="problem-closer reveal">
-      The gap between where you are and where you want to be isn't your offer. It isn't your skills. It isn't your pricing. It's the absence of one thing — <strong>a predictable, repeatable system that puts qualified buyers in front of you every single week without you having to chase them.</strong><br><br>
-      That's not a you problem. That's a system problem. And systems can be fixed.
+      The gap between where you are and where you want to be isn't your offer. It isn't your skills. It isn't your pricing. It's the absence of one thing — <strong>a team that knows how to run outbound and land high-ticket clients predictably, without depending on referrals, paid ads, or a rented agency.</strong><br><br>
+      That's not a you problem. That's a skills-and-systems gap inside your team. And that's exactly what we install over 75 days — not by running it for you, but by training your team to run it themselves, so you never have to pay another agency again.
     </p>
   </section>
 
@@ -834,27 +709,27 @@ h2 em {
     <div class="system-inner">
       <p class="section-label reveal">How It Works</p>
       <h2 class="reveal" style="transition-delay:.08s">
-        We Install a Done-For-You<br><em>Appointment Engine</em><br>Into Your Business.
+        We Train Your Team To Run<br>The Exact <span class="accent">Appointment Engine</span><br>We Use, In 75 Days.
       </h2>
       <div class="steps">
         <div class="step reveal" style="transition-delay:.00s">
           <div class="step-num">01</div>
           <h3>Identify</h3>
-          <p>We map your ideal client profile with surgical precision — industry, revenue range, pain point, buying trigger. No spray and pray.</p>
+          <p>We teach your team to map your ideal client profile with surgical precision — industry, revenue range, pain point, buying trigger. No spray and pray.</p>
         </div>
         <div class="step reveal" style="transition-delay:.1s">
           <div class="step-num">02</div>
           <h3>Outreach</h3>
-          <p>We build and run a multi-channel outbound system — cold email, LinkedIn, cold calling — that puts your offer in front of decision makers daily.</p>
+          <p>We train your team to build and run a multi-channel outbound system — cold email, LinkedIn, cold calling — that puts your offer in front of decision makers daily.</p>
         </div>
         <div class="step reveal" style="transition-delay:.2s">
           <div class="step-num">03</div>
           <h3>Book</h3>
-          <p>We qualify every lead before they hit your calendar. You only speak to people who have a problem you solve and budget to pay for it.</p>
+          <p>We show your team how to qualify every lead before it hits the calendar. By day 75, they're running the whole engine without us.</p>
         </div>
       </div>
       <div style="margin-top:48px" class="reveal">
-        <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+        <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
       </div>
     </div>
   </section>
@@ -863,78 +738,37 @@ h2 em {
   <section id="results">
     <div class="t-heading-wrap reveal">
       <p class="section-label">Results From The System</p>
-      <h2 style="margin-bottom:12px">Real clients.<br><em>Real outcomes.</em></h2>
+      <h2 style="margin-bottom:12px">Real clients.<br><span class="accent">Real outcomes.</span></h2>
       <p style="font-size:0.9rem;color:var(--grey-4);max-width:480px;margin:0 auto">20+ coaches and agency owners across India have used the system. Here's what they said.</p>
     </div>
 
-    <!-- 3 VIDEO TESTIMONIALS -->
     <div class="t-videos reveal" style="transition-delay:.1s">
-
-  <div class="t-video-item" onclick="playVideo(this)">
-    <video preload="metadata" playsinline>
-      <source src="t7.mp4" type="video/mp4">
-    </video>
-
-    <div class="video-overlay">
-      <div class="play-btn"></div>
+      <div class="t-video-item" onclick="playVideo(this)">
+        <video preload="metadata" playsinline><source src="t7.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"></div></div>
+      </div>
+      <div class="t-video-item" onclick="playVideo(this)">
+        <video preload="metadata" playsinline><source src="t8.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"></div></div>
+      </div>
+      <div class="t-video-item" onclick="playVideo(this)">
+        <video preload="metadata" playsinline><source src="t9.mp4" type="video/mp4"></video>
+        <div class="video-overlay"><div class="play-btn"></div></div>
+      </div>
     </div>
-  </div>
 
-  <div class="t-video-item" onclick="playVideo(this)">
-    <video preload="metadata" playsinline>
-      <source src="t8.mp4" type="video/mp4">
-    </video>
-
-    <div class="video-overlay">
-      <div class="play-btn"></div>
-    </div>
-  </div>
-
-  <div class="t-video-item" onclick="playVideo(this)">
-    <video preload="metadata" playsinline>
-      <source src="t9.mp4" type="video/mp4">
-    </video>
-
-    <div class="video-overlay">
-      <div class="play-btn"></div>
-    </div>
-  </div>
-
-</div>
-
-</div>
-
-</div>
-</div>
-
-    <!-- 6 SCREENSHOT TESTIMONIALS -->
     <div class="t-screenshots reveal" style="transition-delay:.2s">
-
-      <!-- Replace testimonial1.jpg etc. with your actual filenames -->
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t1.webp" alt="Client result" loading="lazy" />
-      </div>
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t2.webp" alt="Client result" loading="lazy" />
-      </div>
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t3.webp" alt="Client result" loading="lazy" />
-      </div>
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t4.webp" alt="Client result" loading="lazy" />
-      </div>
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t5.webp" alt="Client result" loading="lazy" />
-      </div>
-      <div class="t-shot" onclick="openLightbox(this)">
-        <img src="t6.webp" alt="Client result" loading="lazy" />
-      </div>
-
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t1.webp" alt="Client result" loading="lazy" /></div>
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t2.webp" alt="Client result" loading="lazy" /></div>
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t3.webp" alt="Client result" loading="lazy" /></div>
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t4.webp" alt="Client result" loading="lazy" /></div>
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t5.webp" alt="Client result" loading="lazy" /></div>
+      <div class="t-shot" onclick="openLightbox(this)"><img src="t6.webp" alt="Client result" loading="lazy" /></div>
     </div>
 
     <div style="text-align:center;margin-top:52px" class="reveal" style="transition-delay:.28s">
-      <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
-      <p class="trust-note" style="margin-top:14px">Trusted by 20+ coaches and agency owners across India</p>
+      <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
+      <p class="trust-note" style="margin-top:14px">Helping coaches and agencies train their own outbound teams</p>
     </div>
   </section>
 
@@ -949,23 +783,23 @@ h2 em {
   <!-- FOR WHO -->
   <section id="for-who">
     <p class="section-label reveal">Who This Is For</p>
-    <h2 class="reveal" style="transition-delay:.08s">The right fit<br><em>matters.</em></h2>
+    <h2 class="reveal" style="transition-delay:.08s">The right fit<br><span class="accent">matters.</span></h2>
     <div class="for-who-grid">
       <div class="for-who-block reveal" style="transition-delay:.1s">
         <h3>This Is For You If</h3>
         <ul class="check-list yes">
           <li>You run a coaching business or agency doing at least ₹2L+/month</li>
           <li>You have a proven offer but inconsistent lead flow</li>
-          <li>You're ready to scale but don't want to hire a full sales team</li>
-          <li>You've tried ads or content and want something more predictable</li>
+          <li>You want your own team running outbound in-house — not renting it every month</li>
+          <li>You've tried ads or content and want something more predictable and permanent</li>
         </ul>
       </div>
       <div class="for-who-block reveal" style="transition-delay:.2s">
         <h3>This Is NOT For You If</h3>
         <ul class="check-list no">
           <li>You don't have an offer that has closed at least one paying client</li>
-          <li>You're looking for a magic button with zero involvement</li>
-          <li>You can't handle 30 calls in a month operationally</li>
+          <li>You're looking for a magic button with zero involvement from your team</li>
+          <li>You can't commit your team to the 75-day training and implementation window</li>
         </ul>
       </div>
     </div>
@@ -975,21 +809,21 @@ h2 em {
   <section id="deliverables">
     <div class="deliverables-inner">
       <p class="section-label reveal">What You Get</p>
-      <h2 class="reveal" style="transition-delay:.08s">Everything you need.<br><em>Nothing you don't.</em></h2>
+      <h2 class="reveal" style="transition-delay:.08s">Everything your team needs.<br><span class="accent">Nothing you don't.</span></h2>
       <div class="deliverables-grid reveal" style="transition-delay:.16s">
-        <div class="deliverable-item"><div class="d-dot"></div><p>Done-for-you outbound system built and managed for you</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Ideal client profile research and targeting</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Cold email + LinkedIn + calling sequences</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Lead qualification before any call hits your calendar</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly reporting on pipeline activity</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Direct access to your account manager</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>A 75-day live training and implementation program for your team</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Ideal client profile framework and targeting playbook, yours to keep</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Cold email + LinkedIn + calling scripts and sequences, fully editable and owned by you</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Lead qualification framework so your team only books calls worth taking</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly live coaching and pipeline reviews during the 75 days</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Direct access to your trainer throughout the program</p></div>
         <div class="deliverable-item" style="grid-column:1/-1">
           <div class="d-dot"></div>
-          <p><strong style="color:var(--white);font-weight:500">30 qualified show-up appointments in 30 days — guaranteed.</strong></p>
+          <p><strong style="color:var(--white);font-weight:500">20 to 30 qualified show-up appointments in 75 days — guaranteed, when you implement the program as taught. No ongoing retainer after that. Your team runs it, permanently.</strong></p>
         </div>
       </div>
       <div style="margin-top:48px" class="reveal">
-        <a href="#hero-cal" class="btn-primary">Schedule Your Free Strategy Call</a>
+        <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
       </div>
     </div>
   </section>
@@ -998,31 +832,36 @@ h2 em {
   <section id="faq">
     <div class="faq-inner">
       <p class="section-label reveal">FAQ</p>
-      <h2 class="reveal" style="transition-delay:.08s;margin-bottom:44px">Common<br><em>Questions.</em></h2>
+      <h2 class="reveal" style="transition-delay:.08s;margin-bottom:44px">Common<br><span class="accent">Questions.</span></h2>
+
+      <details class="faq-item reveal">
+        <summary class="faq-q">How is this different from hiring an agency? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">An agency runs your pipeline for you, every month, for as long as you keep paying. This is a one-time, 75-day training program — we teach your team to run the exact system we use, so by the end you own it outright and never have to pay an agency again.</p>
+      </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">How quickly do we start seeing results? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">Most clients start seeing qualified calls within the first 7–10 business days. The full system ramps up over 30 days, with weeks two and three typically being the strongest.</p>
+        <p class="faq-a">Most teams start seeing qualified calls within the first 7–10 business days of implementing what they're taught. The full system ramps up over 75 days, with the middle stretch typically being the strongest.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">What do I need to have ready before starting? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">A proven offer that has closed at least one paying client, a calendar link, and 30–60 minutes for our onboarding call. We handle everything else — copy, targeting, sequences, execution.</p>
+        <p class="faq-a">A proven offer that has closed at least one paying client, someone on your team who can own outbound, and a calendar link. We teach your team everything else — copy, targeting, sequences, execution — so they're running it independently well before day 75.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">Do you run ads? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">No. We run a fully organic outbound system — cold email, LinkedIn, and calling. No ad spend required. That's what makes the results predictable and the ROI clean.</p>
+        <p class="faq-a">No. We train a fully organic outbound system — cold email, LinkedIn, and calling. No ad spend required. That's what makes the results predictable and the ROI clean.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">What industries do you work with? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">Primarily coaches and agency owners in India — business coaching, marketing agencies, consulting, and professional services. If you have a high-ticket offer, we can make it work.</p>
+        <p class="faq-a">Primarily coaches and agency owners in India — business coaching, marketing agencies, consulting, and professional services. If you have a high-ticket offer and a team willing to be trained, we can make it work.</p>
       </details>
 
       <details class="faq-item reveal">
-        <summary class="faq-q">What happens on the strategy call? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and goals. We'll map out a custom outbound strategy and tell you exactly what we'd do — whether you work with us or not.</p>
+        <summary class="faq-q">What happens on the enrollment call? <span class="faq-icon">+</span></summary>
+        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and team. We'll walk through exactly what the 75-day program covers, how the guarantee works, and whether it's the right fit — whether you enroll or not.</p>
       </details>
     </div>
   </section>
@@ -1031,10 +870,10 @@ h2 em {
   <section id="booking-bottom">
     <p class="section-label reveal">Book Your Call</p>
     <h2 class="reveal" style="transition-delay:.08s;margin-bottom:16px">
-      Ready to Fill<br><em>Your Calendar?</em>
+      Ready to Train<br><span class="accent">Your Team?</span>
     </h2>
     <p class="booking-intro reveal" style="transition-delay:.16s">
-      Pick a time below. No pressure, no pitch. Just a focused strategy conversation about your business.
+      Pick a time below. No pressure, no pitch. Just a focused conversation about your business and your team.
     </p>
     <div class="reveal" style="transition-delay:.22s">
       <a href="https://cal.com/zenacquisition/strategy" class="btn-primary" target="_blank" rel="noopener">Open Booking Page ↗</a>
@@ -1047,26 +886,34 @@ h2 em {
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
-<div>
-  <div class="footer-brand">Zen Acquisition™</div>
-  <div style="font-size:0.72rem;color:var(--grey-3);margin-top:6px">
-    Proprietor: Sujit Samanta
-  </div>
-</div>      <div class="footer-links">
-  <a href="privacy-policy">Privacy Policy</a>
-  <a href="terms-and-conditions">Terms &amp; Conditions</a>
-  <a href="earning-disclaimer">Earnings Disclaimer</a>
-  <a href="https://cal.com/zenacquisition/strategy" target="_blank" rel="noopener">Book a Call</a>
-</div>
+      <div>
+        <div class="footer-brand">Zen Acquisition™</div>
+        <div style="font-size:0.72rem;color:var(--grey-3);margin-top:6px">
+          Proprietor: Sujit Samanta
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy-policy">Privacy Policy</a>
+        <a href="terms-and-conditions">Terms &amp; Conditions</a>
+        <a href="earning-disclaimer">Earnings Disclaimer</a>
+        <a href="https://cal.com/zenacquisition/strategy" target="_blank" rel="noopener">Book a Call</a>
+      </div>
+    </div>
+
+    <div style="margin-top:24px;font-size:0.78rem;color:var(--grey-4);line-height:1.8">
+      <strong style="color:var(--white);font-weight:500">Business Information</strong><br>
+      Legal Business Name: Zen Acquisition<br>
+      Proprietor: Sujit Samanta<br>
+      Business Type: Training, Consulting & Appointment Setting Services<br>
+      Location: West Bengal, India<br>
+      Contact Email: support@zenacquisition.com
     </div>
     <p class="footer-disclaimer">
-  Zen Acquisition is operated by Sujit Samanta.<br><br>
-
-  © 2026 Zen Acquisition. All rights reserved.
-  This website is not affiliated with Google, Facebook, or LinkedIn.
-  Results mentioned on this page are not typical and are not a guarantee of your results.
-  Individual outcomes depend on your offer, market, and execution.
-</p>
+      Zen Acquisition is operated by Sujit Samanta.<br><br>
+      © 2026 Zen Acquisition. All rights reserved.
+      This website is not affiliated with Google, Facebook, or LinkedIn.
+      The 20-30 client guarantee applies when the program is implemented as taught and is governed by the program terms and conditions provided at enrollment. General results and testimonials mentioned on this page are not typical and depend on your offer, market, and execution — see our Earnings Disclaimer.
+    </p>
   </footer>
 
   <!-- CAL.COM SCRIPTS -->
@@ -1096,7 +943,6 @@ h2 em {
       };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    /* Hero embed */
     Cal("init", "strategy", { origin: "https://app.cal.com" });
     Cal.ns.strategy("inline", {
       elementOrSelector: "#my-cal-inline-strategy",
@@ -1112,7 +958,6 @@ h2 em {
       "layout": "month_view"
     });
 
-    /* Bottom embed */
     Cal("init", "strategy-bottom", { origin: "https://app.cal.com" });
     Cal.ns["strategy-bottom"]("inline", {
       elementOrSelector: "#my-cal-inline-strategy-bottom",
@@ -1155,9 +1000,7 @@ h2 em {
 
   <script>
   function playVideo(card) {
-
     const allVideos = document.querySelectorAll('.t-video-item');
-
     allVideos.forEach(item => {
       if (item !== card) {
         const v = item.querySelector('video');
@@ -1165,9 +1008,7 @@ h2 em {
         item.classList.remove('playing');
       }
     });
-
     const video = card.querySelector('video');
-
     if (video.paused) {
       video.play();
       video.setAttribute('controls', true);
@@ -1177,68 +1018,26 @@ h2 em {
       card.classList.remove('playing');
     }
   }
-</script>
+  </script>
 
-
-<script>
-
-  /* STEP 1 — WATCH VIDEO */
-
-  document
-    .getElementById('watch-video-btn')
-    .addEventListener('click', async () => {
-
+  <script>
+    document.getElementById('watch-video-btn').addEventListener('click', async () => {
       const player = document.querySelector('wistia-player');
-
       if (!player) return;
-
-      /* scroll to video first */
-      document
-        .getElementById('hero-video')
-        .scrollIntoView({
-          behavior: 'smooth',
-          block: 'center'
-        });
-
-      /* slight delay for smoother UX */
+      document.getElementById('hero-video').scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(async () => {
-
         try {
-/* unmute first */
-player.muted = false;
-          /* play video */
+          player.muted = false;
           await player.play();
-
-          /* fullscreen */
-          if (player.requestFullscreen) {
-            player.requestFullscreen();
-          }
-
-        } catch(err) {
-          console.log(err);
-        }
-
+          if (player.requestFullscreen) player.requestFullscreen();
+        } catch(err) { console.log(err); }
       }, 700);
-
     });
 
-
-  /* STEP 2 — BOOK CALL */
-
-  document
-    .getElementById('book-call-btn')
-    .addEventListener('click', () => {
-
-      document
-        .getElementById('hero-cal')
-        .scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-
+    document.getElementById('book-call-btn').addEventListener('click', () => {
+      document.getElementById('hero-cal').scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-
-</script>
+  </script>
 
 </body>
 </html>
