@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zen Acquisition — Train Your Team To Land 20-30 Clients In 75 Days</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+<title>Zen Academy by Zen Acquisition™ — Train Your Team To Land 20-30 Clients In 90 Days</title>  
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -80,6 +80,11 @@
       color: var(--white);
       text-decoration: none;
     }
+    .nav-logo span {
+  color: var(--grey-4);
+  font-weight: 500;
+  font-size: 0.75em;
+}
 
     .nav-cta {
       display: inline-block;
@@ -436,6 +441,174 @@
     .step-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; color: var(--blue-light); line-height: 1; margin-bottom: 20px; }
     .step h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
     .step p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.8; }
+    .system-intro {
+  font-size: 0.96rem;
+  color: var(--grey-4);
+  max-width: 620px;
+  line-height: 1.8;
+  margin-top: -12px;
+}
+
+.system-results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--grey-2);
+  margin-top: 52px;
+}
+
+.system-result {
+  padding: 30px 24px;
+  border-right: 1px solid var(--grey-2);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.system-result:last-child {
+  border-right: none;
+}
+
+.system-result-number {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blue-light);
+}
+
+.system-result-label {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--grey-3);
+}
+
+.curriculum-heading {
+  margin-top: 90px;
+  margin-bottom: 32px;
+}
+
+.curriculum-heading h3 {
+  font-family: var(--serif);
+  font-size: 1.8rem;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.curriculum-heading p:last-child {
+  color: var(--grey-4);
+  font-size: 0.88rem;
+}
+
+.curriculum {
+  border-top: 1px solid var(--grey-2);
+}
+
+.curriculum-week {
+  border-bottom: 1px solid var(--grey-2);
+}
+
+.curriculum-week summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 58px 1fr 30px;
+  align-items: center;
+  gap: 18px;
+  padding: 24px 4px;
+  transition: background 0.2s ease;
+}
+
+.curriculum-week summary::-webkit-details-marker {
+  display: none;
+}
+
+.curriculum-week summary:hover {
+  background: rgba(255,255,255,.025);
+}
+
+.week-number {
+  font-family: var(--serif);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--blue-light);
+}
+
+.week-title {
+  font-family: var(--serif);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+}
+
+.week-icon {
+  font-size: 1.3rem;
+  color: var(--grey-3);
+  text-align: center;
+  transition: transform 0.25s ease;
+}
+
+.curriculum-week[open] .week-icon {
+  transform: rotate(45deg);
+  color: var(--blue-light);
+}
+
+.week-content {
+  padding: 0 48px 28px 76px;
+  max-width: 700px;
+}
+
+.week-content p {
+  font-size: 0.88rem;
+  color: var(--grey-4);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.week-content ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+
+.week-content li {
+  font-size: 0.78rem;
+  color: var(--grey-4);
+  position: relative;
+  padding-left: 16px;
+}
+
+.week-content li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--blue-light);
+}
+
+.system-guarantee {
+  margin-top: 44px;
+  padding: 28px 32px;
+  border: 1px solid rgba(59,130,246,.25);
+  background: linear-gradient(
+    135deg,
+    rgba(26,86,219,.10),
+    rgba(59,130,246,.03)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.system-guarantee strong {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--white);
+}
+
+.system-guarantee span {
+  font-size: 0.84rem;
+  color: var(--blue-light);
+}
 
     /* ── FOR WHO ── */
     #for-who { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
@@ -581,6 +754,26 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 860px) {
+      .system-results {
+  grid-template-columns: 1fr;
+}
+
+.system-result {
+  border-right: none;
+  border-bottom: 1px solid var(--grey-2);
+}
+
+.system-result:last-child {
+  border-bottom: none;
+}
+
+.week-content {
+  padding-left: 20px;
+}
+
+.week-content ul {
+  grid-template-columns: 1fr;
+}
       .steps { grid-template-columns: 1fr; border-left: none; }
       .step { border-left: 1px solid var(--grey-2); }
       .for-who-grid { grid-template-columns: 1fr; }
@@ -590,6 +783,31 @@
     }
 
     @media (max-width: 600px) {
+      .curriculum-heading {
+  margin-top: 64px;
+}
+
+.curriculum-week summary {
+  grid-template-columns: 42px 1fr 24px;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.week-title {
+  font-size: 0.9rem;
+}
+
+.week-content {
+  padding: 0 20px 24px 52px;
+}
+
+.system-result {
+  padding: 24px 20px;
+}
+
+.system-guarantee {
+  padding: 24px 20px;
+}
       nav { padding: 18px 20px; }
       .nav-logo { font-size: 1.05rem; }
       .nav-cta { padding: 8px 14px; font-size: 0.7rem; }
@@ -607,15 +825,15 @@
 
   <!-- NAV -->
   <nav>
-    <a href="/" class="nav-logo">Zen Acquisition™</a>
-    <a href="#hero-cal" class="nav-cta">Book a Call</a>
+<a href="/" class="nav-logo">Zen Academy <span>by Zen Acquisition™</span></a>    
+<a href="#hero-cal" class="nav-cta">Book a Call</a>
   </nav>
 
   <!-- PROGRESS BAR -->
   <div class="progress-wrap">
     <div class="progress-top">
-      <span class="progress-label">Step 1 of 2 in progress...</span>
-      <span class="progress-percent">60%</span>
+      <span class="progress-label">Step 1 of 2 — Watch The Video</span>
+<span class="progress-percent">60%</span>
     </div>
     <div class="progress-bar">
       <div class="progress-fill"></div>
@@ -625,12 +843,12 @@
   <!-- ═══════ HERO ═══════ -->
   <section id="hero">
     <p class="hero-sub reveal" style="transition-delay:.02s">
-      A 75-day training program for agency owners, coaches & consultants
+      A 90-day training program for agency owners, coaches & consultants
     </p>
 
     <h1 class="reveal" style="transition-delay:.08s">
-      We Train Your Team To Land <span class="accent">20 to 30</span>
-      High-Ticket Clients In <span class="accent">75 Days.</span>
+     We Train Your Team To Land <span class="accent">20 to 30</span>
+High-Ticket Clients In <span class="accent">90 Days.</span>
     </h1>
 
     <p class="hero-guarantee reveal" style="transition-delay:.14s">
@@ -665,7 +883,6 @@
     <!-- CTA -->
     <div class="hero-cta-block reveal" style="transition-delay:.38s">
       <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
-      <span class="trust-note">You pay once,the system and the skills stay with your team permanently</span>
     </div>
 
     <!-- CAL EMBED -->
@@ -698,41 +915,11 @@
     </ul>
     <p class="problem-closer reveal">
       The gap between where you are and where you want to be isn't your offer. It isn't your skills. It isn't your pricing. It's the absence of one thing — <strong>a team that knows how to run outbound and land high-ticket clients predictably, without depending on referrals, paid ads, or a rented agency.</strong><br><br>
-      That's not a you problem. That's a skills-and-systems gap inside your team. And that's exactly what we install over 75 days — not by running it for you, but by training your team to run it themselves, so you never have to pay another agency again.
+      That's not a you problem. That's a skills-and-systems gap inside your team. And that's exactly what we install over 90 days — not by running it for you, but by training your team to run it themselves, so you never have to pay another agency again.
     </p>
   </section>
 
   <hr class="divider" />
-
-  <!-- SYSTEM -->
-  <section id="system">
-    <div class="system-inner">
-      <p class="section-label reveal">How It Works</p>
-      <h2 class="reveal" style="transition-delay:.08s">
-        We Train Your Team To Run<br>The Exact <span class="accent">Appointment Engine</span><br>We Use, In 75 Days.
-      </h2>
-      <div class="steps">
-        <div class="step reveal" style="transition-delay:.00s">
-          <div class="step-num">01</div>
-          <h3>Identify</h3>
-          <p>We teach your team to map your ideal client profile with surgical precision — industry, revenue range, pain point, buying trigger. No spray and pray.</p>
-        </div>
-        <div class="step reveal" style="transition-delay:.1s">
-          <div class="step-num">02</div>
-          <h3>Outreach</h3>
-          <p>We train your team to build and run a multi-channel outbound system — cold email, LinkedIn, cold calling — that puts your offer in front of decision makers daily.</p>
-        </div>
-        <div class="step reveal" style="transition-delay:.2s">
-          <div class="step-num">03</div>
-          <h3>Book</h3>
-          <p>We show your team how to qualify every lead before it hits the calendar. By day 75, they're running the whole engine without us.</p>
-        </div>
-      </div>
-      <div style="margin-top:48px" class="reveal">
-        <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
-      </div>
-    </div>
-  </section>
 
   <!-- TESTIMONIALS -->
   <section id="results">
@@ -772,6 +959,380 @@
     </div>
   </section>
 
+
+<!-- ═══════ 90-DAY SYSTEM ═══════ -->
+<section id="system">
+  <div class="system-inner">
+
+    <p class="section-label reveal">How It Works</p>
+
+    <h2 class="reveal" style="transition-delay:.08s">
+      We Train Your Team To Run<br>
+      The Exact <span class="accent">Appointment Engine</span><br>
+      We Use, In <span class="accent">90 Days.</span>
+    </h2>
+
+    <p class="system-intro reveal" style="transition-delay:.14s">
+      A complete 90-day implementation program designed to take your team
+      from inconsistent outreach to a trained, repeatable client acquisition
+      system they can run independently.
+    </p>
+
+    <div class="steps">
+
+      <div class="step reveal" style="transition-delay:.00s">
+        <div class="step-num">01</div>
+        <h3>Foundation</h3>
+        <p>
+          We identify your ideal clients, sharpen your positioning,
+          build your targeting criteria, and establish the foundation
+          your team needs before outreach begins.
+        </p>
+      </div>
+
+      <div class="step reveal" style="transition-delay:.10s">
+        <div class="step-num">02</div>
+        <h3>Outbound</h3>
+        <p>
+          Your team learns the complete outbound engine — lead sourcing,
+          cold email, LinkedIn, cold calling, messaging, follow-up,
+          and daily execution.
+        </p>
+      </div>
+
+      <div class="step reveal" style="transition-delay:.20s">
+        <div class="step-num">03</div>
+        <h3>Mastery</h3>
+        <p>
+          We review real conversations, fix objections, improve qualification,
+          increase booking rates, and train your team until they can operate
+          the system without depending on us.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="system-results reveal" style="transition-delay:.24s">
+
+      <div class="system-result">
+        <span class="system-result-number">90</span>
+        <span class="system-result-label">Days of Implementation</span>
+      </div>
+
+      <div class="system-result">
+        <span class="system-result-number">13</span>
+        <span class="system-result-label">Weeks of Training</span>
+      </div>
+
+      <div class="system-result">
+        <span class="system-result-number">20–30</span>
+        <span class="system-result-label">Target Client Outcomes</span>
+      </div>
+
+    </div>
+
+    <div class="curriculum-heading reveal" style="transition-delay:.28s">
+      <p class="section-label">90-Day Curriculum</p>
+      <h3>What Your Team Will Learn</h3>
+      <p>
+        Expand each week to see exactly what is covered during the
+        90-day implementation.
+      </p>
+    </div>
+
+    <div class="curriculum reveal" style="transition-delay:.32s">
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">01</span>
+          <span class="week-title">Foundation & Client Acquisition Strategy</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Establish the foundation for the acquisition system. Define the
+            business model, offer, ideal client profile, target market,
+            acquisition goals, and current pipeline.
+          </p>
+          <ul>
+            <li>Ideal Client Profile</li>
+            <li>Market & niche selection</li>
+            <li>Offer positioning</li>
+            <li>Client acquisition goals</li>
+            <li>Baseline pipeline audit</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">02</span>
+          <span class="week-title">Prospecting Psychology & Outreach Fundamentals</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Build the mindset and fundamentals required for consistent
+            outbound execution without relying on motivation or referrals.
+          </p>
+          <ul>
+            <li>Outbound psychology</li>
+            <li>Understanding buyer intent</li>
+            <li>Prospecting fundamentals</li>
+            <li>Common outreach mistakes</li>
+            <li>Building an execution routine</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">03</span>
+          <span class="week-title">Lead Sourcing & Targeting</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Teach your team how to consistently identify and build lists of
+            qualified prospects instead of relying on random lead lists.
+          </p>
+          <ul>
+            <li>Lead sourcing</li>
+            <li>Target account identification</li>
+            <li>Decision-maker research</li>
+            <li>Lead qualification criteria</li>
+            <li>Building the prospect database</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">04</span>
+          <span class="week-title">Messaging, Scripts & Outreach Infrastructure</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Build the actual communication assets your team will use to
+            start conversations with qualified prospects.
+          </p>
+          <ul>
+            <li>Cold email scripts</li>
+            <li>LinkedIn outreach</li>
+            <li>Cold calling scripts</li>
+            <li>Follow-up sequences</li>
+            <li>Personalization framework</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">05</span>
+          <span class="week-title">Live Outreach Execution</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Your team begins executing the system against real prospects
+            while receiving live feedback and correction.
+          </p>
+          <ul>
+            <li>Daily prospecting activity</li>
+            <li>Cold outreach execution</li>
+            <li>Call practice</li>
+            <li>Message testing</li>
+            <li>Activity tracking</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">06</span>
+          <span class="week-title">Follow-Up & Appointment Generation</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Turn initial conversations into consistent follow-up systems
+            and qualified appointments.
+          </p>
+          <ul>
+            <li>Follow-up psychology</li>
+            <li>Multi-touch sequences</li>
+            <li>Appointment setting</li>
+            <li>Lead qualification</li>
+            <li>Calendar management</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">07</span>
+          <span class="week-title">First Performance Checkpoint</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Review the team's real-world performance and identify the
+            highest-impact bottlenecks in the acquisition engine.
+          </p>
+          <ul>
+            <li>Pipeline review</li>
+            <li>Call review</li>
+            <li>Message performance</li>
+            <li>Conversion analysis</li>
+            <li>Corrective action plan</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">08</span>
+          <span class="week-title">Objection Handling & Conversation Mastery</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Train the team to handle resistance confidently and keep
+            qualified conversations moving forward.
+          </p>
+          <ul>
+            <li>Common objections</li>
+            <li>Price objections</li>
+            <li>Timing objections</li>
+            <li>Authority objections</li>
+            <li>Conversation control</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">09</span>
+          <span class="week-title">Optimization & Conversion Improvement</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Use real campaign data to improve targeting, messaging,
+            activity levels, qualification, and booking performance.
+          </p>
+          <ul>
+            <li>Campaign analysis</li>
+            <li>Conversion optimization</li>
+            <li>Message iteration</li>
+            <li>Lead quality improvement</li>
+            <li>Pipeline optimization</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">10</span>
+          <span class="week-title">Advanced Calling & Sales Conversation Skills</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Develop stronger live conversation skills through repeated
+            practice, call reviews, roleplay, and advanced objection handling.
+          </p>
+          <ul>
+            <li>Advanced cold calling</li>
+            <li>Conversation control</li>
+            <li>Discovery questions</li>
+            <li>Qualification</li>
+            <li>Advanced roleplay</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">11</span>
+          <span class="week-title">Second Performance Checkpoint</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Conduct a second deep performance review using real campaign
+            data and recorded conversations.
+          </p>
+          <ul>
+            <li>Pipeline performance review</li>
+            <li>Call scoring</li>
+            <li>Booking-rate analysis</li>
+            <li>Team performance review</li>
+            <li>Final optimization plan</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">12</span>
+          <span class="week-title">Systemization & Team Independence</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Turn the training into a repeatable internal process that can
+            continue operating without daily external supervision.
+          </p>
+          <ul>
+            <li>Outbound SOP creation</li>
+            <li>Team responsibilities</li>
+            <li>Daily & weekly KPIs</li>
+            <li>Management dashboards</li>
+            <li>Internal quality control</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="curriculum-week">
+        <summary>
+          <span class="week-number">13</span>
+          <span class="week-title">Final Mastery & 90-Day Independence</span>
+          <span class="week-icon">+</span>
+        </summary>
+        <div class="week-content">
+          <p>
+            Complete the final performance review and ensure your team can
+            independently operate, measure, optimize, and scale the
+            appointment engine.
+          </p>
+          <ul>
+            <li>Final performance checkpoint</li>
+            <li>Full system review</li>
+            <li>Team competency assessment</li>
+            <li>90-day acquisition roadmap</li>
+            <li>Long-term operating system</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="system-guarantee reveal" style="transition-delay:.36s">
+      <strong>By Day 90, your team doesn't just understand the system.</strong>
+      <span>They know how to run it.</span>
+    </div>
+
+    <div style="margin-top:48px" class="reveal">
+      <a href="#hero-cal" class="btn-primary">
+        Schedule Your Free Enrollment Call
+      </a>
+    </div>
+
+  </div>
+</section>
+
   <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <button class="lightbox-close" onclick="closeLightbox()">×</button>
@@ -799,7 +1360,7 @@
         <ul class="check-list no">
           <li>You don't have an offer that has closed at least one paying client</li>
           <li>You're looking for a magic button with zero involvement from your team</li>
-          <li>You can't commit your team to the 75-day training and implementation window</li>
+          <li>You can't commit your team to the 90-day training and implementation window</li>
         </ul>
       </div>
     </div>
@@ -809,17 +1370,20 @@
   <section id="deliverables">
     <div class="deliverables-inner">
       <p class="section-label reveal">What You Get</p>
-      <h2 class="reveal" style="transition-delay:.08s">Everything your team needs.<br><span class="accent">Nothing you don't.</span></h2>
+<h2 class="reveal" style="transition-delay:.08s">
+  Everything your team needs<br>
+  to own acquisition in <span class="accent">90 days.</span>
+</h2>
       <div class="deliverables-grid reveal" style="transition-delay:.16s">
-        <div class="deliverable-item"><div class="d-dot"></div><p>A 75-day live training and implementation program for your team</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>A 90-day live training and implementation program for your team</p></div>
         <div class="deliverable-item"><div class="d-dot"></div><p>Ideal client profile framework and targeting playbook, yours to keep</p></div>
         <div class="deliverable-item"><div class="d-dot"></div><p>Cold email + LinkedIn + calling scripts and sequences, fully editable and owned by you</p></div>
         <div class="deliverable-item"><div class="d-dot"></div><p>Lead qualification framework so your team only books calls worth taking</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly live coaching and pipeline reviews during the 75 days</p></div>
+        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly live coaching and pipeline reviews during the 90 days</p></div>
         <div class="deliverable-item"><div class="d-dot"></div><p>Direct access to your trainer throughout the program</p></div>
         <div class="deliverable-item" style="grid-column:1/-1">
           <div class="d-dot"></div>
-          <p><strong style="color:var(--white);font-weight:500">20 to 30 qualified show-up appointments in 75 days — guaranteed, when you implement the program as taught. No ongoing retainer after that. Your team runs it, permanently.</strong></p>
+          <p><strong style="color:var(--white);font-weight:500">20 to 30 qualified show-up appointments in 90 days — guaranteed, when you implement the program as taught. No ongoing retainer after that. Your team runs it, permanently.</strong></p>
         </div>
       </div>
       <div style="margin-top:48px" class="reveal">
@@ -836,17 +1400,17 @@
 
       <details class="faq-item reveal">
         <summary class="faq-q">How is this different from hiring an agency? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">An agency runs your pipeline for you, every month, for as long as you keep paying. This is a one-time, 75-day training program — we teach your team to run the exact system we use, so by the end you own it outright and never have to pay an agency again.</p>
+        <p class="faq-a">An agency runs your pipeline for you, every month, for as long as you keep paying. This is a one-time, 90-day training program — we teach your team to run the exact system we use, so by the end you own it outright and never have to pay an agency again.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">How quickly do we start seeing results? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">Most teams start seeing qualified calls within the first 7–10 business days of implementing what they're taught. The full system ramps up over 75 days, with the middle stretch typically being the strongest.</p>
+        <p class="faq-a">Most teams start seeing qualified calls within the first 7–10 business days of implementing what they're taught. The full system ramps up over 90 days, with the middle stretch typically being the strongest.</p>
       </details>
 
       <details class="faq-item reveal">
         <summary class="faq-q">What do I need to have ready before starting? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">A proven offer that has closed at least one paying client, someone on your team who can own outbound, and a calendar link. We teach your team everything else — copy, targeting, sequences, execution — so they're running it independently well before day 75.</p>
+        <p class="faq-a">A proven offer that has closed at least one paying client, someone on your team who can own outbound, and a calendar link. We teach your team everything else — copy, targeting, sequences, execution — so they're running it independently well before day 90.</p>
       </details>
 
       <details class="faq-item reveal">
@@ -861,7 +1425,7 @@
 
       <details class="faq-item reveal">
         <summary class="faq-q">What happens on the enrollment call? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and team. We'll walk through exactly what the 75-day program covers, how the guarantee works, and whether it's the right fit — whether you enroll or not.</p>
+        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and team. We'll walk through exactly what the 90-day program covers, how the guarantee works, and whether it's the right fit — whether you enroll or not.</p>
       </details>
     </div>
   </section>
@@ -889,7 +1453,8 @@
       <div>
         <div class="footer-brand">Zen Acquisition™</div>
         <div style="font-size:0.72rem;color:var(--grey-3);margin-top:6px">
-          Proprietor: Sujit Samanta
+          Proprietor:
+          Sujit Samanta
         </div>
       </div>
       <div class="footer-links">
