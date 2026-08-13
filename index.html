@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Zen Acquisition™ — business education, systems and practical resources for founders at every stage." />
+  <title>Zen Acquisition™ | Build Better. Grow Smarter.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #050505;
+      --black-2: #0b0b0b;
+      --white: #f7f7f3;
+      --muted: #b7b7b0;
+      --line: rgba(255,255,255,.13);
+      --green: #19a900;
+      --green-bright: #24c80a;
+      --green-soft: rgba(25,169,0,.12);
+      --max: 1220px;
+      --serif: 'Playfair Display', Georgia, serif;
+      --sans: 'DM Sans', Arial, sans-serif;
+
+      /* spacing scale — used consistently for section/component rhythm */
+      --sp-1: 8px;
+      --sp-2: 14px;
+      --sp-3: 20px;
+      --sp-4: 28px;
+      --sp-5: 40px;
+      --sp-6: 56px;
+      --sp-7: 80px;
+      --sp-8: 110px;
+      --sp-9: 130px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--sans);
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+
+    :focus-visible {
+      outline: 2px solid var(--green-bright);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { transition: none; opacity: 1; transform: none; }
+      * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 100;
+      opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+    }
+
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      border-bottom: 1px solid transparent;
+      transition: .3s ease;
+    }
+    .nav.scrolled {
+      background: rgba(5,5,5,.86);
+      backdrop-filter: blur(18px);
+      border-color: var(--line);
+    }
+    .nav-inner {
+      max-width: var(--max);
+      height: 82px;
+      margin: auto;
+      padding: 0 var(--sp-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .brand {
+      font-family: var(--serif);
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+    .brand sup { font-family: var(--sans); font-size: 8px; vertical-align: top; margin-left: 2px; }
+    .nav-links { display: flex; align-items: center; gap: 34px; font-size: 13px; font-weight: 600; }
+    .nav-links a { opacity: .82; transition: .2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible { opacity: 1; color: var(--green-bright); }
+    .nav-cta {
+      padding: 12px 18px;
+      border: 1px solid rgba(25,169,0,.65);
+      color: white !important;
+      opacity: 1 !important;
+      transition: .25s ease;
+    }
+    .nav-cta:hover { background: var(--green); border-color: var(--green); }
+    .menu {
+      display: none;
+      border: 0;
+      background: none;
+      color: white;
+      font-size: 22px;
+      line-height: 1;
+      padding: 8px;
+      cursor: pointer;
+    }
+    .menu[aria-expanded="true"] { color: var(--green-bright); }
+
+    .hero {
+      min-height: 880px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 22%, rgba(25,169,0,.10), transparent 32%),
+        linear-gradient(180deg, #080808 0%, #050505 75%);
+    }
+    .hero:before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: .18;
+      background:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 72px 72px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    .hero-orb {
+      position: absolute;
+      width: 620px;
+      height: 620px;
+      border-radius: 50%;
+      right: -220px;
+      top: 100px;
+      background: radial-gradient(circle, rgba(25,169,0,.12), transparent 68%);
+      filter: blur(20px);
+    }
+    .hero-inner {
+      width: 100%;
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 145px var(--sp-4) var(--sp-8);
+      position: relative;
+      z-index: 2;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: #d6d6cf;
+      text-transform: uppercase;
+      letter-spacing: .19em;
+      font-size: 10px;
+      font-weight: 700;
+      margin-bottom: var(--sp-4);
+    }
+    .eyebrow:before { content:''; width: 30px; height: 1px; background: var(--green); }
+    h1 {
+      max-width: 900px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(46px, 8vw, 108px);
+      line-height: .96;
+      letter-spacing: -.045em;
+      font-weight: 600;
+    }
+    h1 em { color: var(--green-bright); font-style: normal; }
+    .hero-copy {
+      max-width: 640px;
+      margin: var(--sp-4) 0 0;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #d1d1cb;
+    }
+    .hero-rule {
+      width: 100%;
+      height: 1px;
+      background: var(--line);
+      margin: var(--sp-7) 0 var(--sp-3);
+    }
+    .question { font-family: var(--serif); font-size: 22px; }
+    .scroll-cue { float:right; color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.14em; }
+
+    .paths { background: #f1f1ed; color: #080808; padding: 0 0 var(--sp-8); }
+    .paths-inner { max-width: var(--max); margin:auto; padding: 0 var(--sp-4); }
+    .path-grid { display:grid; grid-template-columns: 1fr 1fr; gap: var(--sp-3); }
+    .path {
+      min-height: 500px;
+      position: relative;
+      padding: var(--sp-6);
+      display:flex;
+      flex-direction:column;
+      overflow:hidden;
+      border: 1px solid #d7d7d0;
+      background:#fff;
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+    .path:hover { transform: translateY(-8px); box-shadow: 0 28px 60px rgba(0,0,0,.12); }
+    .path.dark { background:#070707; color:#fff; border-color:#070707; }
+    .path-number { font-size:11px; letter-spacing:.18em; font-weight:700; opacity:.55; }
+    .path-label { margin-top:80px; font-size:11px; letter-spacing:.16em; text-transform:uppercase; font-weight:700; color:var(--green); }
+    .path h2 { font-family:var(--serif); font-size:44px; line-height:1.02; letter-spacing:-.04em; margin:14px 0 var(--sp-3); max-width:520px; }
+    .path p { max-width:480px; line-height:1.7; color:#5f5f59; margin:0; font-size:15px; }
+    .path.dark p { color:#b9b9b2; }
+    .path-meta { display:flex; gap:10px; flex-wrap:wrap; margin-top:var(--sp-4); }
+    .pill { padding:8px 11px; border:1px solid #d6d6d0; font-size:10px; text-transform:uppercase; letter-spacing:.1em; font-weight:700; }
+    .dark .pill { border-color:#303030; }
+    .path-bottom { margin-top:auto; padding-top:var(--sp-6); display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3); flex-wrap: wrap; }
+    .path-bottom strong { font-size: 13px; font-weight: 600; }
+    .path-link { font-weight:700; font-size:12px; letter-spacing:.12em; text-transform:uppercase; display:inline-flex; align-items:center; gap:14px; white-space: nowrap; }
+    .path-link span { display:grid; place-items:center; width:42px; height:42px; border-radius:50%; background:var(--green); color:white; transition:.25s ease; flex-shrink: 0; }
+    .path:hover .path-link span, .path-link:focus-visible span { transform:translateX(5px); }
+    .path-ghost { position:absolute; right:-30px; bottom:-80px; font-family:var(--serif); font-size:230px; line-height:1; color:rgba(0,0,0,.035); pointer-events:none; }
+    .dark .path-ghost { color:rgba(255,255,255,.035); }
+
+    .manifesto { padding: var(--sp-9) var(--sp-4); background:#080808; }
+    .manifesto-inner { max-width:var(--max); margin:auto; display:grid; grid-template-columns: .75fr 1.25fr; gap:var(--sp-7); }
+    .section-tag { font-size:10px; text-transform:uppercase; letter-spacing:.18em; color:var(--green-bright); font-weight:700; }
+    .manifesto h2 { font-family:var(--serif); font-size:clamp(38px,5vw,64px); line-height:1.03; letter-spacing:-.04em; margin:var(--sp-2) 0 0; }
+    .manifesto-copy { border-top:1px solid var(--line); padding-top:var(--sp-3); }
+    .manifesto-copy p { font-size:19px; line-height:1.75; color:#ccc; margin:0 0 var(--sp-5); }
+    .principles { display:grid; grid-template-columns:repeat(2,1fr); gap:0; border-top:1px solid var(--line); border-left:1px solid var(--line); }
+    .principle { padding:var(--sp-4); min-height:150px; border-right:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .principle strong { font-family:var(--serif); font-size:23px; }
+    .principle p { font-size:13px; line-height:1.6; color:#9a9a93; margin:12px 0 0; }
+
+    .journey { padding: var(--sp-9) var(--sp-4); background:#f1f1ed; color:#080808; }
+    .journey-inner { max-width:var(--max); margin:auto; }
+    .journey-head { display:flex; justify-content:space-between; gap:var(--sp-5); align-items:end; margin-bottom:var(--sp-7); }
+    .journey h2 { font-family:var(--serif); font-size:clamp(40px,6vw,72px); line-height:.98; letter-spacing:-.045em; margin:var(--sp-2) 0 0; }
+    .journey-intro { max-width:360px; color:#5c5c55; line-height:1.65; }
+    .steps { display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid #cfcfc8; }
+    .step { padding:var(--sp-4) var(--sp-3) var(--sp-2) 0; border-right:1px solid #cfcfc8; margin-right:var(--sp-3); }
+    .step:last-child { border-right:0; margin-right:0; }
+    .step-num { font-size:10px; color:var(--green); font-weight:800; letter-spacing:.14em; }
+    .step h3 { font-family:var(--serif); font-size:27px; margin:var(--sp-3) 0 12px; }
+    .step p { color:#5c5c55; font-size:13px; line-height:1.65; margin:0; }
+
+    .about { padding: var(--sp-9) var(--sp-4); background:#080808; }
+    .about-inner { max-width:var(--max); margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-7); }
+    .about h2 { font-family:var(--serif); font-size:clamp(38px,5vw,64px); line-height:1.03; letter-spacing:-.04em; margin:var(--sp-2) 0 0; }
+    .about-copy { font-size:18px; line-height:1.8; color:#c2c2bc; }
+    .about-copy p { margin:0 0 var(--sp-3); }
+    .cta-strip { margin-top:var(--sp-6); border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:var(--sp-3) 0; display:flex; align-items:center; justify-content:space-between; gap:var(--sp-3); flex-wrap: wrap; }
+    .cta-strip strong { font-family:var(--serif); font-size:24px; font-weight: 600; }
+    .button { display:inline-flex; align-items:center; gap:14px; padding:15px 20px; background:var(--green); color:#fff; font-size:11px; letter-spacing:.11em; text-transform:uppercase; font-weight:800; transition:.25s ease; }
+    .button:hover, .button:focus-visible { background:var(--green-bright); transform:translateY(-2px); }
+
+    footer { background:#030303; border-top:1px solid var(--line); padding:var(--sp-6) var(--sp-4) var(--sp-4); }
+    .footer-inner { max-width:var(--max); margin:auto; }
+    .footer-top { display:flex; justify-content:space-between; gap:var(--sp-5); align-items:start; padding-bottom:var(--sp-6); flex-wrap: wrap; }
+    .footer-brand { font-family:var(--serif); font-size:26px; }
+    .footer-note { max-width:340px; color:#8c8c85; line-height:1.65; font-size:12px; margin-top:12px; }
+    .footer-links { display:flex; gap:var(--sp-6); font-size:12px; flex-wrap: wrap; }
+    .footer-col { display:flex; flex-direction:column; gap:12px; }
+    .footer-col span { color:#8c8c85; font-size:10px; letter-spacing:.13em; text-transform:uppercase; margin-bottom:3px; }
+    .footer-col a { color: #d8d8d2; }
+    .footer-col a:hover, .footer-col a:focus-visible { color:var(--green-bright); }
+    .copyright { border-top:1px solid var(--line); padding-top:var(--sp-2); color:#7a7a73; font-size:10px; display:flex; justify-content:space-between; flex-wrap: wrap; gap: 8px; }
+
+    .reveal { opacity:0; transform:translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity:1; transform:none; }
+
+    @media (max-width: 850px) {
+      .nav-inner { height:70px; padding: 0 var(--sp-3); }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: rgba(5,5,5,.98);
+        backdrop-filter: blur(18px);
+        border-bottom: 1px solid var(--line);
+        padding: var(--sp-1) var(--sp-3) var(--sp-3);
+      }
+      .nav-links.mobile-open { display: flex; }
+      .nav-links a { width: 100%; padding: 14px 4px; border-bottom: 1px solid var(--line); opacity: 1; }
+      .nav-links a:last-of-type { border-bottom: 0; }
+      .nav-cta { margin-top: var(--sp-2); text-align: center; justify-content: center; }
+      .menu { display: block; }
+
+      .hero { min-height: 720px; }
+      .hero-inner { padding-top: 115px; padding-bottom: var(--sp-6); }
+      .hero-rule { margin: var(--sp-6) 0 var(--sp-2); }
+
+      .path-grid, .manifesto-inner, .about-inner { grid-template-columns:1fr; }
+      .path { min-height: auto; padding: var(--sp-5); }
+      .path-label { margin-top: 50px; }
+      .manifesto-inner, .about-inner { gap: var(--sp-6); }
+      .manifesto, .journey, .about { padding-top: var(--sp-7); padding-bottom: var(--sp-7); }
+      .steps { grid-template-columns:1fr 1fr; }
+      .step:nth-child(2) { border-right:0; margin-right:0; }
+      .journey-head { display:block; }
+      .journey-intro { margin-top: var(--sp-4); max-width: none; }
+    }
+
+    @media (max-width: 560px) {
+      .nav-inner, .hero-inner, .paths-inner, .manifesto, .journey, .about, footer { padding-left:18px; padding-right:18px; }
+      h1 { font-size: 46px; letter-spacing: -.03em; }
+      .hero-copy { font-size:16px; }
+      .question { font-size: 19px; }
+      .scroll-cue { display:none; }
+      .path { padding: var(--sp-4); }
+      .path-label { margin-top: 40px; }
+      .path h2 { font-size:34px; }
+      .path-bottom { flex-direction: column; align-items: flex-start; gap: var(--sp-3); }
+      .principles { grid-template-columns:1fr; }
+      .steps { grid-template-columns:1fr; }
+      .step, .step:nth-child(2) { border-right:0; margin-right:0; border-bottom:1px solid #cfcfc8; padding-bottom: var(--sp-3); }
+      .step:last-child { border-bottom:0; }
+      .footer-top, .copyright, .cta-strip { flex-direction:column; align-items:flex-start; }
+      .footer-links { gap: var(--sp-5); }
+      .cta-strip .button { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain"></div>
+
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">Zen Acquisition<sup>™</sup></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#paths">Choose Your Path</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <!-- Replace with your real YouTube URL -->
+        <a href="https://www.youtube.com/@theritamsamanta" target="_blank" rel="noopener">YouTube</a>
+        <!-- Replace with your real Zen Academy URL -->
+        <a class="nav-cta" href="https://zenacquisition.com/academy" target="_blank" rel="noopener">Zen Academy™ →</a>
+      </nav>
+      <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-orb"></div>
+      <div class="hero-inner">
+        <div class="eyebrow reveal">Business education · systems · growth</div>
+        <h1 class="reveal">Build Better.<br>Grow <em>Smarter.</em></h1>
+        <p class="hero-copy reveal">Zen Acquisition™ is where you learn how businesses actually work: the offers, the systems, and the thinking that make growth repeatable instead of accidental.</p>
+        <div class="hero-rule reveal"></div>
+        <div class="question reveal">
+          Where are you in your journey?
+          <span class="scroll-cue">Choose your path ↓</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="paths" id="paths">
+      <div class="paths-inner">
+        <div class="path-grid">
+          <article class="path reveal">
+            <span class="path-number">01 / START HERE</span>
+            <div class="path-label">Just getting started?</div>
+            <h2>Learn on YouTube.</h2>
+            <p>Free, practical videos on client acquisition, sales, offers, systems and the mindset it takes to build your first real business. Watch, apply, repeat at your own pace.</p>
+            <div class="path-meta">
+              <span class="pill">Free</span>
+              <span class="pill">Self-directed</span>
+              <span class="pill">Public</span>
+            </div>
+            <div class="path-bottom">
+              <strong>For aspiring & early-stage founders</strong>
+              <!-- Replace with your actual YouTube channel URL -->
+              <a class="path-link" href="https://www.youtube.com/@theritamsamanta" target="_blank" rel="noopener">Watch YouTube <span>↗</span></a>
+            </div>
+            <div class="path-ghost">Y</div>
+          </article>
+
+          <article class="path dark reveal">
+            <span class="path-number">02 / GO DEEPER</span>
+            <div class="path-label">Already building?</div>
+            <h2>Train with Zen Academy™.</h2>
+            <p>When scattered videos stop being enough, this is the structured environment for business owners and teams who want deeper skills, real systems and actual implementation.</p>
+            <div class="path-meta">
+              <span class="pill">Structured</span>
+              <span class="pill">Implementation</span>
+              <span class="pill">For teams</span>
+            </div>
+            <div class="path-bottom">
+              <strong>For business owners & growing teams</strong>
+              <!-- Replace with your actual Academy URL -->
+              <a class="path-link" href="https://zenacquisition.com/academy" target="_blank" rel="noopener">Enter Academy <span>↗</span></a>
+            </div>
+            <div class="path-ghost">Z</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="approach">
+      <div class="manifesto-inner">
+        <div class="reveal">
+          <div class="section-tag">The Zen approach</div>
+          <h2>One philosophy.<br>Two ways to learn.</h2>
+        </div>
+        <div class="manifesto-copy reveal">
+          <p>Better businesses aren't built from isolated tactics. They come from clearer thinking, sharper offers, repeatable systems and disciplined execution.</p>
+          <div class="principles">
+            <div class="principle"><strong>Think</strong><p>Understand the principles behind the tactic before you copy it.</p></div>
+            <div class="principle"><strong>Build</strong><p>Turn ideas into offers, processes and real-world assets.</p></div>
+            <div class="principle"><strong>Systemize</strong><p>Replace improvisation with a repeatable operating system.</p></div>
+            <div class="principle"><strong>Grow</strong><p>Use that system to create progress that compounds.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="journey">
+      <div class="journey-inner">
+        <div class="journey-head reveal">
+          <div>
+            <div class="section-tag">The journey</div>
+            <h2>Start where<br>you are.</h2>
+          </div>
+          <p class="journey-intro">You don't need to know everything before you start. The point is to keep moving: from understanding, to execution, to systems, to scale.</p>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="step-num">01 — DISCOVER</div><h3>Learn</h3><p>Build your understanding of how offers, sales, marketing and businesses actually work.</p></div>
+          <div class="step reveal"><div class="step-num">02 — BUILD</div><h3>Execute</h3><p>Turn knowledge into action. Get customers, test ideas and lay your foundation.</p></div>
+          <div class="step reveal"><div class="step-num">03 — SYSTEMIZE</div><h3>Structure</h3><p>Build the processes and systems that make good execution repeatable.</p></div>
+          <div class="step reveal"><div class="step-num">04 — GROW</div><h3>Scale</h3><p>Develop the people, systems and capability a larger organization needs.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="about-inner">
+        <div class="reveal">
+          <div class="section-tag">Zen Acquisition™</div>
+          <h2>The umbrella behind the education.</h2>
+        </div>
+        <div class="about-copy reveal">
+          <p>Zen Acquisition™ exists to make good business education more practical, more systematic and easier to apply.</p>
+          <p>The public layer is YouTube: accessible ideas, frameworks and lessons for anyone still building their foundation.</p>
+          <p>The deeper layer is Zen Academy™: structured education for founders and teams who need a more complete system for building business capability.</p>
+          <div class="cta-strip">
+            <strong>Not sure where to start?</strong>
+            <a class="button" href="#paths">Choose your path →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand">Zen Acquisition<sup>™</sup></div>
+          <div class="footer-note">Business education, systems and practical resources for founders at every stage.</div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <span>Explore</span>
+            <a href="#paths">Choose Your Path</a>
+            <a href="#approach">Approach</a>
+            <a href="#about">About</a>
+          </div>
+          <div class="footer-col">
+            <span>Destinations</span>
+            <a href="https://www.youtube.com/@theritamsamanta" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://zenacquisition.com/academy" target="_blank" rel="noopener">Zen Academy™</a>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <span>© <span id="year"></span> Zen Acquisition™. All rights reserved.</span>
+        <span>Build better. Grow smarter.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 25));
+
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('mobile-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('mobile-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.textContent = '☰';
+    }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 55);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
