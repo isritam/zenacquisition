@@ -1,0 +1,20 @@
+# Zen Academy
+
+> Zen Academy is the agency training & acquisition division of Zen Acquisition™, teaching digital agencies and their teams to land 20–30 high-ticket clients in 90 days using automated outbound systems, AI LLM outreach engines, and inbound LinkedIn/content acquisition.
+
+## Core Program Offerings
+
+- [75-Day Team Client Acquisition Program](https://zenacquisition.com/academy): Intensive live cohort & team training program designed for 3-15 person agencies to build predictable client pipelines.
+- [AI LLM & Autonomous Outreach Robots](https://zenacquisition.com/academy-test): Custom automated lead scraping, personalized LLM outreach agents, and automated booking systems.
+
+## Key Facts
+
+- Stated Outcome: 20-30 high-ticket clients in 90 days
+- Pricing: ₹60,000 one-time / ₹69k / ₹99k tiers
+- Parent Proprietorship: Zen Acquisition™ (UDYAM-WB-18-0184983)
+- Founders: Ritam Samanta & Sayak
+
+## Optional Context
+
+- [Full LLM Specification](https://zenacquisition.com/llms-full.txt)
+- [Terms & Ownership](https://zenacquisition.com/terms-and-conditions)

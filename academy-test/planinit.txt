@@ -1,0 +1,168 @@
+Zen Academy Business Plan								A division of Zen Acquisition™ 
+Document Prepared: June 29, 2026 
+1. Executive Summary
+Zen Academy is a client acquisition training and consulting division operated under the Zen Acquisition proprietorship. It exists because Zen Acquisition's core insight, that Indian agency owners desperately need a predictable client pipeline, proved more valuable as taught knowledge than as a rented service. Over the past several months, Ritam informally consulted more than 40 agency owners for free, validating both demand and his own delivery competence well before this became a paid offering.
+Zen Academy teaches agency owners and their teams to run their own outbound (cold calling, cold outreach) and inbound (content, LinkedIn, YouTube) client acquisition systems, so they stop paying agencies a monthly retainer for a skill their own team can own permanently. The founding offer is a 75-day, 30-hour training program priced at ₹60,000 per team (unlimited team seats, added before the program starts), with 20–30 high-ticket clients in 75 days as the guaranteed stated outcome.
+12-month revenue target: ₹10,00,000 in monthly recurring/recognized revenue, reached through three sequential phases: personal 1:1 consultation (Q1), group cohort consultation (Q2), and a scalable annual course (Q3 onward). This document projects the path to that target, the resourcing behind it, and the risks that could interrupt it.
+
+2. Business Structure
+Zen Academy is not a separately registered legal entity. It operates as a trade name and training division under the existing Zen Acquisition sole proprietorship (registered under UDYAM-WB-18-0184983, operating under Sujit Samanta). All Academy contracts are legally executed by Zen Acquisition™, with client-facing materials presenting "Zen Academy" as the primary brand and "operated by Zen Acquisition™" disclosed in the fine print, not the reverse.
+Sayak's 50% involvement is structured as a private profit-sharing and roles agreement between two individuals, sitting outside the proprietorship itself (a sole proprietorship cannot have a legal co-owner). This is a deliberate right-sized-for-now decision. The plan is to formalize into an LLP or a private limited company once revenue and Ritam's age (18) both justify the added compliance overhead. This transition point is not contractually fixed to a date, but the partnership agreement carries a review trigger at ₹2,00,000/month in combined profit (₹1,00,000 each), at which point formalization is revisited.
+
+3. Market Opportunity & Competitive Landscape
+The opportunity. India has an estimated 5,000+ small and mid-sized digital marketing agencies, most generating ₹2–6L/month gross revenue with 3–15 employees, and almost none of them have a systematic, predictable outbound or inbound client acquisition engine. This is the exact ICP validated by Zen Acquisition's own outbound campaigns and Ritam's 40+ free consultations.
+Competitive landscape. The Indian agency-coaching space is fragmented and largely composed of two categories:
+Solo consultants and course creators who teach generic "how to get clients" content, often adapted from international frameworks (Alex Hormozi-style offer design, generic sales training) without deep localization to Indian buying psychology, WhatsApp-native workflows, or the specific financial and trust dynamics of Indian agency owners (referral dependency, vendor skepticism from past betrayals, family financial pressure as the hidden buying driver).
+Remote-work and freelance-coaching educators, who teach individuals how to get freelance or remote clients for themselves, are a distinctly different audience from agency owners trying to build a team-based, scalable outbound function.
+Zen Academy's positioning advantage is threefold: 
+It is built by someone who has actually run the exact outbound motion being taught (not theorized it) 
+It combines outbound (Ritam) and inbound (Sayak) under one program rather than teaching one channel in isolation, and it is priced and packaged specifically around what a 3–15-person Indian agency can actually justify (₹60,000 one-time vs. ₹30-40k/month indefinitely to an agency). 
+Competitors in this space are largely unwilling or unable to offer a hard outcome guarantee tied to client acquisition; Zen Academy's 20-30 client guarantee is a meaningful differentiator, at real risk to the business if under-delivered, which is precisely why it functions as a trust signal.
+
+
+
+
+
+
+
+
+4. Product & Service Roadmap
+
+Phase
+Timing
+Format
+Description
+Phase 1: Personal Consultation
+Q1 (Months 1–3, Jul–Sep 2026)
+1-on-1
+Founding cohort, ~4 clients/month, builds case studies and refines curriculum
+Phase 2: Group Coaching
+Q2 (Months 4–6, Oct–Dec 2026)
+Cohort-based
+Shift to shared weekly calls, 4–15 team-clients per cohort, driven by capacity constraints once Ritam's college schedule tightens
+Phase 3: Self-Paced Course
+Q3 or Q4 onward (Month 7+, Jan 2027)
+Async + light live touch
+Annual-fee course (₹1L–2L/year, EMI-eligible), built from recorded cohort content, available free of charge to all prior 75-day program participants
+Phase 4: Adjacent Higher-Tier Offers
+Month 10+ (tentative)
+Mastermind (physical/online), adjacent skill courses
+Distinct brand (not "Zen Academy"), covering course-building, personal brand, and consulting business-building for graduates who've outgrown the core program. Deprioritized relative to the core 75-day program; explored only once Phase 3 is stable.
+
+
+
+
+
+
+
+
+
+
+
+5. Revenue Model & Pricing
+
+Offer
+Price
+Structure
+75-Day Team Program (Phase 1 & 2)
+₹60,000 total, or ₹30,000 × 2 monthly instalments
+One-time, per team (unlimited seats declared before the program starts)
+Annual Course (Phase 3)
+₹1,00,000–₹2,00,000/year (pricing TBD, ₹1.4L used as planning midpoint)
+Annual, EMI-eligible, recurring
+Mastermind / Adjacent Offers (Phase 4)
+Not yet priced
+Distinct brand, explored post-Phase 3
+
+Community access and access to all future Zen Academy course updates are included free for the specific team enrolled in a given 75-day cohort, for a stated term of 10 years from enrollment (see partnership/service agreement rationale: indefinite terms create complications in a future sale or restructuring of the business, so a long but bounded term protects both client goodwill and business optionality). This free-access commitment explicitly does not extend to separately branded future products (e.g., a hypothetical "Zen Accelerator" mastermind brand).
+6. Financial Projections
+Assumptions: ₹60,000 per team-client for Phases 1–2; ₹1,40,000 average per course-client in Phase 3 (midpoint of stated ₹1L-2L range, to be firmed up before Phase 3 launch); EMI clients are counted at full contract value for revenue recognition purposes, with a separate cash-collection lag noted; group coaching capacity assumptions are directional and will be refined once Phase 1 data exists.
+
+
+
+
+
+
+
+Months 1–6 (Monthly)
+
+Month
+Phase
+New Clients
+Revenue Booked
+1 (Jul '26)
+Personal 1:1
+4
+₹2,40,000
+2 (Aug '26)
+Personal 1:1
+4
+₹2,40,000
+3 (Sep '26)
+Personal 1:1
+4
+₹2,40,000
+Q1 Subtotal
+
+
+12
+₹7,20,000
+4 (Oct '26)
+Group transition
+6
+₹3,60,000
+5 (Nov '26)
+Group
+8
+₹4,80,000
+6 (Dec '26)
+Group
+10
+₹6,00,000
+Q2 Subtotal
+
+
+24
+₹14,40,000
+
+Months 7–12 (Quarterly)
+Quarter
+Phase
+Group Revenue
+Course Revenue
+Total (Quarter)
+Avg/Month
+Q3 (Jan–Mar '27)
+Group plateau + Course launch
+~₹18,00,000 (10/mo × 60k)
+~₹12,60,000 (ramping 2→4 new/mo)
+~₹30,60,000
+~₹10,20,000
+Q4 (Apr–Jun '27)
+Group tapering + Course scaling
+~₹14,40,000 (8/mo × 60k)
+~₹23,80,000 (ramping 5→6 new/mo)
+~₹38,20,000
+~₹12,73,000
+
+
+Result: The ₹10,00,000/month target is projected to be reached around Month 8–9 (roughly Feb–Mar 2027), with continued growth beyond that through Q4 as the course scales. This is presented as a realistic, not guaranteed, path; actual client acquisition rates depend heavily on cold-calling volume and conversion, both of which carry real execution risk (see Section 7).
+Note on cash vs. booked revenue: Because a portion of clients will choose the 2-instalment EMI option, actual cash collected in a given month will trail booked/contracted revenue by roughly one instalment cycle for those clients. This does not affect the projection materially at this volume but should be tracked separately once the monthly client count exceeds 10.
+
+7. Key Risks
+Key-person risk. The business is a two-person operation, and Ritam personally delivers all outbound training and a majority of consultation hours in Phase 1. Ritam's move to Punjab for college (starting end-July 2026) reduces his available hours, which is the direct reason Phase 2's shift to group delivery is scheduled rather than optional. If Ritam is unable to deliver consistently for any reason (health, academic conflict, personal), the business has no immediate backup deliverer for the outbound curriculum, since that expertise is currently unique to him.
+Calling volume dependency. New client acquisition for the Academy itself still runs on Ritam's own cold-calling output. If outbound volume drops, either due to time constraints or diminishing lead lists, new client intake slows directly, with no inbound channel yet mature enough to compensate. Sayak's inbound/content build-out is intended to reduce this dependency over time but is not yet proven at scale.
+Guarantee exposure. The 20-30 client guarantee is tied to client execution, not solely to Zen Academy's training delivery. While the dispute/proof mechanism (documented trackers, call recordings, session attendance) protects against unfounded refund claims, a genuine execution failure by a diligent client who still doesn't hit the outcome represents a real refund liability that scales with client volume.
+8. Partnership & Profit Distribution (Summary)
+Full terms are documented separately in the Partnership Agreement. In summary: profit from the Academy's 75-day program (Phases 1–2 specifically) is split 50-50 between Ritam and Sayak, regardless of which partner sourced a given client. Both partners are expected to contribute equal weekly hours; Ritam's outbound lead generation and Sayak's inbound lead generation are each independently owned, while sales calls from either channel are shared and can be taken by either partner. Neither partner draws a fixed salary at this stage; all profit is currently split directly, with a formal salary/reinvestment structure to be introduced only once the business formalizes into an LLP or Pvt Ltd.
+9. Use of Funds
+Given the low overhead of a coaching/training model (no ad spend planned at this stage, tools and software are minimal), the majority of near-term profit is intended for direct distribution to the two founders rather than reinvestment. As volume grows into Phase 3 (course) and beyond, a modest allocation should be planned for: course production/hosting tooling (e.g., Skool or equivalent), a lightweight CRM/tracker system for client hour accounting, and eventual paid inbound support (ads) once organic content reaches its ceiling. No specific budget is allocated at this stage; this is a placeholder for future planning once Phase 2 revenue is realized.
+
+11. Milestone Summary
+Month 1 (Jul '26): Launch, 4 founding 1:1 clients
+Month 3 (Sep '26): Q1 complete, ~12 clients trained, case studies and testimonials secured
+Month 6 (Dec '26): Group cohort model live, ~24 additional clients across Q2
+Months 7–9 (Jan–Mar '27): Course launches, ₹10L/month target reached
+Months 10–12 (Apr–Jun '27): Course scaling continues, mastermind/adjacent offers explored
+Trigger point (any time): Combined founder profit hits ₹2L/month → partnership structure formally reviewed for LLP/Pvt Ltd conversion
+

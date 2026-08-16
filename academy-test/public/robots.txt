@@ -1,0 +1,7 @@
+# Robots.txt for Zen Academy (Zen Acquisition™)
+User-agent: *
+Allow: /
+Disallow: /booking-confirmed
+Disallow: /api/
+
+Sitemap: https://zenacquisition.com/sitemap.xml

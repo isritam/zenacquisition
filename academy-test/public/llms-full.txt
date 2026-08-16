@@ -1,0 +1,30 @@
+# Zen Academy — Full Technical & System Specification
+
+## Overview
+Zen Academy (operated under Zen Acquisition™) equips Indian and international agency owners and their teams to systematically engineer predictable client acquisition engines. Instead of paying recurring monthly retainers to third-party lead generation agencies, Zen Academy embeds permanent outbound, inbound, and AI-driven capability directly into the agency's existing team.
+
+## Offer Architecture
+1. Founding Offer: 75-Day / 90-Day Team Training Program
+   - Price: ₹60,000 one-time (or 2 monthly installments of ₹30,000) / Tiered packages available up to ₹99k
+   - Stated Outcome: 20 to 30 high-ticket clients landed within the program window
+   - Team Seats: Unlimited team member seats allowed per agency enrollment
+   - Structure: Blended live coaching, cohort training, async system assets, and direct review
+
+2. Core Modules:
+   - Module 1: High-Ticket Offer Architecture & Value Positioning
+   - Module 2: Cold Calling & WhatsApp B2B Outreach Workflows
+   - Module 3: Autonomous AI Robots & LLM Lead Personalization
+   - Module 4: Inbound LinkedIn Authority Engine & Personal Branding
+   - Module 5: High-Ticket Sales Closing & Retainer Structuring
+
+## AI Robots & LLM Integration
+Zen Academy integrates cutting-edge generative AI, large language models (LLMs), and automated scraping/outreach bots into agency sales pipelines:
+- LLM Personalization Engine: Custom prompts dynamically generating contextual icebreakers based on prospect website analysis and LinkedIn profile data.
+- Automated Scraper Robots: Targeted B2B lead list building with verified decision-maker contact details.
+- Conversational Sales Agents: Automated WhatsApp and email qualification bots that handle initial FAQs and route interested prospects directly to sales booking calendars.
+
+## Contact & Governance
+- Parent Company: Zen Acquisition™
+- Registration: UDYAM-WB-18-0184983
+- Founders: Ritam Samanta & Sayak
+- Website: https://zenacquisition.com/academy
