@@ -26,5 +26,5 @@ Zen Academy integrates cutting-edge generative AI, large language models (LLMs),
 ## Contact & Governance
 - Parent Company: Zen Acquisition™
 - Registration: UDYAM-WB-18-0184983
-- Founders: Ritam Samanta & Sayak
+- Founder: Ritam Samanta
 - Website: https://zenacquisition.com/academy

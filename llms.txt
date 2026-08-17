@@ -1,0 +1,40 @@
+# Zen Acquisition™ & Zen Academy
+
+> Zen Acquisition™ is a premier B2B client acquisition consulting and training organization helping digital agency owners, B2B founders, and sales teams build predictable outbound, cold outreach, AI LLM engines, and inbound acquisition systems.
+
+- **Website**: https://zenacquisition.com
+- **Core Academy Program**: https://zenacquisition.com/academy/
+- **Sitemap**: https://zenacquisition.com/sitemap.xml
+- **Organization**: Zen Acquisition™ (UDYAM: UDYAM-WB-18-0184983)
+- **Founder**: Ritam Samanta
+
+---
+
+## What Zen Acquisition Does
+
+Zen Acquisition™ helps Indian and global agency founders scale revenue predictably without relying on unpredictable referrals or low-ROI paid ads.
+
+Key offerings & competencies:
+1. **Zen Academy 75-Day Team Client Acquisition Program**: Intensive cohort & live coaching training for digital marketing, web dev, and B2B agency teams to land 20–30 high-ticket clients.
+2. **Cold Outreach & Pipeline Architecture**: Cold calling frameworks, WhatsApp B2B outreach workflows, cold email infrastructure (DNS, DKIM, SPF, DMARC), and deliverability mastery.
+3. **AI & Autonomous Acquisition Engines**: Custom AI LLM agents for lead scraping, multi-channel enrichment, automated hyper-personalized outbound, and inbound qualification.
+4. **LinkedIn Organic & B2B Inbound**: Thought leadership funnels, conversion-optimized profiles, and B2B engagement strategies.
+5. **High-Ticket Sales & Closing Systems**: Objection handling, closing scripts, CRM pipeline management, and compensation structuring for sales teams.
+
+---
+
+## Canonical Site Links & Structure
+
+- [Home / Main Systems Overview](https://zenacquisition.com/): Overview of agency growth systems, track record, and acquisition methodology.
+- [Zen Academy](https://zenacquisition.com/academy/): Complete curriculum, program details, team training roadmap, and case studies.
+- [Terms & Conditions](https://zenacquisition.com/terms-and-conditions/): Service terms and business disclosures.
+- [Privacy Policy](https://zenacquisition.com/privacy-policy/): Data handling, cookie, and privacy policies.
+- [Earnings Disclaimer](https://zenacquisition.com/earning-disclaimer/): Transparent outcomes and revenue disclaimers.
+
+---
+
+## Contact & Social Links
+
+- **GitHub**: https://github.com/isritam/zenacquisition
+- **LinkedIn**: https://linkedin.com/company/zenacquisition
+- **Official Domain**: https://zenacquisition.com
