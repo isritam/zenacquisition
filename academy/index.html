@@ -3,9 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Zen Academy by Zen Acquisition™ — Train Your Team To Land 20-30 Clients In 90 Days</title>  
 
-  <!-- Schema.org JSON-LD Structured Data -->
+  <title>Zen Academy by Zen Acquisition™ — Train Your Team To Land 20–30 Clients In 90 Days</title>
+
+  <meta
+    name="description"
+    content="Zen Academy trains agency teams to build and operate a repeatable client acquisition system over 90 days."
+  />
+
+  <!-- =========================================================
+       STRUCTURED DATA
+  ========================================================== -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -17,19 +26,20 @@
     "description": "Zen Acquisition is a B2B client acquisition consulting and training company helping digital agency owners build predictable outbound and inbound client acquisition systems."
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "EducationalOccupationalProgram",
-    "name": "Zen Academy 75-Day Team Client Acquisition Program",
-    "description": "A 75-day intensive training program for Indian agency owners and their teams to master cold outreach, AI LLM engines, LinkedIn B2B acquisition, and land 20-30 high-ticket clients.",
+    "name": "Zen Academy 90-Day Team Client Acquisition Program",
+    "description": "A 90-day intensive training and implementation program for agency owners and their teams to build a repeatable client acquisition system.",
     "provider": {
       "@type": "Organization",
       "name": "Zen Acquisition™",
       "url": "https://zenacquisition.com"
     },
     "educationalProgramMode": "Blended (Live Coaching + Cohort Training)",
-    "timeToComplete": "P75D",
+    "timeToComplete": "P90D",
     "offers": {
       "@type": "Offer",
       "price": "60000",
@@ -41,7 +51,7 @@
     "hasCourse": {
       "@type": "Course",
       "name": "Outbound & Inbound Agency Client Acquisition",
-      "description": "Mastering cold calling, WhatsApp B2B outreach, AI LLM agents, LinkedIn personal branding, and sales closing for digital agencies.",
+      "description": "Training in prospecting, outbound outreach, appointment generation, qualification, sales conversations, and acquisition systemization.",
       "provider": {
         "@type": "Organization",
         "name": "Zen Academy"
@@ -49,6 +59,7 @@
     }
   }
   </script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,7 +67,7 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How many team members can join the 75-day Zen Academy program?",
+        "name": "How many team members can join the 90-day Zen Academy program?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Zen Academy allows unlimited team seats per enrolled agency, provided team seats are declared prior to the program start date."
@@ -67,7 +78,7 @@
         "name": "What is the cost of the Zen Academy training program?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The 75-day program is priced at ₹60,000 total (or 2 monthly installments of ₹30,000)."
+          "text": "The 90-day program is priced at ₹60,000 total, or two monthly installments of ₹30,000."
         }
       },
       {
@@ -75,897 +86,1817 @@
         "name": "What is the stated target outcome for agencies?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The program is designed and structured to help digital agencies land 20 to 30 high-ticket clients within 75-90 days by implementing automated outbound, AI LLMs, and inbound LinkedIn engines."
+          "text": "The program is designed to help agencies build and operate a repeatable client acquisition system, with a stated target of 20 to 30 high-ticket clients within 90 days when the program is implemented as taught."
         }
       }
     ]
   }
   </script>
 
+  <!-- =========================================================
+       FONTS / ICONS
+  ========================================================== -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- =========================================================
+       DESIGN SYSTEM
+  ========================================================== -->
 
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --black: #0a0a0a;
-      --white: #f5f5f3;
-      --grey-1: #1a1a1a;
-      --grey-2: #2e2e2e;
-      --grey-3: #6b6b6b;
-      --grey-4: #a0a0a0;
-      --blue: #1a56db;
-      --blue-light: #3b82f6;
-      --serif: 'Space Grotesk', 'DM Sans', sans-serif;
-      --sans: 'DM Sans', sans-serif;
+    /* ---------------------------------------------------------
+       RESET
+    --------------------------------------------------------- */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --black: #080808;
+      --black-soft: #0d0d0d;
+      --surface: #111111;
+      --surface-2: #151515;
+
+      --white: #f5f5f3;
+      --white-soft: #d8d8d5;
+
+      --grey-1: #1a1a1a;
+      --grey-2: #252525;
+      --grey-3: #666666;
+      --grey-4: #929292;
+
+      --blue: #1a56db;
+      --blue-light: #3b82f6;
+
+      --border: rgba(255,255,255,.08);
+      --border-strong: rgba(255,255,255,.14);
+
+      --heading: 'Space Grotesk', sans-serif;
+      --body: 'DM Sans', sans-serif;
+
+      --max: 1080px;
+      --content: 900px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--black);
+    }
 
     body {
       background: var(--black);
       color: var(--white);
-      font-family: var(--sans);
+      font-family: var(--body);
       font-weight: 300;
       line-height: 1.7;
       overflow-x: hidden;
     }
 
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-      pointer-events: none;
-      z-index: 9999;
-      opacity: 0.35;
+    body::selection {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    /* ---------------------------------------------------------
+       GLOBAL UTILITIES
+    --------------------------------------------------------- */
+
+    .container {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .content-width {
+      max-width: var(--content);
+      margin: 0 auto;
+    }
+
+    .divider {
+      border: 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .accent {
+      color: var(--blue-light);
+    }
+
+    .muted {
+      color: var(--grey-4);
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(20px);
+      transition:
+        opacity .7s ease,
+        transform .7s ease;
     }
-    .reveal.visible { opacity: 1; transform: none; }
 
-    .divider { border: none; border-top: 1px solid var(--grey-2); margin: 0; }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
 
-    /* ── NAV ── */
-    nav {
-      display: flex;
-      justify-content: space-between;
+    .eyebrow {
+      display: inline-flex;
       align-items: center;
-      padding: 26px 48px;
-      border-bottom: 1px solid var(--grey-2);
-      position: sticky;
-      top: 0;
-      background: rgba(10,10,10,0.93);
-      backdrop-filter: blur(14px);
-      z-index: 100;
-    }
+      gap: 9px;
 
-    .nav-logo {
-      font-family: var(--serif);
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      color: var(--white);
-      text-decoration: none;
-    }
-    .nav-logo span {
-  color: var(--grey-4);
-  font-weight: 500;
-  font-size: 0.75em;
-}
-
-    .nav-cta {
-      display: inline-block;
-      padding: 10px 24px;
-      border: 1px solid var(--white);
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: 0.75rem;
+      font-size: .68rem;
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: .18em;
       text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.22s, color 0.22s;
-    }
-    .nav-cta:hover { background: var(--white); color: var(--black); }
 
-    /* ── PROGRESS BAR ── */
-
-.progress-wrap {
-  width: 100%;
-  border-bottom: 1px solid var(--grey-2);
-
-  background:
-    linear-gradient(
-      90deg,
-      rgba(26,86,219,.10),
-      rgba(59,130,246,.04)
-    );
-
-  backdrop-filter: blur(12px);
-
-  padding: 18px 24px;
-}
-
-.progress-top {
-  max-width: 900px;
-  margin: 0 auto 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.progress-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  color: var(--white);
-}
-
-.progress-percent {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-
-  color: var(--grey-4);
-}
-
-.progress-bar {
-  max-width: 900px;
-  height: 10px;
-
-  margin: 0 auto;
-
-  background: rgba(255,255,255,.06);
-
-  border: 1px solid rgba(255,255,255,.08);
-
-  overflow: hidden;
-}
-
-.progress-fill {
-  position: relative;
-
-  width: 60%;
-  height: 100%;
-
-  overflow: hidden;
-
-  background:
-    linear-gradient(
-      90deg,
-      var(--blue),
-      var(--blue-light)
-    );
-
-}
-
-/* moving shine effect */
-.progress-fill::after {
-  content: '';
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    linear-gradient(
-      115deg,
-      transparent 20%,
-      rgba(255,255,255,.10) 35%,
-      rgba(255,255,255,.22) 50%,
-      rgba(255,255,255,.10) 65%,
-      transparent 80%
-    );
-
-  transform: translateX(-120%);
-
-  animation: progressShine 2.8s ease-in-out infinite;
-}
-
-@keyframes progressShine {
-  0% { transform: translateX(-120%); }
-  100% { transform: translateX(120%); }
-}
-
-    /* ── HERO FLOW ── */
-
-.hero-flow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  margin-bottom: 26px;
-  flex-wrap: wrap;
-}
-
-.flow-step {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  border: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.02);
-  backdrop-filter: blur(10px);
-  cursor: pointer;
-  transition: transform .22s ease, border-color .22s ease, background .22s ease;
-}
-
-.flow-step:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255,255,255,.16);
-  background: rgba(255,255,255,.04);
-}
-
-.flow-number {
-  width: 24px;
-  height: 24px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--blue), var(--blue-light));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--serif);
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: white;
-  flex-shrink: 0;
-}
-
-.flow-text {
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,.72);
-}
-
-.flow-divider {
-  width: 34px;
-  height: 1px;
-  background: linear-gradient(to right, rgba(255,255,255,.08), rgba(255,255,255,.22), rgba(255,255,255,.08));
-}
-
-@media (max-width: 640px) {
-  .hero-flow { gap: 10px; }
-  .flow-divider { display: none; }
-  .flow-step { width: 100%; justify-content: center; }
-}
-
-.flow-step:first-child {
-  border-color: rgba(59,130,246,.22);
-  background: linear-gradient(180deg, rgba(26,86,219,.12), rgba(26,86,219,.04));
-}
-
-    #hero {
-      padding: 42px 48px 80px;
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
+      color: var(--grey-4);
     }
 
-    .hero-eyebrow {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blue-light);
-      margin-bottom: 24px;
+    .eyebrow::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--blue);
+      border-radius: 50%;
+      box-shadow: 0 0 14px rgba(26,86,219,.55);
+    }
+
+    .section-label {
+      margin-bottom: 18px;
+
+      font-size: .67rem;
       font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+
+      color: var(--grey-3);
+    }
+
+    h1,
+    h2,
+    h3,
+    .nav-logo,
+    .footer-brand {
+      font-family: var(--heading);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--white);
     }
 
     h1 {
-      font-family: var(--serif);
-      font-size: clamp(2.8rem, 6vw, 5rem);
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: .98;
+      letter-spacing: -.045em;
       font-weight: 700;
-      line-height: 1.02;
-      letter-spacing: -0.02em;
-      color: var(--white);
-      margin-bottom: 18px;
-    }
-    h1 .accent { color: var(--blue-light); }
-    h1 .dim { color: var(--grey-4); }
-
-    .hero-guarantee {
-      font-family: var(--serif);
-      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
-      font-weight: 600;
-      color: var(--blue-light);
-      margin-bottom: 20px;
-    }
-
-    .hero-sub {
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--grey-3);
-      margin-bottom: 26px;
-      line-height: 1.4;
-    }
-
-    /* video inside hero */
-    .hero-video-wrap {
-      position: relative;
-      width: 100%;
-      aspect-ratio: 16/9;
-      background: var(--grey-1);
-      border: 1px solid var(--grey-2);
-      overflow: hidden;
-      margin-bottom: 40px;
-    }
-    wistia-player {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
-
-    .highlight-blue { color: var(--blue-light); }
-
-    .hero-video-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 2;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      padding-bottom: 28px;
-      background: linear-gradient(to top, rgba(0,0,0,.45), rgba(0,0,0,0));
-      pointer-events: none;
-    }
-
-    .hero-video-overlay p {
-      font-size: 0.74rem;
-      color: white;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      opacity: 0.9;
-    }
-
-    .video-placeholder p { font-size: 0.74rem; color: var(--grey-3); letter-spacing: 0.14em; text-transform: uppercase; }
-
-    /* CTA */
-    .hero-cta-block { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-bottom: 52px; }
-
-    .btn-primary {
-      display: inline-block;
-      padding: 16px 40px;
-      background: var(--blue);
-      color: #fff;
-      font-family: var(--sans);
-      font-size: 0.82rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: background 0.22s, transform 0.18s;
-    }
-    .btn-primary:hover { background: var(--blue-light); transform: translateY(-2px); }
-
-    .trust-note { font-size: 0.73rem; color: var(--grey-3); letter-spacing: 0.06em; }
-
-    /* cal embed in hero */
-    .hero-cal-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--grey-3);
-      margin-bottom: 16px;
-    }
-
-    .cal-embed-box {
-      width: 100%;
-      border: 1px solid var(--grey-2);
-      background: var(--grey-1);
-      overflow: hidden;
-    }
-
-    #my-cal-inline-strategy { width: 100%; min-height: 660px; overflow: scroll; }
-
-    /* ── SHARED ── */
-    .section-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--grey-3);
-      margin-bottom: 20px;
     }
 
     h2 {
-      font-family: var(--serif);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 700;
-      line-height: 1.12;
-      margin-bottom: 32px;
-      letter-spacing: -0.01em;
+      font-size: clamp(2.1rem, 4.8vw, 4rem);
+      line-height: 1.03;
+      letter-spacing: -.035em;
+      font-weight: 600;
     }
-    h2 .accent { color: var(--blue-light); }
 
-    /* ── PROBLEM ── */
-    #problem { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
+    h3 {
+      font-weight: 600;
+    }
 
-    .problem-intro { font-size: 1rem; color: var(--grey-4); max-width: 580px; margin-bottom: 52px; line-height: 1.85; }
+    /* ---------------------------------------------------------
+       BUTTON
+    --------------------------------------------------------- */
 
-    .pain-list { list-style: none; border-top: 1px solid var(--grey-2); }
-    .pain-list li {
-      padding: 20px 0 20px 28px;
-      border-bottom: 1px solid var(--grey-2);
-      font-size: 0.94rem; color: var(--grey-4);
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+      padding: 0 25px;
+
+      background: var(--blue);
+      border: 1px solid var(--blue);
+
+      color: #fff;
+
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-light);
+      border-color: var(--blue-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 50px;
+      padding: 0 25px;
+
+      border: 1px solid var(--border-strong);
+
+      color: var(--white);
+
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,.04);
+      border-color: rgba(255,255,255,.24);
+    }
+
+    /* ---------------------------------------------------------
+       NAV
+    --------------------------------------------------------- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      width: 100%;
+
+      padding: 18px 48px;
+
+      background: rgba(8,8,8,.92);
+      border-bottom: 1px solid var(--border);
+
+      backdrop-filter: blur(16px);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      color: var(--white);
+      text-decoration: none;
+
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: -.02em;
+    }
+
+    .nav-logo-mark {
+      width: 8px;
+      height: 8px;
+
+      background: var(--blue);
+      border-radius: 50%;
+
+      box-shadow: 0 0 14px rgba(26,86,219,.55);
+    }
+
+    .nav-logo span {
+      color: var(--grey-3);
+      font-size: .7rem;
+      font-weight: 400;
+      letter-spacing: 0;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+
+      min-height: 38px;
+      padding: 0 18px;
+
+      border: 1px solid var(--border-strong);
+
+      color: var(--white);
+
+      font-size: .68rem;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+
+      text-decoration: none;
+
+      transition:
+        background .2s ease,
+        border-color .2s ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--white);
+      color: var(--black);
+      border-color: var(--white);
+    }
+
+    /* ---------------------------------------------------------
+       PROGRESS
+    --------------------------------------------------------- */
+
+    .progress-wrap {
+      border-bottom: 1px solid var(--border);
+      background: var(--black-soft);
+      padding: 14px 24px;
+    }
+
+    .progress-top,
+    .progress-bar {
+      width: min(900px, 100%);
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .progress-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      margin-bottom: 8px;
+    }
+
+    .progress-label,
+    .progress-percent {
+      font-size: .62rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .progress-label {
+      color: var(--white-soft);
+    }
+
+    .progress-percent {
+      color: var(--grey-3);
+    }
+
+    .progress-bar {
+      height: 3px;
+      overflow: hidden;
+
+      background: rgba(255,255,255,.07);
+    }
+
+    .progress-fill {
       position: relative;
-      transition: color 0.22s, padding-left 0.22s;
+
+      width: 60%;
+      height: 100%;
+
+      background: var(--blue);
     }
-    .pain-list li::before { content: '—'; position: absolute; left: 0; color: var(--grey-2); }
-    .pain-list li:hover { color: var(--white); padding-left: 36px; }
 
-    .problem-closer { margin-top: 48px; font-size: 1rem; color: var(--grey-4); max-width: 580px; line-height: 1.85; }
-    .problem-closer strong { color: var(--white); font-weight: 500; }
+    /* ---------------------------------------------------------
+       HERO
+    --------------------------------------------------------- */
 
-    /* ── SYSTEM ── */
-    #system { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
-    .system-inner { max-width: 860px; margin: 0 auto; }
+    #hero {
+      width: min(980px, calc(100% - 48px));
+      margin: 0 auto;
 
-    .steps { display: grid; grid-template-columns: repeat(3,1fr); border-left: 1px solid var(--grey-2); margin-top: 56px; }
-    .step { padding: 44px 36px; border-right: 1px solid var(--grey-2); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
-    .step-num { font-family: var(--serif); font-size: 2.8rem; font-weight: 700; color: var(--blue-light); line-height: 1; margin-bottom: 20px; }
-    .step h3 { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; margin-bottom: 10px; color: var(--white); }
-    .step p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.8; }
-    .system-intro {
-  font-size: 0.96rem;
-  color: var(--grey-4);
-  max-width: 620px;
-  line-height: 1.8;
-  margin-top: -12px;
-}
+      padding: 76px 0 100px;
 
-.system-results {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: 1px solid var(--grey-2);
-  margin-top: 52px;
-}
+      text-align: center;
+    }
 
-.system-result {
-  padding: 30px 24px;
-  border-right: 1px solid var(--grey-2);
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
+    .hero-kicker {
+      margin-bottom: 26px;
+    }
 
-.system-result:last-child {
-  border-right: none;
-}
+    .hero-sub {
+      max-width: 620px;
+      margin: 24px auto 0;
 
-.system-result-number {
-  font-family: var(--serif);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--blue-light);
-}
+      color: var(--grey-4);
 
-.system-result-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--grey-3);
-}
+      font-size: .78rem;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
 
-.curriculum-heading {
-  margin-top: 90px;
-  margin-bottom: 32px;
-}
+    .hero-guarantee {
+      margin-top: 22px;
 
-.curriculum-heading h3 {
-  font-family: var(--serif);
-  font-size: 1.8rem;
-  color: var(--white);
-  margin-bottom: 8px;
-}
+      color: var(--blue-light);
 
-.curriculum-heading p:last-child {
-  color: var(--grey-4);
-  font-size: 0.88rem;
-}
+      font-family: var(--heading);
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: -.01em;
+    }
 
-.curriculum {
-  border-top: 1px solid var(--grey-2);
-}
+    .hero-flow {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-.curriculum-week {
-  border-bottom: 1px solid var(--grey-2);
-}
+      margin: 42px 0 24px;
 
-.curriculum-week summary {
-  list-style: none;
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 58px 1fr 30px;
-  align-items: center;
-  gap: 18px;
-  padding: 24px 4px;
-  transition: background 0.2s ease;
-}
+      gap: 10px;
+    }
 
-.curriculum-week summary::-webkit-details-marker {
-  display: none;
-}
+    .flow-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
-.curriculum-week summary:hover {
-  background: rgba(255,255,255,.025);
-}
+      min-height: 40px;
+      padding: 0 13px;
 
-.week-number {
-  font-family: var(--serif);
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--blue-light);
-}
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.015);
 
-.week-title {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--white);
-}
+      cursor: pointer;
 
-.week-icon {
-  font-size: 1.3rem;
-  color: var(--grey-3);
-  text-align: center;
-  transition: transform 0.25s ease;
-}
+      transition:
+        border-color .2s ease,
+        background .2s ease;
+    }
 
-.curriculum-week[open] .week-icon {
-  transform: rotate(45deg);
-  color: var(--blue-light);
-}
+    .flow-step:hover {
+      border-color: var(--border-strong);
+      background: rgba(255,255,255,.035);
+    }
 
-.week-content {
-  padding: 0 48px 28px 76px;
-  max-width: 700px;
-}
+    .flow-step:first-child {
+      border-color: rgba(59,130,246,.28);
+      background: rgba(26,86,219,.07);
+    }
 
-.week-content p {
-  font-size: 0.88rem;
-  color: var(--grey-4);
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
+    .flow-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-.week-content ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px 24px;
-}
+      width: 20px;
+      height: 20px;
 
-.week-content li {
-  font-size: 0.78rem;
-  color: var(--grey-4);
-  position: relative;
-  padding-left: 16px;
-}
+      background: var(--blue);
 
-.week-content li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--blue-light);
-}
+      color: #fff;
 
-.system-guarantee {
-  margin-top: 44px;
-  padding: 28px 32px;
-  border: 1px solid rgba(59,130,246,.25);
-  background: linear-gradient(
-    135deg,
-    rgba(26,86,219,.10),
-    rgba(59,130,246,.03)
-  );
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
+      font-family: var(--heading);
+      font-size: .62rem;
+      font-weight: 600;
+    }
 
-.system-guarantee strong {
-  font-family: var(--serif);
-  font-size: 1.05rem;
-  color: var(--white);
-}
+    .flow-text {
+      font-size: .62rem;
+      font-weight: 500;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--white-soft);
+    }
 
-.system-guarantee span {
-  font-size: 0.84rem;
-  color: var(--blue-light);
-}
+    .flow-divider {
+      width: 26px;
+      height: 1px;
+      background: var(--grey-2);
+    }
 
-    /* ── FOR WHO ── */
-    #for-who { padding: 100px 48px; max-width: 860px; margin: 0 auto; }
-    .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 52px; }
-    .for-who-block h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 700; margin-bottom: 22px; color: var(--white); padding-bottom: 14px; border-bottom: 1px solid var(--grey-2); }
-    .check-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
-    .check-list li { font-size: 0.88rem; color: var(--grey-4); padding-left: 20px; position: relative; line-height: 1.6; }
-    .check-list.yes li::before { content: '✓'; position: absolute; left: 0; color: var(--blue-light); font-weight: 500; }
-    .check-list.no  li::before { content: '×'; position: absolute; left: 0; color: var(--grey-3); font-weight: 500; }
+    .hero-video-wrap {
+      position: relative;
 
-    /* ── DELIVERABLES ── */
-    #deliverables { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); }
-    .deliverables-inner { max-width: 860px; margin: 0 auto; }
-    .deliverables-grid { display: grid; grid-template-columns: repeat(2,1fr); border-top: 1px solid var(--grey-2); border-left: 1px solid var(--grey-2); margin-top: 52px; }
-    .deliverable-item { padding: 26px 28px; border-right: 1px solid var(--grey-2); border-bottom: 1px solid var(--grey-2); display: flex; align-items: flex-start; gap: 14px; }
-    .d-dot { width: 6px; height: 6px; background: var(--blue-light); border-radius: 50%; margin-top: 8px; flex-shrink: 0; }
-    .deliverable-item p { font-size: 0.88rem; color: var(--grey-4); line-height: 1.6; }
+      width: 100%;
+      aspect-ratio: 16 / 9;
 
-    /* ── TESTIMONIALS ── */
-    #results { padding: 100px 48px; max-width: 960px; margin: 0 auto; }
+      margin-top: 26px;
 
-    .t-heading-wrap { text-align: center; margin-bottom: 64px; }
+      overflow: hidden;
+
+      background: #000;
+      border: 1px solid var(--border-strong);
+
+      box-shadow:
+        0 25px 80px rgba(0,0,0,.35);
+    }
+
+    wistia-player {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .hero-cta-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      margin-top: 30px;
+    }
+
+    .trust-note {
+      margin-top: 12px;
+
+      color: var(--grey-3);
+
+      font-size: .68rem;
+      letter-spacing: .05em;
+    }
+
+    .hero-cal-label {
+      margin: 58px 0 16px;
+
+      color: var(--grey-3);
+
+      font-size: .64rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .cal-embed-box,
+    .cal-embed-box-bottom {
+      width: 100%;
+      overflow: hidden;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+    }
+
+    #my-cal-inline-strategy,
+    #my-cal-inline-strategy-bottom {
+      width: 100%;
+      min-height: 660px;
+      overflow: scroll;
+    }
+
+    /* ---------------------------------------------------------
+       STANDARD SECTIONS
+    --------------------------------------------------------- */
+
+    #problem,
+    #for-who,
+    #results,
+    #booking-bottom {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 110px 0;
+    }
+
+    /* ---------------------------------------------------------
+       PROBLEM
+    --------------------------------------------------------- */
+
+    .problem-intro {
+      max-width: 620px;
+      margin: 0 0 54px;
+
+      color: var(--grey-4);
+
+      font-size: .96rem;
+      line-height: 1.9;
+    }
+
+    .pain-list {
+      list-style: none;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .pain-list li {
+      position: relative;
+
+      padding: 19px 0 19px 28px;
+
+      border-bottom: 1px solid var(--border);
+
+      color: var(--grey-4);
+
+      font-size: .88rem;
+
+      transition:
+        color .2s ease,
+        padding-left .2s ease;
+    }
+
+    .pain-list li::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: 29px;
+
+      width: 5px;
+      height: 5px;
+
+      background: var(--grey-2);
+    }
+
+    .pain-list li:hover {
+      padding-left: 34px;
+      color: var(--white);
+    }
+
+    .problem-closer {
+      max-width: 650px;
+      margin-top: 48px;
+
+      color: var(--grey-4);
+
+      font-size: .94rem;
+      line-height: 1.9;
+    }
+
+    .problem-closer strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* ---------------------------------------------------------
+       RESULTS
+    --------------------------------------------------------- */
+
+    .t-heading-wrap {
+      margin-bottom: 54px;
+    }
+
+    .t-heading-wrap h2 {
+      margin-bottom: 14px;
+    }
+
+    .t-heading-wrap p:last-child {
+      max-width: 520px;
+
+      color: var(--grey-4);
+
+      font-size: .88rem;
+      line-height: 1.8;
+    }
 
     .t-videos {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-bottom: 16px;
+      gap: 12px;
+
+      margin-bottom: 12px;
     }
 
     .t-video-item {
       position: relative;
-      aspect-ratio: 16/9;
-      background: #000;
-      border: 1px solid var(--grey-2);
+
+      aspect-ratio: 16 / 9;
+
       overflow: hidden;
-      border-radius: 16px;
+
+      background: #000;
+      border: 1px solid var(--border);
+
       cursor: pointer;
+
+      transition:
+        border-color .2s ease,
+        transform .2s ease;
+    }
+
+    .t-video-item:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
     }
 
     .t-video-item video {
+      display: block;
+
       width: 100%;
       height: 100%;
+
       object-fit: contain;
+
       background: #000;
-      display: block;
     }
 
     .video-overlay {
       position: absolute;
       inset: 0;
+
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.15));
+
+      background: rgba(0,0,0,.22);
+
       transition: opacity .25s ease;
     }
 
-    .t-video-item.playing .video-overlay { opacity: 0; pointer-events: none; }
+    .t-video-item.playing .video-overlay {
+      opacity: 0;
+      pointer-events: none;
+    }
 
     .play-btn {
-      width: 72px;
-      height: 72px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.1);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255,255,255,.2);
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: transform .2s ease, background .2s ease;
+
+      width: 54px;
+      height: 54px;
+
+      border: 1px solid rgba(255,255,255,.22);
+
+      background: rgba(0,0,0,.5);
+
+      backdrop-filter: blur(8px);
     }
 
     .play-btn::before {
       content: '';
-      margin-left: 4px;
+
+      margin-left: 3px;
+
       width: 0;
       height: 0;
-      border-top: 12px solid transparent;
-      border-bottom: 12px solid transparent;
-      border-left: 18px solid white;
-    }
 
-    .t-video-item:hover .play-btn { transform: scale(1.08); background: rgba(255,255,255,.16); }
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 13px solid #fff;
+    }
 
     .t-screenshots {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+      gap: 12px;
     }
 
     .t-shot {
-      border: 1px solid var(--grey-2);
       overflow: hidden;
-      background: var(--grey-1);
-      transition: transform 0.25s, border-color 0.25s;
+
+      aspect-ratio: 4 / 3;
+
+      background: var(--surface);
+      border: 1px solid var(--border);
+
       cursor: zoom-in;
+
+      transition:
+        transform .2s ease,
+        border-color .2s ease;
     }
 
-    .t-shot:hover { transform: scale(1.02); border-color: var(--grey-3); }
+    .t-shot:hover {
+      transform: translateY(-2px);
+      border-color: var(--border-strong);
+    }
 
-    .t-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .t-shot img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+
+    /* ---------------------------------------------------------
+       LIGHTBOX
+    --------------------------------------------------------- */
 
     .lightbox {
-      display: none;
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,0.92);
       z-index: 1000;
+
+      display: none;
       align-items: center;
       justify-content: center;
+
       padding: 24px;
+
+      background: rgba(0,0,0,.94);
     }
-    .lightbox.open { display: flex; }
-    .lightbox img { max-width: 90vw; max-height: 88vh; object-fit: contain; border: 1px solid var(--grey-2); }
-    .lightbox-close { position: fixed; top: 24px; right: 32px; font-size: 2rem; color: var(--grey-4); cursor: pointer; line-height: 1; background: none; border: none; transition: color 0.2s; }
-    .lightbox-close:hover { color: var(--white); }
 
-    /* ── FAQ ── */
-    #faq { padding: 100px 48px; background: var(--grey-1); border-top: 1px solid var(--grey-2); }
-    .faq-inner { max-width: 700px; margin: 0 auto; }
-    .faq-item { border-bottom: 1px solid var(--grey-2); padding: 22px 0; }
-    .faq-q { font-family: var(--serif); font-size: 1.12rem; font-weight: 700; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; color: var(--white); list-style: none; user-select: none; }
-    .faq-q::-webkit-details-marker { display: none; }
-    .faq-icon { font-size: 1.2rem; color: var(--grey-3); flex-shrink: 0; transition: transform 0.28s; font-style: normal; font-family: var(--sans); }
-    details[open] .faq-icon { transform: rotate(45deg); }
-    .faq-a { font-size: 0.9rem; color: var(--grey-4); line-height: 1.8; padding-top: 14px; max-width: 560px; }
+    .lightbox.open {
+      display: flex;
+    }
 
-    /* ── BOTTOM BOOKING ── */
-    #booking-bottom { padding: 100px 48px; max-width: 900px; margin: 0 auto; text-align: center; }
-    .booking-intro { font-size: 0.98rem; color: var(--grey-4); max-width: 480px; margin: 0 auto 36px; line-height: 1.8; }
-    .cal-embed-box-bottom { width: 100%; border: 1px solid var(--grey-2); background: var(--grey-1); overflow: hidden; margin-top: 36px; }
-    #my-cal-inline-strategy-bottom { width: 100%; min-height: 660px; overflow: scroll; }
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 88vh;
 
-    /* ── FOOTER ── */
-    footer { border-top: 1px solid var(--grey-2); padding: 44px 48px; display: flex; flex-direction: column; gap: 20px; }
-    .footer-inner { max-width: 860px; margin: 0 auto; width: 100%; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px; }
-    .footer-brand { font-family: var(--serif); font-size: 1.1rem; font-weight: 700; color: var(--white); }
-    .footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-    .footer-links a { font-size: 0.73rem; color: var(--grey-3); text-decoration: none; letter-spacing: 0.06em; transition: color 0.2s; }
-    .footer-links a:hover { color: var(--white); }
-    .footer-disclaimer { max-width: 860px; margin: 0 auto; width: 100%; font-size: 0.68rem; color: var(--grey-3); line-height: 1.75; }
+      object-fit: contain;
 
-    /* ── RESPONSIVE ── */
+      border: 1px solid var(--border);
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 22px;
+      right: 28px;
+
+      border: 0;
+      background: none;
+
+      color: var(--grey-4);
+
+      font-size: 2rem;
+      line-height: 1;
+
+      cursor: pointer;
+
+      transition: color .2s ease;
+    }
+
+    .lightbox-close:hover {
+      color: var(--white);
+    }
+
+    /* ---------------------------------------------------------
+       SYSTEM
+    --------------------------------------------------------- */
+
+    #system {
+      padding: 110px 0;
+
+      background: var(--surface);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .system-inner {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .system-intro {
+      max-width: 620px;
+      margin-top: 24px;
+
+      color: var(--grey-4);
+
+      font-size: .94rem;
+      line-height: 1.85;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 58px;
+
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .step {
+      padding: 34px 30px;
+
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+
+      transition: background .2s ease;
+    }
+
+    .step:hover {
+      background: rgba(255,255,255,.02);
+    }
+
+    .step-num {
+      margin-bottom: 26px;
+
+      color: var(--blue-light);
+
+      font-family: var(--heading);
+      font-size: 2.4rem;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -.04em;
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+
+      font-size: 1.15rem;
+    }
+
+    .step p {
+      color: var(--grey-4);
+
+      font-size: .84rem;
+      line-height: 1.8;
+    }
+
+    .system-results {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      margin-top: 48px;
+
+      border: 1px solid var(--border);
+    }
+
+    .system-result {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      padding: 28px 24px;
+
+      border-right: 1px solid var(--border);
+    }
+
+    .system-result:last-child {
+      border-right: none;
+    }
+
+    .system-result-number {
+      color: var(--white);
+
+      font-family: var(--heading);
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: -.04em;
+    }
+
+    .system-result-label {
+      color: var(--grey-3);
+
+      font-size: .63rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    /* ---------------------------------------------------------
+       CURRICULUM
+    --------------------------------------------------------- */
+
+    .curriculum-heading {
+      margin-top: 92px;
+      margin-bottom: 30px;
+    }
+
+    .curriculum-heading h3 {
+      margin-bottom: 7px;
+
+      font-size: 1.7rem;
+      letter-spacing: -.025em;
+    }
+
+    .curriculum-heading p:last-child {
+      color: var(--grey-4);
+      font-size: .84rem;
+    }
+
+    .curriculum {
+      border-top: 1px solid var(--border);
+    }
+
+    .curriculum-week {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .curriculum-week summary {
+      display: grid;
+      grid-template-columns: 48px 1fr 24px;
+      align-items: center;
+      gap: 16px;
+
+      padding: 22px 0;
+
+      cursor: pointer;
+      list-style: none;
+
+      transition: background .2s ease;
+    }
+
+    .curriculum-week summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .curriculum-week summary:hover {
+      background: rgba(255,255,255,.018);
+    }
+
+    .week-number {
+      color: var(--blue-light);
+
+      font-family: var(--heading);
+      font-size: .72rem;
+      font-weight: 600;
+    }
+
+    .week-title {
+      color: var(--white);
+
+      font-family: var(--heading);
+      font-size: .92rem;
+      font-weight: 500;
+    }
+
+    .week-icon {
+      color: var(--grey-3);
+
+      font-size: 1.15rem;
+      text-align: center;
+
+      transition:
+        transform .25s ease,
+        color .25s ease;
+    }
+
+    .curriculum-week[open] .week-icon {
+      transform: rotate(45deg);
+      color: var(--blue-light);
+    }
+
+    .week-content {
+      max-width: 700px;
+
+      padding: 0 40px 28px 64px;
+    }
+
+    .week-content p {
+      margin-bottom: 16px;
+
+      color: var(--grey-4);
+
+      font-size: .83rem;
+      line-height: 1.8;
+    }
+
+    .week-content ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 24px;
+
+      list-style: none;
+    }
+
+    .week-content li {
+      position: relative;
+
+      padding-left: 15px;
+
+      color: var(--grey-4);
+
+      font-size: .75rem;
+    }
+
+    .week-content li::before {
+      content: '';
+
+      position: absolute;
+      left: 0;
+      top: .7em;
+
+      width: 4px;
+      height: 4px;
+
+      background: var(--blue-light);
+    }
+
+    .system-guarantee {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+
+      margin-top: 42px;
+      padding: 25px 28px;
+
+      border: 1px solid rgba(59,130,246,.22);
+
+      background: rgba(26,86,219,.045);
+    }
+
+    .system-guarantee strong {
+      color: var(--white);
+
+      font-family: var(--heading);
+      font-size: .98rem;
+      font-weight: 500;
+    }
+
+    .system-guarantee span {
+      color: var(--blue-light);
+
+      font-size: .78rem;
+    }
+
+    /* ---------------------------------------------------------
+       FOR WHO
+    --------------------------------------------------------- */
+
+    .for-who-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+
+      margin-top: 52px;
+    }
+
+    .for-who-block h3 {
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+
+      border-bottom: 1px solid var(--border);
+
+      font-size: 1rem;
+    }
+
+    .check-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+
+      list-style: none;
+    }
+
+    .check-list li {
+      position: relative;
+
+      padding-left: 20px;
+
+      color: var(--grey-4);
+
+      font-size: .83rem;
+      line-height: 1.7;
+    }
+
+    .check-list.yes li::before {
+      content: '✓';
+
+      position: absolute;
+      left: 0;
+
+      color: var(--blue-light);
+
+      font-size: .75rem;
+    }
+
+    .check-list.no li::before {
+      content: '×';
+
+      position: absolute;
+      left: 0;
+
+      color: var(--grey-3);
+
+      font-size: .9rem;
+    }
+
+    /* ---------------------------------------------------------
+       DELIVERABLES
+    --------------------------------------------------------- */
+
+    #deliverables {
+      padding: 110px 0;
+
+      background: var(--surface);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .deliverables-inner {
+      width: min(900px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      margin-top: 52px;
+
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+
+    .deliverable-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+
+      padding: 24px;
+
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .d-dot {
+      flex-shrink: 0;
+
+      width: 5px;
+      height: 5px;
+
+      margin-top: 8px;
+
+      background: var(--blue-light);
+    }
+
+    .deliverable-item p {
+      color: var(--grey-4);
+
+      font-size: .83rem;
+      line-height: 1.7;
+    }
+
+    /* ---------------------------------------------------------
+       FAQ
+    --------------------------------------------------------- */
+
+    #faq {
+      padding: 110px 0;
+
+      background: var(--surface);
+
+      border-top: 1px solid var(--border);
+    }
+
+    .faq-inner {
+      width: min(700px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+
+      padding: 21px 0;
+
+      color: var(--white);
+
+      font-family: var(--heading);
+      font-size: .94rem;
+      font-weight: 500;
+
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .faq-q::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+
+      color: var(--grey-3);
+
+      font-family: var(--body);
+      font-size: 1.1rem;
+      font-style: normal;
+
+      transition:
+        transform .25s ease,
+        color .25s ease;
+    }
+
+    details[open] .faq-icon {
+      transform: rotate(45deg);
+      color: var(--blue-light);
+    }
+
+    .faq-a {
+      max-width: 590px;
+
+      padding: 0 0 22px;
+
+      color: var(--grey-4);
+
+      font-size: .84rem;
+      line-height: 1.85;
+    }
+
+    /* ---------------------------------------------------------
+       BOTTOM BOOKING
+    --------------------------------------------------------- */
+
+    #booking-bottom {
+      text-align: center;
+    }
+
+    .booking-intro {
+      max-width: 500px;
+      margin: 20px auto 32px;
+
+      color: var(--grey-4);
+
+      font-size: .9rem;
+      line-height: 1.85;
+    }
+
+    .cal-embed-box-bottom {
+      margin-top: 44px;
+
+      text-align: left;
+    }
+
+    /* ---------------------------------------------------------
+       FOOTER
+    --------------------------------------------------------- */
+
+    footer {
+      padding: 50px 48px;
+
+      border-top: 1px solid var(--border);
+
+      background: var(--black);
+    }
+
+    .footer-inner {
+      width: min(900px, 100%);
+      margin: 0 auto;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      color: var(--white);
+
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .footer-brand-dot {
+      width: 6px;
+      height: 6px;
+
+      background: var(--blue);
+
+      border-radius: 50%;
+    }
+
+    .footer-proprietor {
+      margin-top: 6px;
+
+      color: var(--grey-3);
+
+      font-size: .68rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      color: var(--grey-3);
+
+      font-size: .67rem;
+      letter-spacing: .04em;
+
+      text-decoration: none;
+
+      transition: color .2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--white);
+    }
+
+    .business-info {
+      width: min(900px, 100%);
+      margin: 34px auto 0;
+
+      color: var(--grey-4);
+
+      font-size: .72rem;
+      line-height: 1.85;
+    }
+
+    .business-info strong {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .footer-disclaimer {
+      width: min(900px, 100%);
+      margin: 28px auto 0;
+
+      color: var(--grey-3);
+
+      font-size: .64rem;
+      line-height: 1.8;
+    }
+
+    /* ---------------------------------------------------------
+       RESPONSIVE
+    --------------------------------------------------------- */
+
     @media (max-width: 860px) {
+
+      nav {
+        padding: 17px 24px;
+      }
+
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        border-left: 1px solid var(--border);
+      }
+
       .system-results {
-  grid-template-columns: 1fr;
-}
+        grid-template-columns: 1fr;
+      }
 
-.system-result {
-  border-right: none;
-  border-bottom: 1px solid var(--grey-2);
-}
+      .system-result {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
 
-.system-result:last-child {
-  border-bottom: none;
-}
+      .system-result:last-child {
+        border-bottom: none;
+      }
 
-.week-content {
-  padding-left: 20px;
-}
+      .for-who-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
+      }
 
-.week-content ul {
-  grid-template-columns: 1fr;
-}
-      .steps { grid-template-columns: 1fr; border-left: none; }
-      .step { border-left: 1px solid var(--grey-2); }
-      .for-who-grid { grid-template-columns: 1fr; }
-      .deliverables-grid { grid-template-columns: 1fr; }
-      .t-videos { grid-template-columns: 1fr; }
-      .t-screenshots { grid-template-columns: repeat(2, 1fr); }
+      .deliverables-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .t-videos {
+        grid-template-columns: 1fr;
+      }
+
+      .t-screenshots {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .week-content ul {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
     }
 
     @media (max-width: 600px) {
+
+      nav {
+        padding: 16px 20px;
+      }
+
+      .nav-logo {
+        font-size: .98rem;
+      }
+
+      .nav-logo span {
+        display: none;
+      }
+
+      .nav-cta {
+        min-height: 34px;
+        padding: 0 13px;
+
+        font-size: .61rem;
+      }
+
+      .container,
+      #problem,
+      #for-who,
+      #results,
+      #booking-bottom,
+      .system-inner,
+      .deliverables-inner {
+        width: min(100% - 40px, 900px);
+      }
+
+      #hero {
+        width: min(100% - 40px, 980px);
+        padding: 58px 0 76px;
+      }
+
+      h1 {
+        font-size: clamp(2.65rem, 14vw, 4rem);
+      }
+
+      h2 {
+        font-size: clamp(2rem, 10vw, 3rem);
+      }
+
+      .hero-sub {
+        font-size: .67rem;
+        line-height: 1.6;
+      }
+
+      .hero-flow {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .flow-step {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .flow-divider {
+        display: none;
+      }
+
+      #problem,
+      #for-who,
+      #results,
+      #booking-bottom,
+      #system,
+      #deliverables,
+      #faq {
+        padding-top: 76px;
+        padding-bottom: 76px;
+      }
+
+      .problem-intro {
+        font-size: .88rem;
+      }
+
+      .pain-list li {
+        font-size: .82rem;
+      }
+
+      .step {
+        padding: 30px 22px;
+      }
+
       .curriculum-heading {
-  margin-top: 64px;
-}
+        margin-top: 68px;
+      }
 
-.curriculum-week summary {
-  grid-template-columns: 42px 1fr 24px;
-  gap: 10px;
-  padding: 20px 0;
-}
+      .curriculum-week summary {
+        grid-template-columns: 36px 1fr 20px;
+        gap: 10px;
+        padding: 19px 0;
+      }
 
-.week-title {
-  font-size: 0.9rem;
-}
+      .week-title {
+        font-size: .83rem;
+      }
 
-.week-content {
-  padding: 0 20px 24px 52px;
-}
+      .week-content {
+        padding: 0 10px 24px 46px;
+      }
 
-.system-result {
-  padding: 24px 20px;
-}
+      .system-result {
+        padding: 22px 20px;
+      }
 
-.system-guarantee {
-  padding: 24px 20px;
-}
-      nav { padding: 18px 20px; }
-      .nav-logo { font-size: 1.05rem; }
-      .nav-cta { padding: 8px 14px; font-size: 0.7rem; }
-      #hero { padding: 36px 20px 60px; }
-      #problem, #for-who, #results, #booking-bottom { padding: 72px 20px; }
-      #system, #deliverables, #faq { padding: 72px 20px; }
-      footer { padding: 36px 20px; }
-      .step { padding: 32px 20px; }
-      .deliverable-item { padding: 18px 16px; }
-      .footer-inner { flex-direction: column; gap: 14px; }
+      .system-guarantee {
+        padding: 22px 20px;
+      }
+
+      .deliverable-item {
+        padding: 20px;
+      }
+
+      .t-screenshots {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+
+      footer {
+        padding: 40px 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .progress-wrap {
+        padding: 13px 20px;
+      }
+
+      .progress-label,
+      .progress-percent {
+        font-size: .57rem;
+      }
     }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
   </style>
 </head>
+
 <body>
 
-  <!-- NAV -->
+  <!-- =========================================================
+       NAV
+  ========================================================== -->
+
   <nav>
-<a href="/" class="nav-logo">Zen Academy <span>by Zen Acquisition™</span></a>    
-<a href="#hero-cal" class="nav-cta">Book a Call</a>
+
+    <a href="/" class="nav-logo">
+      <span class="nav-logo-mark"></span>
+      Zen Academy
+      <span>by Zen Acquisition™</span>
+    </a>
+
+    <a href="#hero-cal" class="nav-cta">
+      Book a Call
+    </a>
+
   </nav>
 
-  <!-- PROGRESS BAR -->
+  <!-- =========================================================
+       PROGRESS
+  ========================================================== -->
+
   <div class="progress-wrap">
+
     <div class="progress-top">
-      <span class="progress-label">Step 1 of 2 — Watch The Video</span>
-<span class="progress-percent">60%</span>
+      <span class="progress-label">
+        Step 1 of 2 — Watch The Video
+      </span>
+
+      <span class="progress-percent">
+        60%
+      </span>
     </div>
+
     <div class="progress-bar">
       <div class="progress-fill"></div>
     </div>
+
   </div>
 
-  <!-- ═══════ HERO ═══════ -->
-  <section id="hero">
-    <p class="hero-sub reveal" style="transition-delay:.02s">
-      A 90-day training program for agency owners, coaches & consultants
-    </p>
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
 
-    <h1 class="reveal" style="transition-delay:.08s">
-     We Train Your Team To Land <span class="accent">20 to 30</span>
-High-Ticket Clients In <span class="accent">90 Days.</span>
+  <section id="hero">
+
+    <div class="hero-kicker reveal">
+      <span class="eyebrow">
+        Zen Acquisition / Zen Academy
+      </span>
+    </div>
+
+    <h1 class="reveal" style="transition-delay:.06s">
+      Train Your Team To Land
+      <span class="accent">20–30</span>
+      High-Ticket Clients In
+      <span class="accent">90 Days.</span>
     </h1>
 
-    <p class="hero-guarantee reveal" style="transition-delay:.14s">
+    <p class="hero-sub reveal" style="transition-delay:.12s">
+      A 90-day training and implementation program for agency owners,
+      coaches and consultants.
+    </p>
+
+    <p class="hero-guarantee reveal" style="transition-delay:.18s">
       Implement it as taught or get a full refund.
     </p>
 
-    <!-- VIDEO -->
-    <div class="hero-flow reveal" style="transition-delay:.26s">
+    <div class="hero-flow reveal" style="transition-delay:.24s">
+
       <div class="flow-step" id="watch-video-btn">
         <div class="flow-number">1</div>
         <div class="flow-text">Watch The Video</div>
       </div>
+
       <div class="flow-divider"></div>
+
       <div class="flow-step" id="book-call-btn">
         <div class="flow-number">2</div>
         <div class="flow-text">Book Your Enrollment Call</div>
       </div>
+
     </div>
 
-    <div id="hero-video" class="hero-video-wrap reveal" style="transition-delay:.3s">
+    <!-- WISTIA -->
+
+    <div
+      id="hero-video"
+      class="hero-video-wrap reveal"
+      style="transition-delay:.30s"
+    >
+
       <script src="https://fast.wistia.com/player.js" async></script>
-      <script src="https://fast.wistia.com/embed/8tc28mlc5m.js" async type="module"></script>
+
+      <script
+        src="https://fast.wistia.com/embed/8tc28mlc5m.js"
+        async
+        type="module"
+      ></script>
+
       <wistia-player
         media-id="8tc28mlc5m"
         aspect="1.7777777777777777"
         playsinline="true"
         controls="true"
-        audio="true">
-      </wistia-player>
+        audio="true"
+      ></wistia-player>
+
     </div>
 
-    <!-- CTA -->
-    <div class="hero-cta-block reveal" style="transition-delay:.38s">
-      <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
+    <div
+      class="hero-cta-block reveal"
+      style="transition-delay:.36s"
+    >
+
+      <a href="#hero-cal" class="btn-primary">
+        Schedule Your Free Enrollment Call
+      </a>
+
+      <p class="trust-note">
+        See if the program is right for your team.
+      </p>
+
     </div>
 
-    <!-- CAL EMBED -->
-    <p class="hero-cal-label reveal" style="transition-delay:.44s" id="hero-cal">Pick a time — it takes 30 seconds</p>
-    <div class="cal-embed-box reveal" style="transition-delay:.5s">
+    <p
+      class="hero-cal-label reveal"
+      style="transition-delay:.42s"
+      id="hero-cal"
+    >
+      Pick a time — it takes 30 seconds
+    </p>
+
+    <div
+      class="cal-embed-box reveal"
+      style="transition-delay:.48s"
+    >
       <div id="my-cal-inline-strategy"></div>
     </div>
 
@@ -973,713 +1904,1711 @@ High-Ticket Clients In <span class="accent">90 Days.</span>
 
   <hr class="divider" />
 
-  <!-- PROBLEM -->
+  <!-- =========================================================
+       PROBLEM
+  ========================================================== -->
+
   <section id="problem">
-    <p class="section-label reveal">The Real Problem</p>
-    <h2 class="reveal" style="transition-delay:.08s">
-      Most coaches don't have<br>a delivery problem.<br>They have <span class="accent">a pipeline problem.</span>
+
+    <p class="section-label reveal">
+      The Problem
+    </p>
+
+    <h2 class="reveal" style="transition-delay:.06s">
+      Your offer isn't necessarily the problem.
+      <br />
+      <span class="accent">Your pipeline is.</span>
     </h2>
-    <p class="problem-intro reveal" style="transition-delay:.14s">
-      Every month looks different. Some months you're fully booked. Other months you're refreshing your inbox. And the worst part? You can't pinpoint why it keeps happening.
+
+    <p
+      class="problem-intro reveal"
+      style="transition-delay:.12s"
+    >
+      Every month looks different. Some months you're fully booked.
+      Other months you're refreshing your inbox. And the worst part?
+      You can't pinpoint why it keeps happening.
     </p>
+
     <ul class="pain-list">
-      <li class="reveal" style="transition-delay:.00s">Spending hours every week on outreach that goes nowhere</li>
-      <li class="reveal" style="transition-delay:.04s">Posting content and waiting for it to somehow convert into booked calls</li>
-      <li class="reveal" style="transition-delay:.08s">Relying on referrals you can't predict, control, or scale</li>
-      <li class="reveal" style="transition-delay:.12s">Jumping between strategies — cold DMs one week, LinkedIn the next, email the week after</li>
-      <li class="reveal" style="transition-delay:.16s">Paying an agency every month for pipeline you never actually own</li>
-      <li class="reveal" style="transition-delay:.20s">Closing well when people show up — the problem is getting them to show up</li>
-      <li class="reveal" style="transition-delay:.24s">Watching other agencies scale while your lead flow stays inconsistent</li>
+
+      <li class="reveal">
+        Spending hours every week on outreach that goes nowhere
+      </li>
+
+      <li class="reveal" style="transition-delay:.04s">
+        Posting content and waiting for it to somehow convert into booked calls
+      </li>
+
+      <li class="reveal" style="transition-delay:.08s">
+        Relying on referrals you can't predict, control, or scale
+      </li>
+
+      <li class="reveal" style="transition-delay:.12s">
+        Jumping between strategies without a repeatable operating system
+      </li>
+
+      <li class="reveal" style="transition-delay:.16s">
+        Paying an agency every month for pipeline you never actually own
+      </li>
+
+      <li class="reveal" style="transition-delay:.20s">
+        Closing well when people show up — the problem is getting them to show up
+      </li>
+
+      <li class="reveal" style="transition-delay:.24s">
+        Watching competitors scale while your lead flow stays inconsistent
+      </li>
+
     </ul>
+
     <p class="problem-closer reveal">
-      The gap between where you are and where you want to be isn't your offer. It isn't your skills. It isn't your pricing. It's the absence of one thing — <strong>a team that knows how to run outbound and land high-ticket clients predictably, without depending on referrals, paid ads, or a rented agency.</strong><br><br>
-      That's not a you problem. That's a skills-and-systems gap inside your team. And that's exactly what we install over 90 days — not by running it for you, but by training your team to run it themselves, so you never have to pay another agency again.
+
+      The gap between where you are and where you want to be isn't necessarily
+      your offer, your skills, or your pricing.
+
+      <br /><br />
+
+      It's the absence of a team that knows how to run acquisition
+      consistently.
+
+      <br /><br />
+
+      That's a skills-and-systems gap.
+
+      <strong>
+        Zen Academy exists to close that gap by training your team to run
+        the acquisition system themselves.
+      </strong>
+
     </p>
+
   </section>
 
   <hr class="divider" />
 
-  <!-- TESTIMONIALS -->
+  <!-- =========================================================
+       RESULTS
+  ========================================================== -->
+
   <section id="results">
+
     <div class="t-heading-wrap reveal">
-      <p class="section-label">Results From The System</p>
-      <h2 style="margin-bottom:12px">Real clients.<br><span class="accent">Real outcomes.</span></h2>
-      <p style="font-size:0.9rem;color:var(--grey-4);max-width:480px;margin:0 auto">20+ coaches and agency owners across India have used the system. Here's what they said.</p>
-    </div>
 
-    <div class="t-videos reveal" style="transition-delay:.1s">
-      <div class="t-video-item" onclick="playVideo(this)">
-        <video preload="metadata" playsinline><source src="t7.mp4" type="video/mp4"></video>
-        <div class="video-overlay"><div class="play-btn"></div></div>
-      </div>
-      <div class="t-video-item" onclick="playVideo(this)">
-        <video preload="metadata" playsinline><source src="t8.mp4" type="video/mp4"></video>
-        <div class="video-overlay"><div class="play-btn"></div></div>
-      </div>
-      <div class="t-video-item" onclick="playVideo(this)">
-        <video preload="metadata" playsinline><source src="t9.mp4" type="video/mp4"></video>
-        <div class="video-overlay"><div class="play-btn"></div></div>
-      </div>
-    </div>
-
-    <div class="t-screenshots reveal" style="transition-delay:.2s">
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t1.webp" alt="Client result" loading="lazy" /></div>
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t2.webp" alt="Client result" loading="lazy" /></div>
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t3.webp" alt="Client result" loading="lazy" /></div>
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t4.webp" alt="Client result" loading="lazy" /></div>
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t5.webp" alt="Client result" loading="lazy" /></div>
-      <div class="t-shot" onclick="openLightbox(this)"><img src="t6.webp" alt="Client result" loading="lazy" /></div>
-    </div>
-
-    <div style="text-align:center;margin-top:52px" class="reveal" style="transition-delay:.28s">
-      <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
-      <p class="trust-note" style="margin-top:14px">Helping coaches and agencies train their own outbound teams</p>
-    </div>
-  </section>
-
-
-<!-- ═══════ 90-DAY SYSTEM ═══════ -->
-<section id="system">
-  <div class="system-inner">
-
-    <p class="section-label reveal">How It Works</p>
-
-    <h2 class="reveal" style="transition-delay:.08s">
-      We Train Your Team To Run<br>
-      The Exact <span class="accent">Appointment Engine</span><br>
-      We Use, In <span class="accent">90 Days.</span>
-    </h2>
-
-    <p class="system-intro reveal" style="transition-delay:.14s">
-      A complete 90-day implementation program designed to take your team
-      from inconsistent outreach to a trained, repeatable client acquisition
-      system they can run independently.
-    </p>
-
-    <div class="steps">
-
-      <div class="step reveal" style="transition-delay:.00s">
-        <div class="step-num">01</div>
-        <h3>Foundation</h3>
-        <p>
-          We identify your ideal clients, sharpen your positioning,
-          build your targeting criteria, and establish the foundation
-          your team needs before outreach begins.
-        </p>
-      </div>
-
-      <div class="step reveal" style="transition-delay:.10s">
-        <div class="step-num">02</div>
-        <h3>Outbound</h3>
-        <p>
-          Your team learns the complete outbound engine — lead sourcing,
-          cold email, LinkedIn, cold calling, messaging, follow-up,
-          and daily execution.
-        </p>
-      </div>
-
-      <div class="step reveal" style="transition-delay:.20s">
-        <div class="step-num">03</div>
-        <h3>Mastery</h3>
-        <p>
-          We review real conversations, fix objections, improve qualification,
-          increase booking rates, and train your team until they can operate
-          the system without depending on us.
-        </p>
-      </div>
-
-    </div>
-
-    <div class="system-results reveal" style="transition-delay:.24s">
-
-      <div class="system-result">
-        <span class="system-result-number">90</span>
-        <span class="system-result-label">Days of Implementation</span>
-      </div>
-
-      <div class="system-result">
-        <span class="system-result-number">13</span>
-        <span class="system-result-label">Weeks of Training</span>
-      </div>
-
-      <div class="system-result">
-        <span class="system-result-number">20–30</span>
-        <span class="system-result-label">Target Client Outcomes</span>
-      </div>
-
-    </div>
-
-    <div class="curriculum-heading reveal" style="transition-delay:.28s">
-      <p class="section-label">90-Day Curriculum</p>
-      <h3>What Your Team Will Learn</h3>
-      <p>
-        Expand each week to see exactly what is covered during the
-        90-day implementation.
+      <p class="section-label">
+        Results From The System
       </p>
-    </div>
 
-    <div class="curriculum reveal" style="transition-delay:.32s">
+      <h2>
+        Real clients.
+        <br />
+        <span class="accent">Real outcomes.</span>
+      </h2>
 
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">01</span>
-          <span class="week-title">Foundation & Client Acquisition Strategy</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Establish the foundation for the acquisition system. Define the
-            business model, offer, ideal client profile, target market,
-            acquisition goals, and current pipeline.
-          </p>
-          <ul>
-            <li>Ideal Client Profile</li>
-            <li>Market & niche selection</li>
-            <li>Offer positioning</li>
-            <li>Client acquisition goals</li>
-            <li>Baseline pipeline audit</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">02</span>
-          <span class="week-title">Prospecting Psychology & Outreach Fundamentals</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Build the mindset and fundamentals required for consistent
-            outbound execution without relying on motivation or referrals.
-          </p>
-          <ul>
-            <li>Outbound psychology</li>
-            <li>Understanding buyer intent</li>
-            <li>Prospecting fundamentals</li>
-            <li>Common outreach mistakes</li>
-            <li>Building an execution routine</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">03</span>
-          <span class="week-title">Lead Sourcing & Targeting</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Teach your team how to consistently identify and build lists of
-            qualified prospects instead of relying on random lead lists.
-          </p>
-          <ul>
-            <li>Lead sourcing</li>
-            <li>Target account identification</li>
-            <li>Decision-maker research</li>
-            <li>Lead qualification criteria</li>
-            <li>Building the prospect database</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">04</span>
-          <span class="week-title">Messaging, Scripts & Outreach Infrastructure</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Build the actual communication assets your team will use to
-            start conversations with qualified prospects.
-          </p>
-          <ul>
-            <li>Cold email scripts</li>
-            <li>LinkedIn outreach</li>
-            <li>Cold calling scripts</li>
-            <li>Follow-up sequences</li>
-            <li>Personalization framework</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">05</span>
-          <span class="week-title">Live Outreach Execution</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Your team begins executing the system against real prospects
-            while receiving live feedback and correction.
-          </p>
-          <ul>
-            <li>Daily prospecting activity</li>
-            <li>Cold outreach execution</li>
-            <li>Call practice</li>
-            <li>Message testing</li>
-            <li>Activity tracking</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">06</span>
-          <span class="week-title">Follow-Up & Appointment Generation</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Turn initial conversations into consistent follow-up systems
-            and qualified appointments.
-          </p>
-          <ul>
-            <li>Follow-up psychology</li>
-            <li>Multi-touch sequences</li>
-            <li>Appointment setting</li>
-            <li>Lead qualification</li>
-            <li>Calendar management</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">07</span>
-          <span class="week-title">First Performance Checkpoint</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Review the team's real-world performance and identify the
-            highest-impact bottlenecks in the acquisition engine.
-          </p>
-          <ul>
-            <li>Pipeline review</li>
-            <li>Call review</li>
-            <li>Message performance</li>
-            <li>Conversion analysis</li>
-            <li>Corrective action plan</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">08</span>
-          <span class="week-title">Objection Handling & Conversation Mastery</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Train the team to handle resistance confidently and keep
-            qualified conversations moving forward.
-          </p>
-          <ul>
-            <li>Common objections</li>
-            <li>Price objections</li>
-            <li>Timing objections</li>
-            <li>Authority objections</li>
-            <li>Conversation control</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">09</span>
-          <span class="week-title">Optimization & Conversion Improvement</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Use real campaign data to improve targeting, messaging,
-            activity levels, qualification, and booking performance.
-          </p>
-          <ul>
-            <li>Campaign analysis</li>
-            <li>Conversion optimization</li>
-            <li>Message iteration</li>
-            <li>Lead quality improvement</li>
-            <li>Pipeline optimization</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">10</span>
-          <span class="week-title">Advanced Calling & Sales Conversation Skills</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Develop stronger live conversation skills through repeated
-            practice, call reviews, roleplay, and advanced objection handling.
-          </p>
-          <ul>
-            <li>Advanced cold calling</li>
-            <li>Conversation control</li>
-            <li>Discovery questions</li>
-            <li>Qualification</li>
-            <li>Advanced roleplay</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">11</span>
-          <span class="week-title">Second Performance Checkpoint</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Conduct a second deep performance review using real campaign
-            data and recorded conversations.
-          </p>
-          <ul>
-            <li>Pipeline performance review</li>
-            <li>Call scoring</li>
-            <li>Booking-rate analysis</li>
-            <li>Team performance review</li>
-            <li>Final optimization plan</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">12</span>
-          <span class="week-title">Systemization & Team Independence</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Turn the training into a repeatable internal process that can
-            continue operating without daily external supervision.
-          </p>
-          <ul>
-            <li>Outbound SOP creation</li>
-            <li>Team responsibilities</li>
-            <li>Daily & weekly KPIs</li>
-            <li>Management dashboards</li>
-            <li>Internal quality control</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="curriculum-week">
-        <summary>
-          <span class="week-number">13</span>
-          <span class="week-title">Final Mastery & 90-Day Independence</span>
-          <span class="week-icon">+</span>
-        </summary>
-        <div class="week-content">
-          <p>
-            Complete the final performance review and ensure your team can
-            independently operate, measure, optimize, and scale the
-            appointment engine.
-          </p>
-          <ul>
-            <li>Final performance checkpoint</li>
-            <li>Full system review</li>
-            <li>Team competency assessment</li>
-            <li>90-day acquisition roadmap</li>
-            <li>Long-term operating system</li>
-          </ul>
-        </div>
-      </details>
+      <p>
+        20+ coaches and agency owners across India have used the system.
+        Here's what they said.
+      </p>
 
     </div>
 
-    <div class="system-guarantee reveal" style="transition-delay:.36s">
-      <strong>By Day 90, your team doesn't just understand the system.</strong>
-      <span>They know how to run it.</span>
+    <div
+      class="t-videos reveal"
+      style="transition-delay:.08s"
+    >
+
+      <div
+        class="t-video-item"
+        onclick="playVideo(this)"
+      >
+        <video preload="metadata" playsinline>
+          <source src="t7.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div
+        class="t-video-item"
+        onclick="playVideo(this)"
+      >
+        <video preload="metadata" playsinline>
+          <source src="t8.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
+      <div
+        class="t-video-item"
+        onclick="playVideo(this)"
+      >
+        <video preload="metadata" playsinline>
+          <source src="t9.mp4" type="video/mp4" />
+        </video>
+
+        <div class="video-overlay">
+          <div class="play-btn"></div>
+        </div>
+      </div>
+
     </div>
 
-    <div style="margin-top:48px" class="reveal">
+    <div
+      class="t-screenshots reveal"
+      style="transition-delay:.14s"
+    >
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t1.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t2.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t3.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t4.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t5.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+      <div
+        class="t-shot"
+        onclick="openLightbox(this)"
+      >
+        <img
+          src="t6.webp"
+          alt="Client result"
+          loading="lazy"
+        />
+      </div>
+
+    </div>
+
+    <div
+      class="reveal"
+      style="
+        text-align:center;
+        margin-top:48px;
+        transition-delay:.2s;
+      "
+    >
+
       <a href="#hero-cal" class="btn-primary">
         Schedule Your Free Enrollment Call
       </a>
+
+      <p class="trust-note">
+        Training teams to own their acquisition system.
+      </p>
+
     </div>
 
-  </div>
-</section>
+  </section>
 
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">×</button>
-    <img id="lightbox-img" src="" alt="Testimonial" />
+  <!-- =========================================================
+       SYSTEM
+  ========================================================== -->
+
+  <section id="system">
+
+    <div class="system-inner">
+
+      <p class="section-label reveal">
+        The 90-Day System
+      </p>
+
+      <h2 class="reveal" style="transition-delay:.06s">
+        We Train Your Team To Run
+        <br />
+        The Exact
+        <span class="accent">Appointment Engine</span>
+        <br />
+        We Use, In
+        <span class="accent">90 Days.</span>
+      </h2>
+
+      <p
+        class="system-intro reveal"
+        style="transition-delay:.12s"
+      >
+        A complete 90-day implementation program designed to take your team
+        from inconsistent outreach to a trained, repeatable client acquisition
+        system they can run independently.
+      </p>
+
+      <div class="steps">
+
+        <div class="step reveal">
+
+          <div class="step-num">
+            01
+          </div>
+
+          <h3>
+            Foundation
+          </h3>
+
+          <p>
+            Identify your ideal clients, sharpen your positioning,
+            establish targeting criteria, and build the foundation
+            your team needs before outreach begins.
+          </p>
+
+        </div>
+
+        <div
+          class="step reveal"
+          style="transition-delay:.08s"
+        >
+
+          <div class="step-num">
+            02
+          </div>
+
+          <h3>
+            Outbound
+          </h3>
+
+          <p>
+            Your team learns the complete outbound engine — lead sourcing,
+            cold email, LinkedIn, cold calling, messaging, follow-up,
+            and daily execution.
+          </p>
+
+        </div>
+
+        <div
+          class="step reveal"
+          style="transition-delay:.16s"
+        >
+
+          <div class="step-num">
+            03
+          </div>
+
+          <h3>
+            Mastery
+          </h3>
+
+          <p>
+            Review real conversations, fix objections, improve qualification,
+            increase booking rates, and train the team until they can
+            operate the system without depending on us.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div
+        class="system-results reveal"
+        style="transition-delay:.2s"
+      >
+
+        <div class="system-result">
+          <span class="system-result-number">
+            90
+          </span>
+
+          <span class="system-result-label">
+            Days of Implementation
+          </span>
+        </div>
+
+        <div class="system-result">
+          <span class="system-result-number">
+            13
+          </span>
+
+          <span class="system-result-label">
+            Weeks of Training
+          </span>
+        </div>
+
+        <div class="system-result">
+          <span class="system-result-number">
+            20–30
+          </span>
+
+          <span class="system-result-label">
+            Target Client Outcomes
+          </span>
+        </div>
+
+      </div>
+
+      <!-- CURRICULUM -->
+
+      <div
+        class="curriculum-heading reveal"
+        style="transition-delay:.24s"
+      >
+
+        <p class="section-label">
+          90-Day Curriculum
+        </p>
+
+        <h3>
+          What Your Team Will Learn
+        </h3>
+
+        <p>
+          Expand each week to see what is covered during the
+          90-day implementation.
+        </p>
+
+      </div>
+
+      <div
+        class="curriculum reveal"
+        style="transition-delay:.28s"
+      >
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">01</span>
+            <span class="week-title">
+              Foundation & Client Acquisition Strategy
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Establish the foundation for the acquisition system.
+              Define the business model, offer, ideal client profile,
+              target market, acquisition goals, and current pipeline.
+            </p>
+
+            <ul>
+              <li>Ideal Client Profile</li>
+              <li>Market & niche selection</li>
+              <li>Offer positioning</li>
+              <li>Client acquisition goals</li>
+              <li>Baseline pipeline audit</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">02</span>
+            <span class="week-title">
+              Prospecting Psychology & Outreach Fundamentals
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Build the fundamentals required for consistent outbound
+              execution without relying on motivation or referrals.
+            </p>
+
+            <ul>
+              <li>Outbound psychology</li>
+              <li>Understanding buyer intent</li>
+              <li>Prospecting fundamentals</li>
+              <li>Common outreach mistakes</li>
+              <li>Building an execution routine</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">03</span>
+            <span class="week-title">
+              Lead Sourcing & Targeting
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Teach your team how to consistently identify and build lists
+              of qualified prospects instead of relying on random lead lists.
+            </p>
+
+            <ul>
+              <li>Lead sourcing</li>
+              <li>Target account identification</li>
+              <li>Decision-maker research</li>
+              <li>Lead qualification criteria</li>
+              <li>Building the prospect database</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">04</span>
+            <span class="week-title">
+              Messaging, Scripts & Outreach Infrastructure
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Build the communication assets your team will use to
+              start conversations with qualified prospects.
+            </p>
+
+            <ul>
+              <li>Cold email scripts</li>
+              <li>LinkedIn outreach</li>
+              <li>Cold calling scripts</li>
+              <li>Follow-up sequences</li>
+              <li>Personalization framework</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">05</span>
+            <span class="week-title">
+              Live Outreach Execution
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Your team begins executing the system against real prospects
+              while receiving live feedback and correction.
+            </p>
+
+            <ul>
+              <li>Daily prospecting activity</li>
+              <li>Cold outreach execution</li>
+              <li>Call practice</li>
+              <li>Message testing</li>
+              <li>Activity tracking</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">06</span>
+            <span class="week-title">
+              Follow-Up & Appointment Generation
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Turn initial conversations into consistent follow-up
+              systems and qualified appointments.
+            </p>
+
+            <ul>
+              <li>Follow-up psychology</li>
+              <li>Multi-touch sequences</li>
+              <li>Appointment setting</li>
+              <li>Lead qualification</li>
+              <li>Calendar management</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">07</span>
+            <span class="week-title">
+              First Performance Checkpoint
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Review the team's real-world performance and identify
+              the highest-impact bottlenecks in the acquisition engine.
+            </p>
+
+            <ul>
+              <li>Pipeline review</li>
+              <li>Call review</li>
+              <li>Message performance</li>
+              <li>Conversion analysis</li>
+              <li>Corrective action plan</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">08</span>
+            <span class="week-title">
+              Objection Handling & Conversation Mastery
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Train the team to handle resistance confidently and keep
+              qualified conversations moving forward.
+            </p>
+
+            <ul>
+              <li>Common objections</li>
+              <li>Price objections</li>
+              <li>Timing objections</li>
+              <li>Authority objections</li>
+              <li>Conversation control</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">09</span>
+            <span class="week-title">
+              Optimization & Conversion Improvement
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Use real campaign data to improve targeting, messaging,
+              activity levels, qualification, and booking performance.
+            </p>
+
+            <ul>
+              <li>Campaign analysis</li>
+              <li>Conversion optimization</li>
+              <li>Message iteration</li>
+              <li>Lead quality improvement</li>
+              <li>Pipeline optimization</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">10</span>
+            <span class="week-title">
+              Advanced Calling & Sales Conversation Skills
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Develop stronger live conversation skills through repeated
+              practice, call reviews, roleplay, and advanced objection handling.
+            </p>
+
+            <ul>
+              <li>Advanced cold calling</li>
+              <li>Conversation control</li>
+              <li>Discovery questions</li>
+              <li>Qualification</li>
+              <li>Advanced roleplay</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">11</span>
+            <span class="week-title">
+              Second Performance Checkpoint
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Conduct a second deep performance review using real campaign
+              data and recorded conversations.
+            </p>
+
+            <ul>
+              <li>Pipeline performance review</li>
+              <li>Call scoring</li>
+              <li>Booking-rate analysis</li>
+              <li>Team performance review</li>
+              <li>Final optimization plan</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">12</span>
+            <span class="week-title">
+              Systemization & Team Independence
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Turn the training into a repeatable internal process that can
+              continue operating without daily external supervision.
+            </p>
+
+            <ul>
+              <li>Outbound SOP creation</li>
+              <li>Team responsibilities</li>
+              <li>Daily & weekly KPIs</li>
+              <li>Management dashboards</li>
+              <li>Internal quality control</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+        <details class="curriculum-week">
+
+          <summary>
+            <span class="week-number">13</span>
+            <span class="week-title">
+              Final Mastery & 90-Day Independence
+            </span>
+            <span class="week-icon">+</span>
+          </summary>
+
+          <div class="week-content">
+
+            <p>
+              Complete the final performance review and ensure your team
+              can independently operate, measure, optimize, and scale
+              the appointment engine.
+            </p>
+
+            <ul>
+              <li>Final performance checkpoint</li>
+              <li>Full system review</li>
+              <li>Team competency assessment</li>
+              <li>90-day acquisition roadmap</li>
+              <li>Long-term operating system</li>
+            </ul>
+
+          </div>
+
+        </details>
+
+      </div>
+
+      <div
+        class="system-guarantee reveal"
+        style="transition-delay:.32s"
+      >
+
+        <strong>
+          By Day 90, your team doesn't just understand the system.
+        </strong>
+
+        <span>
+          They know how to run it.
+        </span>
+
+      </div>
+
+      <div
+        style="margin-top:42px"
+        class="reveal"
+      >
+
+        <a href="#hero-cal" class="btn-primary">
+          Schedule Your Free Enrollment Call
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       LIGHTBOX
+  ========================================================== -->
+
+  <div
+    class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"
+  >
+
+    <button
+      class="lightbox-close"
+      onclick="closeLightbox()"
+      aria-label="Close image"
+    >
+      ×
+    </button>
+
+    <img
+      id="lightbox-img"
+      src=""
+      alt="Testimonial"
+    />
+
   </div>
 
   <hr class="divider" />
 
-  <!-- FOR WHO -->
+  <!-- =========================================================
+       FIT
+  ========================================================== -->
+
   <section id="for-who">
-    <p class="section-label reveal">Who This Is For</p>
-    <h2 class="reveal" style="transition-delay:.08s">The right fit<br><span class="accent">matters.</span></h2>
-    <div class="for-who-grid">
-      <div class="for-who-block reveal" style="transition-delay:.1s">
-        <h3>This Is For You If</h3>
-        <ul class="check-list yes">
-          <li>You run a coaching business or agency doing at least ₹2L+/month</li>
-          <li>You have a proven offer but inconsistent lead flow</li>
-          <li>You want your own team running outbound in-house — not renting it every month</li>
-          <li>You've tried ads or content and want something more predictable and permanent</li>
-        </ul>
-      </div>
-      <div class="for-who-block reveal" style="transition-delay:.2s">
-        <h3>This Is NOT For You If</h3>
-        <ul class="check-list no">
-          <li>You don't have an offer that has closed at least one paying client</li>
-          <li>You're looking for a magic button with zero involvement from your team</li>
-          <li>You can't commit your team to the 90-day training and implementation window</li>
-        </ul>
-      </div>
-    </div>
-  </section>
 
-  <!-- DELIVERABLES -->
-  <section id="deliverables">
-    <div class="deliverables-inner">
-      <p class="section-label reveal">What You Get</p>
-<h2 class="reveal" style="transition-delay:.08s">
-  Everything your team needs<br>
-  to own acquisition in <span class="accent">90 days.</span>
-</h2>
-      <div class="deliverables-grid reveal" style="transition-delay:.16s">
-        <div class="deliverable-item"><div class="d-dot"></div><p>A 90-day live training and implementation program for your team</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Ideal client profile framework and targeting playbook, yours to keep</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Cold email + LinkedIn + calling scripts and sequences, fully editable and owned by you</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Lead qualification framework so your team only books calls worth taking</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Weekly live coaching and pipeline reviews during the 90 days</p></div>
-        <div class="deliverable-item"><div class="d-dot"></div><p>Direct access to your trainer throughout the program</p></div>
-        <div class="deliverable-item" style="grid-column:1/-1">
-          <div class="d-dot"></div>
-          <p><strong style="color:var(--white);font-weight:500">20 to 30 qualified show-up appointments in 90 days — guaranteed, when you implement the program as taught. No ongoing retainer after that. Your team runs it, permanently.</strong></p>
-        </div>
-      </div>
-      <div style="margin-top:48px" class="reveal">
-        <a href="#hero-cal" class="btn-primary">Schedule Your Free Enrollment Call</a>
-      </div>
-    </div>
-  </section>
+    <p class="section-label reveal">
+      Who This Is For
+    </p>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="faq-inner">
-      <p class="section-label reveal">FAQ</p>
-      <h2 class="reveal" style="transition-delay:.08s;margin-bottom:44px">Common<br><span class="accent">Questions.</span></h2>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">How is this different from hiring an agency? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">An agency runs your pipeline for you, every month, for as long as you keep paying. This is a one-time, 90-day training program — we teach your team to run the exact system we use, so by the end you own it outright and never have to pay an agency again.</p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">How quickly do we start seeing results? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">Most teams start seeing qualified calls within the first 7–10 business days of implementing what they're taught. The full system ramps up over 90 days, with the middle stretch typically being the strongest.</p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">What do I need to have ready before starting? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">A proven offer that has closed at least one paying client, someone on your team who can own outbound, and a calendar link. We teach your team everything else — copy, targeting, sequences, execution — so they're running it independently well before day 90.</p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">Do you run ads? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">No. We train a fully organic outbound system — cold email, LinkedIn, and calling. No ad spend required. That's what makes the results predictable and the ROI clean.</p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">What industries do you work with? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">Primarily coaches and agency owners in India — business coaching, marketing agencies, consulting, and professional services. If you have a high-ticket offer and a team willing to be trained, we can make it work.</p>
-      </details>
-
-      <details class="faq-item reveal">
-        <summary class="faq-q">What happens on the enrollment call? <span class="faq-icon">+</span></summary>
-        <p class="faq-a">30–45 minutes understanding your offer, pipeline, and team. We'll walk through exactly what the 90-day program covers, how the guarantee works, and whether it's the right fit — whether you enroll or not.</p>
-      </details>
-    </div>
-  </section>
-
-  <!-- BOTTOM BOOKING -->
-  <section id="booking-bottom">
-    <p class="section-label reveal">Book Your Call</p>
-    <h2 class="reveal" style="transition-delay:.08s;margin-bottom:16px">
-      Ready to Train<br><span class="accent">Your Team?</span>
+    <h2
+      class="reveal"
+      style="transition-delay:.06s"
+    >
+      The right fit
+      <br />
+      <span class="accent">matters.</span>
     </h2>
-    <p class="booking-intro reveal" style="transition-delay:.16s">
-      Pick a time below. No pressure, no pitch. Just a focused conversation about your business and your team.
-    </p>
-    <div class="reveal" style="transition-delay:.22s">
-      <a href="https://cal.com/zenacquisition/strategy" class="btn-primary" target="_blank" rel="noopener">Open Booking Page ↗</a>
+
+    <div class="for-who-grid">
+
+      <div
+        class="for-who-block reveal"
+        style="transition-delay:.10s"
+      >
+
+        <h3>
+          This Is For You If
+        </h3>
+
+        <ul class="check-list yes">
+
+          <li>
+            You run a coaching business or agency doing at least ₹2L+/month
+          </li>
+
+          <li>
+            You have a proven offer but inconsistent lead flow
+          </li>
+
+          <li>
+            You want your own team running outbound in-house
+          </li>
+
+          <li>
+            You've tried ads or content and want something more
+            predictable and permanent
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div
+        class="for-who-block reveal"
+        style="transition-delay:.18s"
+      >
+
+        <h3>
+          This Is NOT For You If
+        </h3>
+
+        <ul class="check-list no">
+
+          <li>
+            You don't have an offer that has closed at least one paying client
+          </li>
+
+          <li>
+            You're looking for a magic button with zero involvement
+            from your team
+          </li>
+
+          <li>
+            You can't commit your team to the 90-day training
+            and implementation window
+          </li>
+
+        </ul>
+
+      </div>
+
     </div>
-    <div class="cal-embed-box-bottom reveal" style="transition-delay:.28s">
-      <div id="my-cal-inline-strategy-bottom"></div>
-    </div>
+
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div>
-        <div class="footer-brand">Zen Acquisition™</div>
-        <div style="font-size:0.72rem;color:var(--grey-3);margin-top:6px">
-          Proprietor:
-          Sujit Samanta
+  <!-- =========================================================
+       DELIVERABLES
+  ========================================================== -->
+
+  <section id="deliverables">
+
+    <div class="deliverables-inner">
+
+      <p class="section-label reveal">
+        What You Get
+      </p>
+
+      <h2
+        class="reveal"
+        style="transition-delay:.06s"
+      >
+        Everything your team needs
+        <br />
+        to own acquisition in
+        <span class="accent">90 days.</span>
+      </h2>
+
+      <div
+        class="deliverables-grid reveal"
+        style="transition-delay:.12s"
+      >
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            A 90-day live training and implementation program
+            for your team
+          </p>
         </div>
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            Ideal client profile framework and targeting playbook,
+            yours to keep
+          </p>
+        </div>
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            Cold email + LinkedIn + calling scripts and sequences,
+            fully editable and owned by you
+          </p>
+        </div>
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            Lead qualification framework so your team only books
+            calls worth taking
+          </p>
+        </div>
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            Weekly live coaching and pipeline reviews during the 90 days
+          </p>
+        </div>
+
+        <div class="deliverable-item">
+          <div class="d-dot"></div>
+
+          <p>
+            Direct access to your trainer throughout the program
+          </p>
+        </div>
+
+        <div
+          class="deliverable-item"
+          style="grid-column:1/-1"
+        >
+
+          <div class="d-dot"></div>
+
+          <p>
+            <strong style="color:var(--white);font-weight:500">
+              20 to 30 qualified show-up appointments in 90 days —
+              guaranteed when you implement the program as taught.
+              No ongoing retainer after that. Your team runs it.
+            </strong>
+          </p>
+
+        </div>
+
       </div>
-      <div class="footer-links">
-        <a href="privacy-policy">Privacy Policy</a>
-        <a href="terms-and-conditions">Terms &amp; Conditions</a>
-        <a href="earning-disclaimer">Earnings Disclaimer</a>
-        <a href="https://cal.com/zenacquisition/strategy" target="_blank" rel="noopener">Book a Call</a>
+
+      <div
+        style="margin-top:42px"
+        class="reveal"
+      >
+
+        <a href="#hero-cal" class="btn-primary">
+          Schedule Your Free Enrollment Call
+        </a>
+
       </div>
+
     </div>
 
-    <div style="margin-top:24px;font-size:0.78rem;color:var(--grey-4);line-height:1.8">
-      <strong style="color:var(--white);font-weight:500">Business Information</strong><br>
-      Legal Business Name: Zen Acquisition<br>
-      Proprietor: Sujit Samanta<br>
-      Business Type: Training, Consulting & Appointment Setting Services<br>
-      Location: West Bengal, India<br>
-      Contact Email: support@zenacquisition.com
+  </section>
+
+  <!-- =========================================================
+       FAQ
+  ========================================================== -->
+
+  <section id="faq">
+
+    <div class="faq-inner">
+
+      <p class="section-label reveal">
+        FAQ
+      </p>
+
+      <h2
+        class="reveal"
+        style="transition-delay:.06s;margin-bottom:42px"
+      >
+        Common
+        <br />
+        <span class="accent">Questions.</span>
+      </h2>
+
+      <details class="faq-item reveal">
+
+        <summary class="faq-q">
+          How is this different from hiring an agency?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          An agency runs your pipeline for you, every month, for as long
+          as you keep paying. This is a one-time, 90-day training program.
+          We teach your team to run the system so your business can own
+          the process internally.
+        </p>
+
+      </details>
+
+      <details
+        class="faq-item reveal"
+        style="transition-delay:.04s"
+      >
+
+        <summary class="faq-q">
+          How quickly do we start seeing results?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          Most teams start seeing qualified calls within the first
+          7–10 business days of implementing what they're taught.
+          The full system ramps up over the 90-day implementation period.
+        </p>
+
+      </details>
+
+      <details
+        class="faq-item reveal"
+        style="transition-delay:.08s"
+      >
+
+        <summary class="faq-q">
+          What do I need to have ready before starting?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          A proven offer that has closed at least one paying client,
+          someone on your team who can own outbound, and a calendar link.
+          We teach your team the acquisition process, targeting,
+          messaging, sequences, and execution.
+        </p>
+
+      </details>
+
+      <details
+        class="faq-item reveal"
+        style="transition-delay:.12s"
+      >
+
+        <summary class="faq-q">
+          Do you run ads?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          No. The core system focuses on organic outbound through
+          channels such as cold email, LinkedIn, and calling.
+        </p>
+
+      </details>
+
+      <details
+        class="faq-item reveal"
+        style="transition-delay:.16s"
+      >
+
+        <summary class="faq-q">
+          What industries do you work with?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          Primarily coaches and agency owners in India, including
+          business coaching, marketing agencies, consulting, and
+          professional services. If you have a high-ticket offer and
+          a team willing to be trained, the program may be a fit.
+        </p>
+
+      </details>
+
+      <details
+        class="faq-item reveal"
+        style="transition-delay:.20s"
+      >
+
+        <summary class="faq-q">
+          What happens on the enrollment call?
+
+          <span class="faq-icon">+</span>
+        </summary>
+
+        <p class="faq-a">
+          We'll spend 30–45 minutes understanding your offer,
+          pipeline, and team. We'll walk through the 90-day program,
+          explain how the guarantee works, and determine whether
+          the program is the right fit.
+        </p>
+
+      </details>
+
     </div>
-    <p class="footer-disclaimer">
-      Zen Acquisition is operated by Sujit Samanta.<br><br>
-      © 2026 Zen Acquisition. All rights reserved.
-      This website is not affiliated with Google, Facebook, or LinkedIn.
-      The 20-30 client guarantee applies when the program is implemented as taught and is governed by the program terms and conditions provided at enrollment. General results and testimonials mentioned on this page are not typical and depend on your offer, market, and execution — see our Earnings Disclaimer.
+
+  </section>
+
+  <!-- =========================================================
+       BOTTOM BOOKING
+  ========================================================== -->
+
+  <section id="booking-bottom">
+
+    <p class="section-label reveal">
+      Book Your Call
     </p>
+
+    <h2
+      class="reveal"
+      style="transition-delay:.06s;margin-bottom:16px"
+    >
+      Ready to Train
+      <br />
+      <span class="accent">Your Team?</span>
+    </h2>
+
+    <p
+      class="booking-intro reveal"
+      style="transition-delay:.12s"
+    >
+      Pick a time below. No pressure, no pitch.
+      Just a focused conversation about your business and your team.
+    </p>
+
+    <div
+      class="reveal"
+      style="transition-delay:.18s"
+    >
+
+      <a
+        href="https://cal.com/zenacquisition/strategy"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
+        Open Booking Page ↗
+      </a>
+
+    </div>
+
+    <div
+      class="cal-embed-box-bottom reveal"
+      style="transition-delay:.24s"
+    >
+
+      <div id="my-cal-inline-strategy-bottom"></div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <div>
+
+        <div class="footer-brand">
+          <span class="footer-brand-dot"></span>
+          Zen Acquisition™
+        </div>
+
+        <div class="footer-proprietor">
+          Proprietor: Sujit Samanta
+        </div>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="privacy-policy">
+          Privacy Policy
+        </a>
+
+        <a href="terms-and-conditions">
+          Terms &amp; Conditions
+        </a>
+
+        <a href="earning-disclaimer">
+          Earnings Disclaimer
+        </a>
+
+        <a
+          href="https://cal.com/zenacquisition/strategy"
+          target="_blank"
+          rel="noopener"
+        >
+          Book a Call
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="business-info">
+
+      <strong>
+        Business Information
+      </strong>
+
+      <br />
+
+      Legal Business Name: Zen Acquisition
+      <br />
+
+      Proprietor: Sujit Samanta
+      <br />
+
+      Business Type: Training, Consulting & Appointment Setting Services
+      <br />
+
+      Location: West Bengal, India
+      <br />
+
+      Contact Email: support@zenacquisition.com
+
+    </div>
+
+    <p class="footer-disclaimer">
+
+      Zen Acquisition is operated by Sujit Samanta.
+
+      <br /><br />
+
+      © 2026 Zen Acquisition. All rights reserved.
+
+      This website is not affiliated with Google, Facebook, or LinkedIn.
+
+      The 20–30 client guarantee applies when the program is implemented
+      as taught and is governed by the program terms and conditions
+      provided at enrollment.
+
+      General results and testimonials mentioned on this page are not
+      typical and depend on your offer, market, and execution —
+      see our Earnings Disclaimer.
+
+    </p>
+
   </footer>
 
-  <!-- CAL.COM SCRIPTS -->
+  <!-- =========================================================
+       CAL.COM
+  ========================================================== -->
+
   <script type="text/javascript">
+
     (function (C, A, L) {
-      let p = function (a, ar) { a.q.push(ar); };
+
+      let p = function (a, ar) {
+        a.q.push(ar);
+      };
+
       let d = C.document;
+
       C.Cal = C.Cal || function () {
-        let cal = C.Cal; let ar = arguments;
+
+        let cal = C.Cal;
+        let ar = arguments;
+
         if (!cal.loaded) {
-          cal.ns = {}; cal.q = cal.q || [];
-          d.head.appendChild(d.createElement("script")).src = A;
+
+          cal.ns = {};
+          cal.q = cal.q || [];
+
+          d.head.appendChild(
+            d.createElement("script")
+          ).src = A;
+
           cal.loaded = true;
         }
+
         if (ar[0] === L) {
-          const api = function () { p(api, arguments); };
+
+          const api = function () {
+            p(api, arguments);
+          };
+
           const namespace = ar[1];
+
           api.q = api.q || [];
+
           if (typeof namespace === "string") {
-            cal.ns[namespace] = cal.ns[namespace] || api;
+
+            cal.ns[namespace] =
+              cal.ns[namespace] || api;
+
             p(cal.ns[namespace], ar);
-            p(cal, ["initNamespace", namespace]);
-          } else p(cal, ar);
+
+            p(cal, [
+              "initNamespace",
+              namespace
+            ]);
+
+          } else {
+
+            p(cal, ar);
+
+          }
+
           return;
         }
+
         p(cal, ar);
+
       };
-    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    Cal("init", "strategy", { origin: "https://app.cal.com" });
-    Cal.ns.strategy("inline", {
-      elementOrSelector: "#my-cal-inline-strategy",
-      config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
-      calLink: "zenacquisition/strategy",
-    });
-    Cal.ns.strategy("ui", {
-      "cssVarsPerTheme": {
-        "light": { "cal-brand": "#000000" },
-        "dark":  { "cal-brand": "#ffffff" }
-      },
-      "hideEventTypeDetails": false,
-      "layout": "month_view"
-    });
-
-    Cal("init", "strategy-bottom", { origin: "https://app.cal.com" });
-    Cal.ns["strategy-bottom"]("inline", {
-      elementOrSelector: "#my-cal-inline-strategy-bottom",
-      config: { "layout": "month_view", "useSlotsViewOnSmallScreen": "true" },
-      calLink: "zenacquisition/strategy",
-    });
-    Cal.ns["strategy-bottom"]("ui", {
-      "cssVarsPerTheme": {
-        "light": { "cal-brand": "#000000" },
-        "dark":  { "cal-brand": "#ffffff" }
-      },
-      "hideEventTypeDetails": false,
-      "layout": "month_view"
-    });
-  </script>
-
-  <!-- Lightbox -->
-  <script>
-    function openLightbox(el) {
-      const src = el.querySelector('img').src;
-      document.getElementById('lightbox-img').src = src;
-      document.getElementById('lightbox').classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
-
-  <!-- Scroll reveal -->
-  <script>
-    const obs = new IntersectionObserver(
-      entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-      { threshold: 0.1 }
+    })(
+      window,
+      "https://app.cal.com/embed/embed.js",
+      "init"
     );
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+
+    /* Main booking embed */
+
+    Cal("init", "strategy", {
+      origin: "https://app.cal.com"
+    });
+
+    Cal.ns.strategy("inline", {
+
+      elementOrSelector:
+        "#my-cal-inline-strategy",
+
+      config: {
+        layout: "month_view",
+        useSlotsViewOnSmallScreen: "true"
+      },
+
+      calLink:
+        "zenacquisition/strategy"
+
+    });
+
+    Cal.ns.strategy("ui", {
+
+      cssVarsPerTheme: {
+
+        light: {
+          "cal-brand": "#1a56db"
+        },
+
+        dark: {
+          "cal-brand": "#3b82f6"
+        }
+
+      },
+
+      hideEventTypeDetails: false,
+
+      layout: "month_view"
+
+    });
+
+
+    /* Bottom booking embed */
+
+    Cal("init", "strategy-bottom", {
+      origin: "https://app.cal.com"
+    });
+
+    Cal.ns["strategy-bottom"]("inline", {
+
+      elementOrSelector:
+        "#my-cal-inline-strategy-bottom",
+
+      config: {
+        layout: "month_view",
+        useSlotsViewOnSmallScreen: "true"
+      },
+
+      calLink:
+        "zenacquisition/strategy"
+
+    });
+
+    Cal.ns["strategy-bottom"]("ui", {
+
+      cssVarsPerTheme: {
+
+        light: {
+          "cal-brand": "#1a56db"
+        },
+
+        dark: {
+          "cal-brand": "#3b82f6"
+        }
+
+      },
+
+      hideEventTypeDetails: false,
+
+      layout: "month_view"
+
+    });
+
   </script>
 
+  <!-- =========================================================
+       LIGHTBOX
+  ========================================================== -->
+
   <script>
-  function playVideo(card) {
-    const allVideos = document.querySelectorAll('.t-video-item');
-    allVideos.forEach(item => {
-      if (item !== card) {
-        const v = item.querySelector('video');
-        v.pause();
-        item.classList.remove('playing');
-      }
-    });
-    const video = card.querySelector('video');
-    if (video.paused) {
-      video.play();
-      video.setAttribute('controls', true);
-      card.classList.add('playing');
-    } else {
-      video.pause();
-      card.classList.remove('playing');
+
+    function openLightbox(el) {
+
+      const src =
+        el.querySelector("img").src;
+
+      document
+        .getElementById("lightbox-img")
+        .src = src;
+
+      document
+        .getElementById("lightbox")
+        .classList.add("open");
+
+      document.body.style.overflow = "hidden";
     }
-  }
+
+
+    function closeLightbox() {
+
+      document
+        .getElementById("lightbox")
+        .classList.remove("open");
+
+      document.body.style.overflow = "";
+    }
+
+
+    document.addEventListener(
+      "keydown",
+      function (e) {
+
+        if (e.key === "Escape") {
+          closeLightbox();
+        }
+
+      }
+    );
+
   </script>
 
-  <script>
-    document.getElementById('watch-video-btn').addEventListener('click', async () => {
-      const player = document.querySelector('wistia-player');
-      if (!player) return;
-      document.getElementById('hero-video').scrollIntoView({ behavior: 'smooth', block: 'center' });
-      setTimeout(async () => {
-        try {
-          player.muted = false;
-          await player.play();
-          if (player.requestFullscreen) player.requestFullscreen();
-        } catch(err) { console.log(err); }
-      }, 700);
-    });
+  <!-- =========================================================
+       SCROLL REVEAL
+  ========================================================== -->
 
-    document.getElementById('book-call-btn').addEventListener('click', () => {
-      document.getElementById('hero-cal').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
+  <script>
+
+    const obs =
+      new IntersectionObserver(
+
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add(
+                "visible"
+              );
+
+            }
+
+          });
+
+        },
+
+        {
+          threshold: .1
+        }
+
+      );
+
+
+    document
+      .querySelectorAll(".reveal")
+      .forEach(el => obs.observe(el));
+
+  </script>
+
+  <!-- =========================================================
+       TESTIMONIAL VIDEOS
+  ========================================================== -->
+
+  <script>
+
+    function playVideo(card) {
+
+      const allVideos =
+        document.querySelectorAll(
+          ".t-video-item"
+        );
+
+      allVideos.forEach(item => {
+
+        if (item !== card) {
+
+          const v =
+            item.querySelector("video");
+
+          v.pause();
+
+          item.classList.remove(
+            "playing"
+          );
+
+        }
+
+      });
+
+      const video =
+        card.querySelector("video");
+
+      if (video.paused) {
+
+        video.play();
+
+        video.setAttribute(
+          "controls",
+          true
+        );
+
+        card.classList.add(
+          "playing"
+        );
+
+      } else {
+
+        video.pause();
+
+        card.classList.remove(
+          "playing"
+        );
+
+      }
+
+    }
+
+  </script>
+
+  <!-- =========================================================
+       HERO FLOW
+  ========================================================== -->
+
+  <script>
+
+    document
+      .getElementById("watch-video-btn")
+      .addEventListener(
+        "click",
+        async () => {
+
+          const player =
+            document.querySelector(
+              "wistia-player"
+            );
+
+          if (!player) return;
+
+          document
+            .getElementById("hero-video")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+          setTimeout(
+            async () => {
+
+              try {
+
+                player.muted = false;
+
+                await player.play();
+
+                if (
+                  player.requestFullscreen
+                ) {
+
+                  player.requestFullscreen();
+
+                }
+
+              } catch (err) {
+
+                console.log(err);
+
+              }
+
+            },
+            700
+          );
+
+        }
+      );
+
+
+    document
+      .getElementById("book-call-btn")
+      .addEventListener(
+        "click",
+        () => {
+
+          document
+            .getElementById("hero-cal")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "start"
+            });
+
+        }
+      );
+
   </script>
 
 </body>
