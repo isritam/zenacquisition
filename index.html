@@ -35,8 +35,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --black: #050505;
@@ -361,6 +360,658 @@
       .footer-links { gap: var(--sp-5); }
       .cta-strip .button { width: 100%; justify-content: center; }
     }
+    /* =========================================================
+   ZEN ACQUISITION — 404 VISUAL SYSTEM
+   Homepage style aligned with the 404 page
+   ========================================================= */
+
+:root {
+  --black: #080808;
+  --black-2: #0d0d0d;
+  --card-bg: #121212;
+
+  --white: #f5f5f3;
+  --muted: #8e8e93;
+  --muted-light: #b8b8bd;
+
+  --line: rgba(255, 255, 255, 0.08);
+  --line-hover: rgba(255, 255, 255, 0.20);
+
+  --blue: #1a56db;
+  --blue-bright: #2867ed;
+  --blue-glow: rgba(26, 86, 219, 0.35);
+  --blue-soft: rgba(26, 86, 219, 0.10);
+
+  /* Keep these aliases so existing HTML continues working */
+  --green: var(--blue);
+  --green-bright: var(--blue-bright);
+  --green-soft: var(--blue-soft);
+
+  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --display: 'Space Grotesk', 'DM Sans', sans-serif;
+
+  --serif: var(--display);
+}
+
+
+/* ---------------------------------------------------------
+   GLOBAL
+   --------------------------------------------------------- */
+
+html {
+  background: var(--black);
+}
+
+body {
+  background:
+    radial-gradient(
+      circle at 50% 8%,
+      rgba(26, 86, 219, 0.10),
+      transparent 32%
+    ),
+    var(--black);
+  color: var(--white);
+  font-family: var(--sans);
+}
+
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+.grain {
+  opacity: 0.018;
+}
+
+
+/* ---------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------- */
+
+.nav {
+  border-bottom: 1px solid transparent;
+}
+
+.nav.scrolled {
+  background: rgba(8, 8, 8, 0.82);
+  border-color: var(--line);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-inner {
+  height: 76px;
+}
+
+.brand {
+  font-family: var(--display);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.brand sup {
+  font-family: var(--sans);
+  font-size: 7px;
+  color: var(--muted);
+}
+
+.nav-links {
+  gap: 30px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.nav-links a {
+  color: var(--muted);
+  opacity: 1;
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+  color: var(--white);
+  opacity: 1;
+}
+
+.nav-cta {
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255,255,255,.04);
+  color: var(--white) !important;
+}
+
+.nav-cta:hover {
+  background: rgba(255,255,255,.09) !important;
+  border-color: var(--line-hover);
+}
+
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.hero {
+  min-height: 820px;
+  background:
+    radial-gradient(
+      circle at 50% 18%,
+      var(--blue-glow),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 45%,
+      rgba(26, 86, 219, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      180deg,
+      #080808 0%,
+      #080808 100%
+    );
+}
+
+.hero:before {
+  opacity: 0.11;
+
+  background:
+    linear-gradient(
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.035) 1px,
+      transparent 1px
+    );
+
+  background-size: 64px 64px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    rgba(0,0,0,.7) 45%,
+    transparent 90%
+  );
+}
+
+.hero-orb {
+  width: 700px;
+  height: 700px;
+  right: -260px;
+  top: 20px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(26,86,219,.18),
+      rgba(26,86,219,.06) 35%,
+      transparent 70%
+    );
+
+  filter: blur(30px);
+}
+
+.hero-inner {
+  padding-top: 150px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .15em;
+}
+
+.eyebrow:before {
+  width: 24px;
+  background: var(--blue);
+}
+
+h1 {
+  max-width: 980px;
+
+  font-family: var(--display);
+  font-size: clamp(50px, 8vw, 104px);
+  font-weight: 600;
+  line-height: .98;
+  letter-spacing: -.055em;
+}
+
+h1 em {
+  color: var(--blue);
+}
+
+.hero-copy {
+  max-width: 620px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.hero-rule {
+  background: var(--line);
+}
+
+.question {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.02em;
+}
+
+.scroll-cue {
+  color: var(--muted);
+}
+
+
+/* ---------------------------------------------------------
+   PATH SECTION
+   --------------------------------------------------------- */
+
+.paths {
+  background: #0b0b0b;
+  color: var(--white);
+}
+
+.path-grid {
+  gap: 16px;
+}
+
+.path {
+  min-height: 500px;
+
+  padding: 40px;
+
+  background: var(--card-bg);
+  color: var(--white);
+
+  border: 1px solid var(--line);
+  border-radius: 12px;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
+}
+
+.path:hover {
+  transform: translateY(-5px);
+
+  background: #151515;
+
+  border-color: var(--line-hover);
+
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.35);
+}
+
+.path.dark {
+  background: var(--card-bg);
+  color: var(--white);
+  border-color: var(--line);
+}
+
+.path.dark:hover {
+  background: #151515;
+  border-color: var(--line-hover);
+}
+
+.path-number {
+  color: var(--muted);
+  opacity: 1;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.path-label {
+  margin-top: 72px;
+
+  color: var(--blue);
+
+  font-size: 10px;
+  letter-spacing: .13em;
+}
+
+.path h2 {
+  font-family: var(--display);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -.045em;
+  margin: 14px 0 18px;
+}
+
+.path p,
+.path.dark p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.path-meta {
+  margin-top: 24px;
+}
+
+.pill,
+.dark .pill {
+  padding: 7px 10px;
+
+  background: rgba(255,255,255,.035);
+
+  border: 1px solid var(--line);
+  border-radius: 6px;
+
+  color: var(--muted);
+
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+
+.path-bottom {
+  padding-top: 40px;
+}
+
+.path-bottom strong {
+  color: var(--muted-light);
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.path-link {
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: .10em;
+}
+
+.path-link span {
+  width: 36px;
+  height: 36px;
+
+  background: var(--blue);
+
+  border-radius: 8px;
+
+  transition:
+    transform .2s ease,
+    background .2s ease;
+}
+
+.path:hover .path-link span,
+.path-link:focus-visible span {
+  background: var(--blue-bright);
+}
+
+.path-ghost {
+  color: rgba(255,255,255,.025);
+}
+
+
+/* ---------------------------------------------------------
+   MANIFESTO
+   --------------------------------------------------------- */
+
+.manifesto {
+  background: var(--black);
+}
+
+.section-tag {
+  color: var(--blue);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+
+.manifesto h2,
+.about h2,
+.journey h2 {
+  font-family: var(--display);
+  font-weight: 600;
+  letter-spacing: -.05em;
+}
+
+.manifesto-copy {
+  border-color: var(--line);
+}
+
+.manifesto-copy p {
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.principles {
+  border-color: var(--line);
+}
+
+.principle {
+  border-color: var(--line);
+  min-height: 145px;
+}
+
+.principle strong {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.principle p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* ---------------------------------------------------------
+   JOURNEY
+   --------------------------------------------------------- */
+
+.journey {
+  background: #0b0b0b;
+  color: var(--white);
+}
+
+.journey-intro {
+  color: var(--muted);
+}
+
+.steps {
+  border-color: var(--line);
+}
+
+.step {
+  border-color: var(--line);
+}
+
+.step-num {
+  color: var(--blue);
+  font-size: 9px;
+}
+
+.step h3 {
+  font-family: var(--display);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -.03em;
+}
+
+.step p {
+  color: var(--muted);
+}
+
+
+/* ---------------------------------------------------------
+   ABOUT
+   --------------------------------------------------------- */
+
+.about {
+  background: var(--black);
+}
+
+.about-copy {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.about-copy p {
+  color: var(--muted);
+}
+
+.cta-strip {
+  border-color: var(--line);
+}
+
+.cta-strip strong {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+
+.button {
+  padding: 13px 20px;
+
+  background: var(--white);
+  color: var(--black);
+
+  border: 1px solid var(--white);
+  border-radius: 8px;
+
+  font-size: 10px;
+  letter-spacing: .09em;
+}
+
+.button:hover,
+.button:focus-visible {
+  background: #e2e2de;
+  color: var(--black);
+  transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   FOOTER
+   --------------------------------------------------------- */
+
+footer {
+  background: #080808;
+  border-top: 1px solid var(--line);
+}
+
+.footer-brand {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -.025em;
+}
+
+.footer-note {
+  color: var(--muted);
+}
+
+.footer-col span {
+  color: var(--muted);
+}
+
+.footer-col a {
+  color: #c5c5ca;
+}
+
+.footer-col a:hover,
+.footer-col a:focus-visible {
+  color: var(--white);
+}
+
+.copyright {
+  color: rgba(255,255,255,.35);
+  border-color: var(--line);
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 850px) {
+
+  .nav-inner {
+    height: 70px;
+  }
+
+  .nav-links {
+    top: 70px;
+
+    background: rgba(8,8,8,.97);
+
+    border-color: var(--line);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  .nav-links a {
+    border-color: var(--line);
+  }
+
+  .hero {
+    min-height: 720px;
+  }
+
+  .hero-inner {
+    padding-top: 120px;
+  }
+
+  .path {
+    border-radius: 10px;
+  }
+}
+
+
+@media (max-width: 560px) {
+
+  h1 {
+    font-size: 47px;
+    letter-spacing: -.045em;
+  }
+
+  .hero-copy {
+    font-size: 15px;
+  }
+
+  .path {
+    padding: 28px;
+  }
+
+  .path h2 {
+    font-size: 34px;
+  }
+
+  .path-label {
+    margin-top: 42px;
+  }
+
+  .cta-strip .button {
+    width: 100%;
+  }
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-badge {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 10px rgba(26, 86, 219, .65);
+  flex-shrink: 0;
+}
+
   </style>
 </head>
 <body>
@@ -368,8 +1019,10 @@
 
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a class="brand" href="#top">Zen Acquisition<sup>™</sup></a>
-      <nav class="nav-links" id="navLinks">
+<a class="brand" href="#top">
+  <span class="brand-badge"></span>
+  Zen Acquisition<sup>™</sup>
+</a>      <nav class="nav-links" id="navLinks">
         <a href="#paths">Choose Your Path</a>
         <a href="#approach">Approach</a>
         <a href="#about">About</a>
